@@ -1,5 +1,33 @@
 [
   {
+    "id": "traffic_usa_virginia_no0011",
+    "name": "Virginia Traffic Camera - Dulles Center Blvd",
+    "location": "Dulles Center Blvd, Fairfax",
+    "city": "Fairfax",
+    "country": "United States",
+    "stream_url": "https://media-sfs8.vdotcameras.com/rtplive/NO0011/playlist.m3u8",
+    "website_url": "https://511.vdot.virginia.gov/services/map/layers/map/cams",
+    "enabled": true,
+    "source": "Virginia DOT 511",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
+    "id": "traffic_usa_virginia_no0012",
+    "name": "Virginia Traffic Camera - Northstar Blvd",
+    "location": "Northstar Blvd & Creighton, Fairfax",
+    "city": "Fairfax",
+    "country": "United States",
+    "stream_url": "https://media-sfs4.vdotcameras.com/rtplive/NO0012/playlist.m3u8",
+    "website_url": "https://511.vdot.virginia.gov/services/map/layers/map/cams",
+    "enabled": true,
+    "source": "Virginia DOT 511",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "webcam_germany_uhu",
     "name": "Uhu Wildlife Live Camera",
     "location": "Uhu Webcam, Germany",
