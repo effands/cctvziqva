@@ -1,5 +1,33 @@
 [
   {
+    "id": "traffic_usa_delaware_kcam002",
+    "name": "Delaware Traffic Camera - West Dover Connector",
+    "location": "W North St, Dover, Delaware",
+    "city": "Dover",
+    "country": "United States",
+    "stream_url": "https://video.deldot.gov:443/live/KCAM002.stream/playlist.m3u8",
+    "website_url": "https://tmc.deldot.gov/json/videocamera.json",
+    "enabled": true,
+    "source": "DelDOT",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
+    "id": "traffic_usa_delaware_kcam003",
+    "name": "Delaware Traffic Camera - US 13",
+    "location": "US 13, Dover, Delaware",
+    "city": "Dover",
+    "country": "United States",
+    "stream_url": "https://video.deldot.gov:443/live/KCAM003.stream/playlist.m3u8",
+    "website_url": "https://tmc.deldot.gov/json/videocamera.json",
+    "enabled": true,
+    "source": "DelDOT",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "traffic_usa_virginia_no0011",
     "name": "Virginia Traffic Camera - Dulles Center Blvd",
     "location": "Dulles Center Blvd, Fairfax",
