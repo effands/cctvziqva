@@ -1,0 +1,28 @@
+{
+  "recordings_dir": "C:\\Users\\RTX\\Videos\\CCTV Recordings",
+  "backup_dir": "C:\\Users\\RTX\\Videos\\CCTV Backup",
+  "segment_duration_minutes": 60,
+  "folder_organization": "per_session",
+  "auto_record_enabled": false,
+  "auto_record_duration_minutes": 1.6,
+  "auto_record_repeat_count": 10,
+  "auto_record_interval_seconds": 10,
+  "auto_record_camera_mode": "random",
+  "auto_record_camera_count": 8,
+  "auto_record_selected_cams": [],
+  "saved_website_urls": [
+    "http://36.66.208.101:5000/",
+    "https://cctvsurabaya.24hour.id/",
+    "https://dishub.bandungkab.go.id/cctv/",
+    "https://atcs.bandungbaratkab.go.id/",
+    "https://smartcity.cimahikota.go.id/cctv",
+    "https://cctv.jogjaprov.go.id/",
+    "https://cctv.malangkota.go.id/sebaran-cctv",
+    "https://dishub.kedirikota.go.id/live-streaming-atcs/",
+    "https://atcs.denpasarkota.go.id/",
+    "https://www.skylinewebcams.com/en/webcam.html",
+    "https://www.skylinewebcams.com/webcam/norge.html",
+    "https://cctv.villabs.id/cctv/",
+    "https://cctv.malangkota.go.id/"
+  ]
+}

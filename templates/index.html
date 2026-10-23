@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCTV ZIQVA - Global Stream & Auto Recorder</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- HLS.js Video Player -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        body { background: #0f172a; color: #f8fafc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glow-green { box-shadow: 0 0 15px rgba(34, 197, 94, 0.4); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header Navbar -->
+    <header class="glass sticky top-0 z-50 px-6 py-4 flex flex-wrap justify-between items-center border-b border-slate-700">
+        <div class="flex items-center space-x-3">
+            <div class="bg-gradient-to-tr from-red-600 to-amber-500 p-2.5 rounded-xl text-white shadow-lg animate-pulse">
+                <i class="fa-solid fa-video text-xl"></i>
+            </div>
+            <div>
+                <div class="flex items-center space-x-2">
+                    <h1 class="text-xl font-bold bg-gradient-to-r from-red-400 via-orange-300 to-yellow-400 bg-clip-text text-transparent">
+                        CCTV ZIQVA
+                    </h1>
+                    <a href="https://ziqva.com" target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30 hover:bg-amber-500/25 transition" title="Kunjungi ziqva.com">
+                        by team ziqva.com
+                    </a>
+                </div>
+                <p class="text-xs text-slate-400">Global Stream & Auto Recorder • Multi-Camera Hub</p>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-2.5 mt-3 sm:mt-0 flex-wrap gap-y-2">
+            <button onclick="document.getElementById('manual-modal').classList.remove('hidden')" class="bg-slate-700 hover:bg-slate-600 text-white px-3.5 py-2 rounded-lg text-xs font-semibold">
+                <i class="fa-solid fa-plus mr-1"></i> Tambah Manual
+            </button>
+            <button onclick="openScanModal()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow" title="Scan Link Website CCTV Custom">
+                <i class="fa-solid fa-globe"></i> <span>+ Scan Website</span>
+            </button>
+            <button onclick="startAll()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow">
+                <i class="fa-solid fa-play"></i> <span>Mulai Semua</span>
+            </button>
+            <button onclick="stopAll()" class="bg-rose-600 hover:bg-rose-500 text-white px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow">
+                <i class="fa-solid fa-stop"></i> <span>Hentikan</span>
+            </button>
+            <button onclick="openFolder(null)" class="bg-amber-600 hover:bg-amber-500 text-white px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow" title="Buka Main Folder Rekaman">
+                <i class="fa-solid fa-folder-open"></i> <span>Folder Utama</span>
+            </button>
+            <button onclick="toggleAutoRecordDirect()" id="btn-auto-record-nav" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow" title="Jadwal & Siklus Auto Rekam">
+                <i class="fa-solid fa-arrows-rotate" id="nav-auto-icon"></i> <span id="nav-auto-text">Auto Rekam</span>
+            </button>
+            <button onclick="openSettingsModal()" class="bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow" title="Pengaturan">
+                <i class="fa-solid fa-gear"></i> <span>Settings</span>
+            </button>
+            <button onclick="checkForUpdate(true)" id="btn-update" class="bg-violet-600 hover:bg-violet-500 text-white px-3 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow" title="Cek dan pasang update dari GitHub">
+                <i class="fa-solid fa-cloud-arrow-down"></i> <span>Update</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- System Stats Bar -->
+    <div class="bg-slate-900 border-b border-slate-800 px-6 py-2.5 flex flex-wrap justify-between items-center text-xs text-slate-400">
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-1">
+            <span><i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> CCTV ON (Aktif): <strong id="stat-total" class="text-emerald-400">0</strong></span>
+            <button onclick="switchMainTab('off')" class="hover:text-rose-300 transition flex items-center" title="Buka Menu CCTV OFF">
+                <i class="fa-solid fa-triangle-exclamation text-rose-400 mr-1.5"></i> CCTV OFF (Mati): <strong id="stat-offline" class="text-rose-400 ml-1">0</strong>
+            </button>
+            <span><i class="fa-solid fa-record-vinyl text-red-500 mr-1.5 animate-spin"></i> Merekam: <strong id="stat-active" class="text-amber-400">0</strong></span>
+        </div>
+        <div class="flex space-x-6 mt-1 sm:mt-0">
+            <span><i class="fa-solid fa-folder text-amber-500 mr-1.5"></i> Location: <strong id="stat-path" class="text-slate-300 font-mono text-[11px]">Loading...</strong></span>
+            <span><i class="fa-solid fa-hard-drive text-slate-500 mr-1.5"></i> Disk Free: <strong id="stat-disk" class="text-sky-400">-</strong></span>
+        </div>
+    </div>
+
+    <!-- Auto Record Live Progress Banner -->
+    <div id="auto-record-banner" class="hidden max-w-7xl mx-auto w-full px-6 pt-4">
+        <div class="glass p-4 rounded-2xl border border-amber-500/50 bg-gradient-to-r from-amber-950/40 via-slate-900/90 to-slate-900/90 flex flex-wrap justify-between items-center gap-4 shadow-xl">
+            <div class="flex items-center space-x-3.5">
+                <div class="p-3 bg-amber-500/20 text-amber-400 rounded-xl text-xl animate-spin">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <div>
+                    <div class="flex items-center space-x-2 flex-wrap gap-y-1">
+                        <span id="auto-banner-status-badge" class="text-[10px] font-bold uppercase tracking-wider text-amber-300 px-2.5 py-0.5 bg-amber-950 rounded-full border border-amber-500/40 animate-pulse">
+                            ● Auto Rekam Aktif
+                        </span>
+                        <span id="auto-banner-cycle" class="text-xs font-bold text-slate-100">Siklus 1 / 5</span>
+                        <span class="text-slate-500 text-xs">•</span>
+                        <span id="auto-banner-timer-label" class="text-xs text-slate-300">Sisa Sesi:</span>
+                        <span id="auto-banner-timer" class="text-xs font-mono font-bold text-amber-400 bg-slate-950 px-2 py-0.5 rounded border border-slate-800">01:00</span>
+                    </div>
+                    <p id="auto-banner-info" class="text-xs text-slate-400 mt-1 flex items-center flex-wrap gap-1">
+                        Memuat kamera...
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <button onclick="openSettingsModal('auto')" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium border border-slate-700">
+                    <i class="fa-solid fa-gear mr-1"></i> Ubah Siklus
+                </button>
+                <button onclick="stopAutoRecord()" class="px-3.5 py-1.5 bg-rose-600 hover:bg-rose-500 text-white rounded-lg text-xs font-semibold flex items-center space-x-1.5 shadow">
+                    <i class="fa-solid fa-stop text-[10px]"></i> <span>Hentikan Auto Rekam</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Grid Content -->
+    <main class="flex-1 p-6 max-w-7xl mx-auto w-full">
+        <!-- Tab Switcher ON vs OFF + Auto Health Scan -->
+        <div class="flex flex-wrap justify-between items-center gap-3 mb-4 pb-3 border-b border-slate-800">
+            <div class="flex flex-wrap items-center gap-2">
+                <button id="tab-main-on" onclick="switchMainTab('on')" class="px-4 py-2 rounded-xl text-xs font-bold flex items-center space-x-2 transition shadow bg-emerald-600 text-white ring-2 ring-emerald-400/50">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>🟢 Daftar CCTV ON (Aktif)</span>
+                    <span id="tab-on-count" class="px-2 py-0.5 rounded-full text-[11px] bg-emerald-950/90 text-emerald-300 font-mono">0</span>
+                </button>
+                <button id="tab-main-off" onclick="switchMainTab('off')" class="px-4 py-2 rounded-xl text-xs font-bold flex items-center space-x-2 transition bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700">
+                    <i class="fa-solid fa-power-off text-rose-400"></i>
+                    <span>🔴 Menu CCTV OFF (Mati)</span>
+                    <span id="tab-off-count" class="px-2 py-0.5 rounded-full text-[11px] bg-rose-950/90 text-rose-300 font-mono">0</span>
+                </button>
+                <span id="pinned-rec-badge" class="hidden px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-950 text-emerald-400 border border-emerald-500/40 animate-pulse">
+                    🔥 Kamera Direkam Otomatis Tampil di Urutan Paling Atas
+                </span>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2">
+                <button id="btn-health-scan-all" onclick="runHealthScan('all')" class="px-3 py-1.5 bg-sky-600/90 hover:bg-sky-500 text-white rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow" title="Scan semua CCTV: yang mati pindah ke Menu OFF, yang nyala kembali ke Menu ON">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>⚡ Auto Scan ON/OFF</span>
+                </button>
+                <button id="btn-health-scan-off" onclick="runHealthScan('offline_only')" class="px-3 py-1.5 bg-teal-600/90 hover:bg-teal-500 text-white rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow" title="Scan ulang daftar CCTV OFF, jika kembali aktif otomatis masuk ke daftar ON">
+                    <i class="fa-solid fa-rotate"></i>
+                    <span>🔄 Scan Ulang CCTV Off</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Dedicated Banner & Bulk CRUD Controls for Menu CCTV OFF -->
+        <div id="off-management-bar" class="hidden mb-5 glass p-4 rounded-2xl border border-rose-500/40 bg-gradient-to-r from-rose-950/40 via-slate-900/90 to-slate-900/90 flex flex-wrap justify-between items-center gap-3">
+            <div class="flex items-start space-x-3">
+                <div class="p-2.5 bg-rose-500/20 text-rose-400 rounded-xl text-base mt-0.5">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold text-rose-200 uppercase tracking-wider">Menu Karantina CCTV OFF (Tidak Mengganggu Perekaman)</h3>
+                    <p class="text-[11px] text-slate-300 mt-0.5">
+                        Kamera yang mati/offline saat dicek atau saat rekam otomatis dipindahkan ke sini. Klik <strong>Scan Ulang CCTV Off</strong> untuk mengecek ulang — jika kembali aktif (ON), kamera otomatis masuk kembali ke <strong>Daftar CCTV ON</strong>. Jika terus mati, Anda bisa mengedit URL atau menghapusnya.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+                <button onclick="runHealthScan('offline_only')" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-semibold flex items-center space-x-1.5 shadow">
+                    <i class="fa-solid fa-arrows-rotate"></i> <span>Scan Ulang Semua Off (Pulihkan yang ON)</span>
+                </button>
+                <button onclick="bulkDeleteOffline('repeated')" class="px-3 py-1.5 bg-amber-600/90 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold flex items-center space-x-1.5 shadow" title="Hapus semua kamera OFF yang sudah gagal dicek >= 2 kali">
+                    <i class="fa-solid fa-filter-circle-xmark"></i> <span>Hapus Gagal ≥2x</span>
+                </button>
+                <button onclick="bulkDeleteOffline('all')" class="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white rounded-lg text-xs font-semibold flex items-center space-x-1.5 shadow" title="Bersihkan seluruh daftar CCTV OFF">
+                    <i class="fa-solid fa-trash-can"></i> <span>Hapus Semua CCTV Off</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap justify-between items-center gap-3 mb-6">
+            <div class="relative flex-1 min-w-[220px] max-w-md">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input id="local-search-input" type="text" oninput="currentPage = 1; drawPage()" placeholder="Cari nama kamera, kota, lokasi, atau alasan off..." class="w-full bg-slate-900 border border-slate-700 rounded-lg pl-8 pr-8 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
+                <button onclick="document.getElementById('local-search-input').value=''; currentPage=1; drawPage();" class="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 text-xs" title="Reset Pencarian">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400">
+                <button onclick="shuffleCctvOrder()" class="px-3 py-1.5 bg-indigo-600/90 hover:bg-indigo-500 text-white rounded-lg font-semibold flex items-center space-x-1.5 transition shadow">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <span>🎲 Acak Urutan</span>
+                </button>
+                <div class="flex items-center space-x-1.5">
+                    <label for="local-page-size" class="font-medium text-slate-300">Tampilkan:</label>
+                    <select id="local-page-size" onchange="onPageSizeChange(this.value)" class="bg-slate-900 border border-slate-600 rounded-lg px-2.5 py-1.5 text-slate-100 font-semibold focus:outline-none focus:border-amber-500">
+                        <option value="12">12 / hal</option>
+                        <option value="24">24 / hal</option>
+                        <option value="48">48 / hal</option>
+                        <option value="96">96 / hal</option>
+                        <option value="all">⚡ Tampilkan ALL (Scroll Bebas)</option>
+                    </select>
+                </div>
+                <div class="flex items-center space-x-1.5">
+                    <label for="local-country-filter">Negara:</label>
+                    <select id="local-country-filter" onchange="currentPage = 1; drawPage()" class="bg-slate-900 border border-slate-600 rounded-lg px-2.5 py-1.5 text-slate-100">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <span>Auto refresh 3s</span>
+            </div>
+        </div>
+
+        <!-- Grid Cards CCTV -->
+        <div id="cctv-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+            <div class="col-span-full text-center py-20 text-slate-500">
+                <i class="fa-solid fa-circle-notch fa-spin text-3xl mb-3 text-red-500"></i>
+                <p>Memuat daftar kamera CCTV...</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal Video Player / Live Preview & Fix Check -->
+    <div id="video-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
+            <div class="px-5 py-3 border-b border-slate-700 flex justify-between items-center bg-slate-800/50">
+                <div class="flex items-center space-x-2">
+                    <h3 id="modal-title" class="font-bold text-slate-200">Live Preview</h3>
+                    <span id="modal-stream-status" class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-slate-400">MEMERIKSA KONEKSI...</span>
+                </div>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white text-lg"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="relative aspect-video bg-black flex items-center justify-center">
+                <video id="player" class="w-full h-full" controls autoplay muted></video>
+            </div>
+            <div class="px-5 py-3 border-t border-slate-700/60 bg-slate-900/80 flex justify-between items-center text-xs">
+                <span class="text-slate-400"><i class="fa-solid fa-circle-info text-sky-400 mr-1"></i> Pastikan video muncul & lancar sebelum menekan tombol rekam.</span>
+                <button id="modal-btn-record" onclick="confirmRecordFromModal()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg flex items-center space-x-1.5 shadow">
+                    <i class="fa-solid fa-play text-[10px]"></i> <span>Mulai Rekam CCTV Ini</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Input Website CCTV Custom (Create CRUD) -->
+    <div id="manual-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="manual-title">
+        <form onsubmit="addManualCamera(event)" class="glass w-full max-w-xl rounded-2xl p-6 shadow-2xl border border-slate-700">
+            <div class="flex justify-between items-center mb-4 pb-2 border-b border-slate-700">
+                <h3 id="manual-title" class="text-base font-bold text-slate-200"><i class="fa-solid fa-plus-circle text-sky-400 mr-1.5"></i>Tambah Kamera CCTV Baru (Auto Cek ON/OFF)</h3>
+                <button type="button" onclick="document.getElementById('manual-modal').classList.add('hidden')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <label for="manual-name" class="block text-xs text-slate-300 mb-1">Nama kamera</label>
+            <input id="manual-name" required maxlength="160" placeholder="Contoh: Simpang Lima Arah Utara" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs mb-3 text-slate-100">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+                <div>
+                    <label for="manual-location" class="block text-xs text-slate-300 mb-1">Lokasi / Area</label>
+                    <input id="manual-location" maxlength="160" placeholder="Area / Kecamatan" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-slate-100">
+                </div>
+                <div>
+                    <label for="manual-city" class="block text-xs text-slate-300 mb-1">Kota / Kabupaten</label>
+                    <input id="manual-city" maxlength="100" placeholder="Contoh: Surabaya" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-slate-100">
+                </div>
+                <div>
+                    <label for="manual-country" class="block text-xs text-slate-300 mb-1">Negara</label>
+                    <input id="manual-country" maxlength="100" value="Indonesia" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-slate-100">
+                </div>
+            </div>
+            <label for="manual-url" class="block text-xs text-slate-300 mb-1">URL Stream (.m3u8 / RTSP / HTTP)</label>
+            <input id="manual-url" required placeholder="https://.../playlist.m3u8 atau rtsp://..." class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs font-mono text-slate-100">
+            <p class="text-[11px] text-slate-400 mt-2">Sistem akan langsung mengetes stream. Jika aktif masuk ke <strong>Daftar ON</strong>, jika mati masuk ke <strong>Menu OFF</strong>.</p>
+            <p id="manual-error" role="alert" class="text-xs text-rose-400 mt-2"></p>
+            <div class="flex justify-end gap-3 mt-4 pt-3 border-t border-slate-700">
+                <button type="button" onclick="document.getElementById('manual-modal').classList.add('hidden')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded-lg text-xs">Batal</button>
+                <button id="manual-save" type="submit" class="px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-xs font-semibold">Simpan & Cek Stream</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal Edit CCTV (Update CRUD) -->
+    <div id="edit-cctv-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" role="dialog" aria-modal="true">
+        <form onsubmit="saveEditCamera(event)" class="glass w-full max-w-xl rounded-2xl p-6 shadow-2xl border border-slate-700">
+            <div class="flex justify-between items-center mb-4 pb-2 border-b border-slate-700">
+                <h3 class="text-base font-bold text-slate-200"><i class="fa-solid fa-pen-to-square text-amber-400 mr-1.5"></i>Edit Data Kamera CCTV</h3>
+                <button type="button" onclick="closeEditModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <input type="hidden" id="edit-cam-id">
+            <label for="edit-cam-name" class="block text-xs text-slate-300 mb-1">Nama Kamera</label>
+            <input id="edit-cam-name" required maxlength="160" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs mb-3 text-slate-100">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+                <div>
+                    <label for="edit-cam-location" class="block text-xs text-slate-300 mb-1">Lokasi / Area</label>
+                    <input id="edit-cam-location" maxlength="160" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-slate-100">
+                </div>
+                <div>
+                    <label for="edit-cam-city" class="block text-xs text-slate-300 mb-1">Kota / Kabupaten</label>
+                    <input id="edit-cam-city" maxlength="100" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-slate-100">
+                </div>
+                <div>
+                    <label for="edit-cam-country" class="block text-xs text-slate-300 mb-1">Negara</label>
+                    <input id="edit-cam-country" maxlength="100" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-slate-100">
+                </div>
+            </div>
+            <label for="edit-cam-url" class="block text-xs text-slate-300 mb-1">URL Stream (.m3u8 / RTSP / HTTP)</label>
+            <input id="edit-cam-url" required class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs font-mono text-slate-100">
+            <p id="edit-cam-error" class="text-xs text-rose-400 mt-2"></p>
+            <div class="flex flex-wrap justify-between items-center gap-2 mt-4 pt-3 border-t border-slate-700">
+                <button type="button" onclick="saveAndRecheckCamera()" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-semibold flex items-center space-x-1.5">
+                    <i class="fa-solid fa-rotate"></i> <span>Simpan & Langsung Tes Koneksi</span>
+                </button>
+                <div class="flex gap-2 ml-auto">
+                    <button type="button" onclick="closeEditModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded-lg text-xs">Batal</button>
+                    <button id="edit-cam-save" type="submit" class="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold">Simpan Perubahan</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="scan-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass w-full max-w-xl rounded-2xl p-6 shadow-2xl border border-slate-700">
+            <div class="flex justify-between items-center pb-3 mb-3 border-b border-slate-700">
+                <h3 class="text-base font-bold text-slate-200 flex items-center">
+                    <i class="fa-solid fa-globe text-indigo-400 mr-2"></i> Input Link Website CCTV Publik / Kota / Global
+                </h3>
+                <button onclick="closeScanModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            
+            <p class="text-xs text-slate-400 mb-3">
+                Masukkan URL website CCTV (satu per baris). AI Scanner akan menggunakan Playwright Headless Browser untuk menemukan stream live (.m3u8/.mp4/HLS) secara otomatis dari berbagai kota dan negara:
+            </p>
+
+            <textarea id="scan-urls-input" rows="6" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-xs text-slate-200 font-mono focus:outline-none focus:border-indigo-500" placeholder="https://cctv.jogjaprov.go.id/&#10;https://cctv.malangkota.go.id/sebaran-cctv&#10;https://dishub.kedirikota.go.id/live-streaming-atcs/&#10;https://atcs.denpasarkota.go.id/&#10;https://www.skylinewebcams.com/en/webcam.html"></textarea>
+
+            <div class="flex justify-end space-x-3 mt-4 pt-3 border-t border-slate-700">
+                <button onclick="closeScanModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs">Batal</button>
+                <button onclick="processCustomScan()" id="btn-custom-scan" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg text-xs flex items-center space-x-1.5">
+                    <i class="fa-solid fa-magnifying-glass"></i> <span>Mulai Scan Website</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Settings / Pengaturan -->
+    <div id="settings-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass w-full max-w-2xl rounded-2xl p-6 shadow-2xl border border-slate-700 flex flex-col max-h-[92vh]">
+            <div class="flex justify-between items-center pb-3 mb-3 border-b border-slate-700">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-amber-600/30 text-amber-400 p-2 rounded-xl">
+                        <i class="fa-solid fa-sliders text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-100">Pengaturan Sistem & Auto Rekam</h3>
+                        <p class="text-[11px] text-slate-400">Atur durasi auto simpan, pengulangan siklus rekaman, dan folder video</p>
+                    </div>
+                </div>
+                <button onclick="closeSettingsModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex items-center border-b border-slate-800 mb-4 gap-2 whitespace-nowrap overflow-x-auto">
+                <button onclick="switchSettingsTab('auto')" id="tab-btn-auto" class="px-3.5 py-2 text-xs font-bold border-b-2 border-amber-500 text-amber-400 flex items-center space-x-1.5 shrink-0">
+                    <i class="fa-solid fa-arrows-rotate"></i> <span>Jadwal & Siklus Auto Rekam</span>
+                </button>
+                <button onclick="switchSettingsTab('storage')" id="tab-btn-storage" class="px-3.5 py-2 text-xs font-semibold text-slate-400 hover:text-slate-200 border-b-2 border-transparent flex items-center space-x-1.5 shrink-0">
+                    <i class="fa-solid fa-folder-tree"></i> <span>Penyimpanan Rekaman</span>
+                </button>
+                <button onclick="switchSettingsTab('about')" id="tab-btn-about" class="px-3.5 py-2 text-xs font-semibold text-slate-400 hover:text-slate-200 border-b-2 border-transparent flex items-center space-x-1.5 shrink-0">
+                    <i class="fa-solid fa-circle-info"></i> <span>Tentang Pengembang</span>
+                </button>
+            </div>
+            
+            <!-- Scrollable Body -->
+            <div class="flex-1 overflow-y-auto pr-1 space-y-4 text-xs">
+                <!-- TAB 1: AUTO RECORD -->
+                <div id="tab-content-auto" class="space-y-4">
+                    <div class="bg-gradient-to-r from-amber-950/40 via-slate-900 to-slate-900 p-3.5 rounded-xl border border-amber-500/30 text-[11px] text-slate-300 flex items-start space-x-3">
+                        <i class="fa-solid fa-circle-info text-amber-400 text-sm mt-0.5"></i>
+                        <p class="leading-relaxed">
+                            <strong>Cara Kerja Auto Rekam:</strong> Sistem akan merekam CCTV selama durasi per sesi yang ditentukan (misal 1 menit), otomatis menyimpan file video, lalu otomatis start sendiri lagi untuk sesi berikutnya hingga target pengulangan tercapai (misal 5x).
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Durasi Rekam per Sesi -->
+                        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+                            <label class="font-bold text-slate-200 block mb-1 flex items-center">
+                                <i class="fa-solid fa-stopwatch text-amber-400 mr-1.5"></i> Durasi per Sesi Rekaman:
+                            </label>
+                            <p class="text-[11px] text-slate-400 mb-2">Auto simpan file setiap menit ini selesai:</p>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <input type="number" id="setting-auto-duration" min="0.1" step="0.5" value="1" class="w-24 bg-slate-800 border border-slate-700 rounded-lg px-3 py-1.5 text-slate-100 font-bold text-sm focus:outline-none focus:border-amber-500">
+                                <span class="text-xs text-slate-300 font-semibold">Menit per Sesi</span>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5">
+                                <button type="button" onclick="setAutoDurationPreset(0.5)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300">30 dtk</button>
+                                <button type="button" onclick="setAutoDurationPreset(1)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300 font-bold text-amber-400">1 Menit</button>
+                                <button type="button" onclick="setAutoDurationPreset(2)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300">2 Menit</button>
+                                <button type="button" onclick="setAutoDurationPreset(5)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300">5 Menit</button>
+                                <button type="button" onclick="setAutoDurationPreset(10)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300">10 Menit</button>
+                                <button type="button" onclick="setAutoDurationPreset(60)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300">1 Jam</button>
+                            </div>
+                        </div>
+
+                        <!-- Jumlah Siklus / Pengulangan -->
+                        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+                            <label class="font-bold text-slate-200 block mb-1 flex items-center">
+                                <i class="fa-solid fa-repeat text-emerald-400 mr-1.5"></i> Jumlah Siklus / Putaran:
+                            </label>
+                            <p class="text-[11px] text-slate-400 mb-2">Berapa kali start rekam otomatis:</p>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <input type="number" id="setting-auto-repeat" min="0" value="5" class="w-24 bg-slate-800 border border-slate-700 rounded-lg px-3 py-1.5 text-slate-100 font-bold text-sm focus:outline-none focus:border-amber-500">
+                                <span class="text-xs text-slate-300 font-semibold">Kali Putaran (x)</span>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5 mb-2">
+                                <button type="button" onclick="setAutoRepeatPreset(1)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300">1x</button>
+                                <button type="button" onclick="setAutoRepeatPreset(3)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300">3x</button>
+                                <button type="button" onclick="setAutoRepeatPreset(5)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300 font-bold text-emerald-400">5x</button>
+                                <button type="button" onclick="setAutoRepeatPreset(10)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300">10x</button>
+                                <button type="button" onclick="setAutoRepeatPreset(0)" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-[10px] rounded text-slate-300">Loop Terus</button>
+                            </div>
+                            <label class="flex items-center space-x-2 cursor-pointer mt-1">
+                                <input type="checkbox" id="setting-auto-loop" onchange="toggleAutoLoop(this.checked)" class="rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0">
+                                <span class="text-[11px] text-slate-400">Ulangi tanpa batas (Loop terus-menerus)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Mode Kamera -->
+                        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+                            <label class="font-bold text-slate-200 block mb-1 flex items-center">
+                                <i class="fa-solid fa-camera text-sky-400 mr-1.5"></i> Opsi Kamera Target:
+                            </label>
+                            <p class="text-[11px] text-slate-400 mb-2">Pilih metode pemilihan kamera:</p>
+                            <select id="setting-auto-cam-mode" onchange="onAutoCamModeChange()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-slate-200 font-semibold focus:outline-none focus:border-amber-500">
+                                <option value="random">🎲 Random / Acak Kamera (Acak Tiap Putaran)</option>
+                                <option value="count">🔢 Berapa Kamera Tertentu (N Kamera Teratas)</option>
+                                <option value="all">🌐 Semua Kamera CCTV Aktif</option>
+                                <option value="selected">📌 Pilih Kamera Spesifik (Centang)</option>
+                            </select>
+
+                            <!-- Jumlah Kamera jika mode random / count -->
+                            <div id="wrapper-cam-count" class="mt-3">
+                                <label class="text-[11px] font-semibold text-slate-300 block mb-1">Berapa Kamera yang Direkam:</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="number" id="setting-auto-cam-count" min="1" value="3" class="w-20 bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1 text-slate-100 font-bold text-xs focus:outline-none focus:border-amber-500">
+                                    <span class="text-xs text-slate-400">Kamera dari total yang tersedia</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jeda Antar Siklus -->
+                        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+                            <label class="font-bold text-slate-200 block mb-1 flex items-center">
+                                <i class="fa-solid fa-hourglass-half text-violet-400 mr-1.5"></i> Jeda Istirahat Antar Putaran:
+                            </label>
+                            <p class="text-[11px] text-slate-400 mb-2">Waktu istirahat sebelum start sendiri lagi:</p>
+                            <select id="setting-auto-interval" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-slate-200 focus:outline-none focus:border-amber-500">
+                                <option value="0">0 Detik (Langsung Start Sesi Berikutnya)</option>
+                                <option value="5">5 Detik</option>
+                                <option value="10">10 Detik</option>
+                                <option value="30">30 Detik</option>
+                                <option value="60">60 Detik (1 Menit Istirahat)</option>
+                            </select>
+                            <p class="text-[11px] text-slate-500 mt-2">Memberi jeda istirahat pada jaringan sebelum memulai putaran rekaman selanjutnya.</p>
+                        </div>
+                    </div>
+
+                    <!-- Opsi Folder: Per Sesi Rekam atau Gabung 1 Folder Utama -->
+                    <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+                        <label class="font-bold text-slate-200 block mb-1 flex items-center">
+                            <i class="fa-solid fa-folder-tree text-amber-400 mr-1.5"></i> Penyimpanan File Tiap Sesi Rekam:
+                        </label>
+                        <p class="text-[11px] text-slate-400 mb-2">Pilih apakah tiap sesi rekam otomatis dibuatkan folder sendiri atau disatukan ke folder utama:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            <label class="flex items-start space-x-2.5 p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/60 hover:border-amber-500/60 cursor-pointer transition">
+                                <input type="radio" name="auto_folder_org" value="per_session" id="auto-folder-org-session" class="mt-0.5 text-amber-500 focus:ring-0" checked>
+                                <div>
+                                    <span class="font-bold text-slate-100 block text-xs flex items-center">
+                                        <i class="fa-solid fa-folder-plus text-emerald-400 mr-1.5"></i> Buat Per Folder per 1 Rekam
+                                    </span>
+                                    <span class="text-[10px] text-slate-400 block mt-1 leading-relaxed">
+                                        Tiap sesi otomatis dibuatkan folder terpisah (misal: <code class="text-emerald-400 font-mono">Siklus_1_2026-10-11/</code>, <code class="text-emerald-400 font-mono">Siklus_2_.../</code>). Video 1 sesi tersimpan rapi berkelompok.
+                                    </span>
+                                </div>
+                            </label>
+
+                            <label class="flex items-start space-x-2.5 p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/60 hover:border-amber-500/60 cursor-pointer transition">
+                                <input type="radio" name="auto_folder_org" value="single" id="auto-folder-org-single" class="mt-0.5 text-amber-500 focus:ring-0">
+                                <div>
+                                    <span class="font-bold text-slate-100 block text-xs flex items-center">
+                                        <i class="fa-solid fa-folder text-amber-400 mr-1.5"></i> Gabung Jadi 1 Folder Saja
+                                    </span>
+                                    <span class="text-[10px] text-slate-400 block mt-1 leading-relaxed">
+                                        Semua sesi rekaman langsung disimpan utuh dalam 1 folder default penyimpanan tanpa membuat subfolder baru.
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Checklist Kamera Spesifik -->
+                    <div id="wrapper-cam-selected" class="hidden bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+                        <label class="font-bold text-slate-200 block mb-1">Centang Kamera yang Ingin Direkam:</label>
+                        <div id="auto-cam-checklist" class="max-h-40 overflow-y-auto space-y-1.5 pr-2 mt-2">
+                            <!-- Diisi dinamis via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: STORAGE -->
+                <div id="tab-content-storage" class="hidden space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="font-semibold text-slate-300">Folder Penyimpanan Rekaman (Recordings Directory):</label>
+                            <button type="button" onclick="setDefaultRecordingsPath()" class="text-amber-400 hover:text-amber-300 text-[11px] font-semibold underline flex items-center space-x-1">
+                                <i class="fa-solid fa-rotate-left text-[10px]"></i> <span>Set Default</span>
+                            </button>
+                        </div>
+                        <div class="flex space-x-2">
+                            <input type="text" id="setting-rec-dir" class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-slate-200 font-mono focus:outline-none focus:border-amber-500" placeholder="Path folder penyimpanan...">
+                            <button type="button" onclick="browseFolderFor('rec')" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-lg text-slate-200 font-semibold flex items-center space-x-1 transition shadow">
+                                <i class="fa-solid fa-folder-open text-amber-400"></i> <span>Browse</span>
+                            </button>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1">Direktori root tempat semua rekaman disimpan.</p>
+                    </div>
+
+                    <!-- Pilihan Struktur Folder: Gabung Jadi 1 atau Per Folder -->
+                    <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+                        <label class="font-bold text-slate-200 block mb-1 flex items-center">
+                            <i class="fa-solid fa-folder-tree text-amber-400 mr-1.5"></i> Struktur Folder Rekaman:
+                        </label>
+                        <p class="text-[11px] text-slate-400 mb-2.5">Pilih apakah file video dibuat per folder terpisah atau digabung dalam 1 folder:</p>
+                        
+                        <div class="space-y-2">
+                            <label class="flex items-start space-x-2.5 p-2 rounded-lg hover:bg-slate-800/60 cursor-pointer border border-transparent hover:border-slate-700 transition">
+                                <input type="radio" name="folder_org_radio" value="single" id="folder-org-single" class="mt-0.5 text-amber-500 focus:ring-0" checked>
+                                <div>
+                                    <span class="font-bold text-slate-200 block text-xs">Semua File Gabung Jadi 1 Folder Utama</span>
+                                    <span class="text-[10px] text-slate-400 block mt-0.5">Semua video langsung ditaruh di folder utama tanpa subfolder baru (misal: <code class="text-amber-400/90 font-mono">Recordings/Nama_CCTV_Tanggal.ts</code>).</span>
+                                </div>
+                            </label>
+
+                            <label class="flex items-start space-x-2.5 p-2 rounded-lg hover:bg-slate-800/60 cursor-pointer border border-transparent hover:border-slate-700 transition">
+                                <input type="radio" name="folder_org_radio" value="per_session" id="folder-org-session" class="mt-0.5 text-amber-500 focus:ring-0">
+                                <div>
+                                    <span class="font-bold text-slate-200 block text-xs">Buat Folder Terpisah per 1 Kali Rekam / Sesi (Direkomendasikan untuk Auto Rekam)</span>
+                                    <span class="text-[10px] text-slate-400 block mt-0.5">Setiap putaran/sesi rekam dibuatkan subfolder khusus (misal: <code class="text-emerald-400/90 font-mono">Recordings/Siklus_1_dari_5_2026-10-11/Nama_CCTV.ts</code>). Video 1 sesi tersimpan rapi bersama.</span>
+                                </div>
+                            </label>
+
+                            <label class="flex items-start space-x-2.5 p-2 rounded-lg hover:bg-slate-800/60 cursor-pointer border border-transparent hover:border-slate-700 transition">
+                                <input type="radio" name="folder_org_radio" value="per_camera" id="folder-org-camera" class="mt-0.5 text-amber-500 focus:ring-0">
+                                <div>
+                                    <span class="font-bold text-slate-200 block text-xs">Buat Folder Terpisah per Kamera CCTV</span>
+                                    <span class="text-[10px] text-slate-400 block mt-0.5">Tiap CCTV memiliki folder masing-masing (misal: <code class="text-sky-400/90 font-mono">Recordings/[Nama_CCTV]/Rekaman_Tanggal.ts</code>).</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="font-semibold text-slate-300 block mb-1">Durasi Potong File Rekaman Standar (Menit):</label>
+                        <select id="setting-duration-min" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-slate-200 focus:outline-none focus:border-amber-500">
+                            <option value="1">1 Menit (Cepat / Pengujian)</option>
+                            <option value="2">2 Menit</option>
+                            <option value="3">3 Menit</option>
+                            <option value="5">5 Menit (Pengujian / File Kecil)</option>
+                            <option value="15">15 Menit</option>
+                            <option value="30">30 Menit</option>
+                            <option value="60" selected>60 Menit (1 Jam - Standar)</option>
+                            <option value="120">120 Menit (2 Jam)</option>
+                            <option value="1440">1440 Menit (24 Jam / 1 Hari Utuh)</option>
+                        </select>
+                        <p class="text-[11px] text-slate-500 mt-1">Durasi pemotongan segmen jika menggunakan tombol rekam manual biasa.</p>
+                    </div>
+                </div>
+
+                <!-- TAB 3: ABOUT / TENTANG PENGEMBANG -->
+                <div id="tab-content-about" class="hidden space-y-4">
+                    <div class="bg-gradient-to-br from-slate-900 via-slate-900/95 to-amber-950/30 p-6 rounded-2xl border border-amber-500/30 text-center space-y-4 shadow-xl">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-tr from-red-600 to-amber-500 text-white shadow-lg mx-auto">
+                            <i class="fa-solid fa-video text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-extrabold bg-gradient-to-r from-red-400 via-orange-300 to-yellow-400 bg-clip-text text-transparent">
+                                CCTV ZIQVA
+                            </h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Global Multi-CCTV Stream Hub, Health Scanner & Smart Auto Recorder</p>
+                        </div>
+
+                        <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 max-w-md mx-auto space-y-2">
+                            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Dikembangkan Oleh</div>
+                            <div class="text-sm font-bold text-amber-300 flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-code text-amber-400"></i>
+                                <span>by team ziqva.com</span>
+                            </div>
+                            <p class="text-[11px] text-slate-400 leading-relaxed">
+                                Sistem pemantauan dan perekaman otomatis ribuan jaringan CCTV publik multi-kota dengan fitur deteksi stream aktif, auto-failover kamera, dan manajemen karantina ON/OFF otomatis.
+                            </p>
+                            <div class="pt-2">
+                                <a href="https://ziqva.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold rounded-xl text-xs shadow-lg transition transform hover:scale-[1.02]">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>Kunjungi Website Resmi: ziqva.com</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-left text-[11px] pt-1">
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <div class="font-bold text-emerald-400 mb-0.5"><i class="fa-solid fa-shield-halved mr-1"></i> Smart Auto-Failover</div>
+                                <div class="text-slate-400">Otomatis mengalihkan kamera offline ke kamera aktif agar target rekaman selalu penuh.</div>
+                            </div>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <div class="font-bold text-sky-400 mb-0.5"><i class="fa-solid fa-stethoscope mr-1"></i> Auto Scan ON/OFF</div>
+                                <div class="text-slate-400">Karantina otomatis kamera mati ke Menu OFF & pulihkan ke ON saat aktif kembali.</div>
+                            </div>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <div class="font-bold text-amber-400 mb-0.5"><i class="fa-solid fa-globe mr-1"></i> Official Portal</div>
+                                <div class="text-slate-400">Info & dukungan pengembangan: <a href="https://ziqva.com" target="_blank" rel="noopener noreferrer" class="text-amber-300 underline hover:text-amber-200 font-semibold">https://ziqva.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Action Buttons -->
+            <div class="flex flex-wrap justify-between items-center gap-2 mt-4 pt-3 border-t border-slate-700">
+                <button id="btn-modal-stop-auto" onclick="stopAutoRecord(); closeSettingsModal();" class="hidden px-3.5 py-2 bg-rose-600/90 hover:bg-rose-500 text-white rounded-lg text-xs font-semibold flex items-center space-x-1.5 shadow">
+                    <i class="fa-solid fa-stop text-[10px]"></i> <span>Hentikan Auto Rekam</span>
+                </button>
+                <div class="flex items-center space-x-2.5 ml-auto">
+                    <button onclick="closeSettingsModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs font-medium">Batal</button>
+                    <button onclick="saveSettingsOnly()" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg text-xs">Simpan Pengaturan</button>
+                    <button onclick="startAutoRecordFromModal()" class="px-4 py-2 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold rounded-lg text-xs flex items-center space-x-1.5 shadow-lg">
+                        <i class="fa-solid fa-play text-[10px]"></i> <span>Mulai Auto Rekam</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Custom Alert / Notification Dialog -->
+    <div id="custom-alert-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass w-full max-w-md rounded-2xl p-6 shadow-2xl border border-slate-700 border-l-4 border-l-sky-500 animate-scale-in">
+            <div class="flex items-center space-x-3 mb-3">
+                <div id="custom-alert-icon-box" class="p-2 rounded-xl bg-sky-500/20 text-sky-400">
+                    <i id="custom-alert-icon" class="fa-solid fa-circle-info text-xl"></i>
+                </div>
+                <h3 id="custom-alert-title" class="text-base font-bold text-slate-100">Pemberitahuan Sistem</h3>
+            </div>
+            <p id="custom-alert-message" class="text-xs text-slate-300 leading-relaxed whitespace-pre-line mb-6 font-medium bg-slate-900/50 p-3.5 rounded-xl border border-slate-800"></p>
+            <div class="flex justify-end">
+                <button onclick="closeCustomAlert()" class="px-5 py-2 bg-sky-600 hover:bg-sky-500 text-white font-semibold rounded-lg text-xs shadow transition">
+                    OK, Mengerti
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
+
+    <script>
+        let hlsPlayer = null;
+        let currentPage = 1;
+        let pageSize = 12;
+        let currentMainTab = 'on'; // 'on' | 'off'
+        let cachedCctvs = [];
+        let cachedOfflineCctvs = [];
+        let cachedStatuses = {};
+        let cachedAutoRecord = {};
+        let originalIndexMap = {};
+        let offlineIndexMap = {};
+        let customShuffleOrder = null;
+        let lastRecordingSignature = "";
+
+        function escapeJsStr(str) {
+            return String(str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        }
+
+        function switchMainTab(tab) {
+            currentMainTab = (tab === 'off') ? 'off' : 'on';
+            currentPage = 1;
+            const btnOn = document.getElementById('tab-main-on');
+            const btnOff = document.getElementById('tab-main-off');
+            const offBar = document.getElementById('off-management-bar');
+
+            if (currentMainTab === 'on') {
+                btnOn.className = "px-4 py-2 rounded-xl text-xs font-bold flex items-center space-x-2 transition shadow bg-emerald-600 text-white ring-2 ring-emerald-400/50";
+                btnOff.className = "px-4 py-2 rounded-xl text-xs font-bold flex items-center space-x-2 transition bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700";
+                if (offBar) offBar.classList.add('hidden');
+            } else {
+                btnOff.className = "px-4 py-2 rounded-xl text-xs font-bold flex items-center space-x-2 transition shadow bg-rose-600 text-white ring-2 ring-rose-400/50";
+                btnOn.className = "px-4 py-2 rounded-xl text-xs font-bold flex items-center space-x-2 transition bg-slate-800/90 hover:bg-slate-700 text-slate-300 border border-slate-700";
+                if (offBar) offBar.classList.remove('hidden');
+            }
+            updateLocalCountries();
+            drawPage();
+        }
+
+        function onPageSizeChange(val) {
+            pageSize = (val === 'all') ? 'all' : parseInt(val, 10);
+            currentPage = 1;
+            drawPage();
+        }
+
+        function shuffleCctvOrder() {
+            const sourceList = (currentMainTab === 'off') ? cachedOfflineCctvs : cachedCctvs;
+            if (!sourceList || sourceList.length === 0) return;
+            const ids = sourceList.map(c => c.id);
+            for (let i = ids.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [ids[i], ids[j]] = [ids[j], ids[i]];
+            }
+            customShuffleOrder = {};
+            ids.forEach((id, idx) => { customShuffleOrder[id] = idx; });
+            currentPage = 1;
+            drawPage();
+            showToast("🎲 Urutan seluruh kamera diacak sampai halaman terakhir!");
+        }
+
+        const localCountrySelect = document.getElementById('local-country-filter');
+
+        function cameraCountry(cam) {
+            return cam.country || (cam.source === 'jogjakota' ? 'Indonesia' : '');
+        }
+
+        function isCameraActiveRecording(camId) {
+            const st = cachedStatuses[camId];
+            if (st && st.is_recording) return true;
+            if (cachedAutoRecord && cachedAutoRecord.is_running && Array.isArray(cachedAutoRecord.active_camera_ids)) {
+                if (cachedAutoRecord.active_camera_ids.includes(camId)) return true;
+            }
+            return false;
+        }
+
+        async function addManualCamera(event) {
+            event.preventDefault();
+            const button = document.getElementById('manual-save');
+            const error = document.getElementById('manual-error');
+            const name = document.getElementById('manual-name').value.trim();
+            const stream_url = document.getElementById('manual-url').value.trim();
+            const location = document.getElementById('manual-location').value.trim() || 'Manual';
+            const city = (document.getElementById('manual-city')?.value || '').trim() || location;
+            const country = (document.getElementById('manual-country')?.value || '').trim() || 'Indonesia';
+            error.textContent = '';
+            if (!name || !/^(https?|rtsps?):\/\/\S+$/i.test(stream_url)) {
+                error.textContent = 'Isi nama kamera dan URL stream HTTP, HTTPS, RTSP, atau RTSPS yang valid.';
+                return;
+            }
+            button.disabled = true;
+            try {
+                const response = await fetch('/api/cctv/add', {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({name, stream_url, location, city, country, check_online: true})
+                });
+                const data = await response.json();
+                if (!response.ok || data.error) throw new Error(data.error || 'Gagal menyimpan kamera.');
+                document.getElementById('manual-modal').classList.add('hidden');
+                event.target.reset();
+                if (data.list === 'off') {
+                    showToast(`⚠️ Kamera disimpan ke Menu OFF karena stream sedang tidak aktif.`);
+                    switchMainTab('off');
+                } else {
+                    showToast(`✅ Kamera aktif & disimpan ke Daftar CCTV ON!`);
+                }
+                await fetchStatus();
+            } catch (failure) {
+                error.textContent = failure.message || 'Gagal terhubung ke server.';
+            } finally {
+                button.disabled = false;
+            }
+        }
+
+        function findCameraById(camId) {
+            return cachedCctvs.find(c => c.id === camId) || cachedOfflineCctvs.find(c => c.id === camId) || null;
+        }
+
+        function openEditModal(camId) {
+            const cam = findCameraById(camId);
+            if (!cam) return;
+            document.getElementById('edit-cam-id').value = cam.id;
+            document.getElementById('edit-cam-name').value = cam.name || '';
+            document.getElementById('edit-cam-location').value = cam.location || '';
+            document.getElementById('edit-cam-city').value = cam.city || cam.location || '';
+            document.getElementById('edit-cam-country').value = cameraCountry(cam) || 'Indonesia';
+            document.getElementById('edit-cam-url').value = cam.stream_url || '';
+            document.getElementById('edit-cam-error').textContent = '';
+            document.getElementById('edit-cctv-modal').classList.remove('hidden');
+        }
+
+        function closeEditModal() {
+            document.getElementById('edit-cctv-modal').classList.add('hidden');
+        }
+
+        async function saveEditCamera(event) {
+            if (event) event.preventDefault();
+            const camId = document.getElementById('edit-cam-id').value;
+            const name = document.getElementById('edit-cam-name').value.trim();
+            const location = document.getElementById('edit-cam-location').value.trim();
+            const city = document.getElementById('edit-cam-city').value.trim();
+            const country = document.getElementById('edit-cam-country').value.trim();
+            const stream_url = document.getElementById('edit-cam-url').value.trim();
+            const errEl = document.getElementById('edit-cam-error');
+            errEl.textContent = '';
+            if (!name || !stream_url) {
+                errEl.textContent = 'Nama kamera dan URL stream wajib diisi.';
+                return false;
+            }
+            try {
+                const res = await fetch(`/api/cctv/edit/${encodeURIComponent(camId)}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, location, city, country, stream_url })
+                });
+                const data = await res.json();
+                if (!res.ok || data.error) throw new Error(data.error || 'Gagal menyimpan perubahan.');
+                closeEditModal();
+                showToast(`✏️ Data kamera '${name}' berhasil diperbarui!`);
+                await fetchStatus();
+                return true;
+            } catch (err) {
+                errEl.textContent = err.message || 'Gagal menyimpan perubahan.';
+                return false;
+            }
+        }
+
+        async function saveAndRecheckCamera() {
+            const camId = document.getElementById('edit-cam-id').value;
+            const saved = await saveEditCamera(null);
+            if (saved && camId) {
+                await recheckCamera(camId);
+            }
+        }
+
+        async function deleteCamera(camId) {
+            const cam = findCameraById(camId);
+            const camName = cam ? cam.name : camId;
+            if (!confirm(`Hapus kamera "${camName}" secara permanen?`)) return;
+            try {
+                const res = await fetch(`/api/cctv/delete/${encodeURIComponent(camId)}`, { method: 'POST' });
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    showToast(`🗑️ Kamera "${camName}" dihapus.`);
+                    await fetchStatus();
+                } else {
+                    showToast(`❌ Gagal menghapus: ${data.error || 'Tidak ditemukan'}`);
+                }
+            } catch (err) {
+                showToast("❌ Gagal menghubungi server saat menghapus kamera.");
+            }
+        }
+
+        async function moveToOff(camId) {
+            const cam = findCameraById(camId);
+            const camName = cam ? cam.name : camId;
+            try {
+                const res = await fetch(`/api/cctv/move_to_off/${encodeURIComponent(camId)}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ reason: 'Dipindahkan manual ke Menu OFF' })
+                });
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    showToast(`📥 "${camName}" dipindahkan ke Menu CCTV OFF.`);
+                    await fetchStatus();
+                }
+            } catch (err) {
+                showToast("❌ Gagal memindahkan kamera ke OFF.");
+            }
+        }
+
+        async function recheckCamera(camId) {
+            const cam = findCameraById(camId);
+            const camName = cam ? cam.name : camId;
+            showToast(`🔄 Mengecek koneksi stream "${camName}"...`);
+            try {
+                const res = await fetch(`/api/cctv/recheck/${encodeURIComponent(camId)}`, { method: 'POST' });
+                const data = await res.json();
+                if (data.is_online) {
+                    showToast(`✅ "${camName}" AKTIF (ONLINE) -> Masuk ke Daftar CCTV ON!`);
+                } else {
+                    showToast(`⚠️ "${camName}" masih OFFLINE -> Tetap di Menu CCTV OFF.`);
+                }
+                await fetchStatus();
+            } catch (err) {
+                showToast("❌ Gagal mengetes koneksi kamera.");
+            }
+        }
+
+        async function runHealthScan(mode = 'all') {
+            const btnAll = document.getElementById('btn-health-scan-all');
+            const btnOff = document.getElementById('btn-health-scan-off');
+            if (btnAll) btnAll.disabled = true;
+            if (btnOff) btnOff.disabled = true;
+
+            const label = (mode === 'offline_only')
+                ? 'Memindai ulang seluruh daftar CCTV OFF secara paralel...'
+                : 'Memindai seluruh kamera ON & OFF secara paralel...';
+            showToast(`⚡ ${label}`);
+
+            try {
+                const res = await fetch('/api/cctv/health_scan', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ mode })
+                });
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    await fetchStatus();
+                    showCustomAlert(
+                        `Hasil Auto Health Scan (${mode === 'offline_only' ? 'Khusus Menu OFF' : 'Semua Kamera'}):\n\n` +
+                        `• Diperiksa: ${data.checked || 0} kamera\n` +
+                        `• Kembali Aktif (OFF ➔ ON): ${data.moved_to_online || 0} kamera\n` +
+                        `• Baru Terdeteksi Mati (ON ➔ OFF): ${data.moved_to_offline || 0} kamera\n\n` +
+                        `Total CCTV ON Sekarang: ${data.total_online} kamera\n` +
+                        `Total CCTV OFF Sekarang: ${data.total_offline} kamera`,
+                        "Auto Scan ON/OFF Selesai",
+                        "success"
+                    );
+                } else {
+                    showCustomAlert(data.error || "Gagal menjalankan Auto Scan.", "Error", "error");
+                }
+            } catch (err) {
+                showCustomAlert("Terjadi kesalahan koneksi saat menjalankan Auto Health Scan.", "Error", "error");
+            } finally {
+                if (btnAll) btnAll.disabled = false;
+                if (btnOff) btnOff.disabled = false;
+            }
+        }
+
+        async function bulkDeleteOffline(mode) {
+            if (!cachedOfflineCctvs || cachedOfflineCctvs.length === 0) {
+                showToast("Daftar CCTV OFF sudah kosong.");
+                return;
+            }
+            const confirmMsg = (mode === 'repeated')
+                ? `Hapus semua kamera di Menu OFF yang sudah gagal dicek >= 2 kali?`
+                : `Hapus SEMUA (${cachedOfflineCctvs.length}) kamera di Menu CCTV OFF secara permanen?`;
+            if (!confirm(confirmMsg)) return;
+
+            try {
+                const res = await fetch('/api/cctv/delete_offline_bulk', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ mode, min_fails: 2 })
+                });
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    showToast(`🗑️ Berhasil menghapus ${data.deleted || 0} kamera OFF (Sisa: ${data.remaining_offline || 0}).`);
+                    await fetchStatus();
+                }
+            } catch (err) {
+                showToast("❌ Gagal menghapus massal kamera OFF.");
+            }
+        }
+
+        function filteredCameras() {
+            const sourceList = (currentMainTab === 'off') ? cachedOfflineCctvs : cachedCctvs;
+            const country = localCountrySelect.value;
+            const q = (document.getElementById('local-search-input')?.value || '').trim().toLowerCase();
+
+            let list = country
+                ? sourceList.filter(cam => (cameraCountry(cam) || 'Negara belum diketahui') === country)
+                : [...sourceList];
+
+            if (q) {
+                list = list.filter(cam => {
+                    const hay = `${cam.name || ''} ${cam.location || ''} ${cam.city || ''} ${cam.country || ''} ${cam.offline_reason || ''} ${cam.source || ''}`.toLowerCase();
+                    return hay.includes(q);
+                });
+            }
+
+            if (currentMainTab === 'off') {
+                list.sort((a, b) => {
+                    if (customShuffleOrder && customShuffleOrder[a.id] !== undefined && customShuffleOrder[b.id] !== undefined) {
+                        return customShuffleOrder[a.id] - customShuffleOrder[b.id];
+                    }
+                    return (offlineIndexMap[a.id] ?? 0) - (offlineIndexMap[b.id] ?? 0);
+                });
+                return list;
+            }
+
+            const activeOrderList = (cachedAutoRecord && Array.isArray(cachedAutoRecord.active_camera_ids))
+                ? cachedAutoRecord.active_camera_ids
+                : [];
+
+            list.sort((a, b) => {
+                const aRec = isCameraActiveRecording(a.id);
+                const bRec = isCameraActiveRecording(b.id);
+                if (aRec !== bRec) {
+                    return aRec ? -1 : 1;
+                }
+                if (aRec && bRec) {
+                    const aAutoIdx = activeOrderList.indexOf(a.id);
+                    const bAutoIdx = activeOrderList.indexOf(b.id);
+                    if (aAutoIdx !== -1 && bAutoIdx !== -1 && aAutoIdx !== bAutoIdx) {
+                        return aAutoIdx - bAutoIdx;
+                    }
+                }
+                if (customShuffleOrder && customShuffleOrder[a.id] !== undefined && customShuffleOrder[b.id] !== undefined) {
+                    return customShuffleOrder[a.id] - customShuffleOrder[b.id];
+                }
+                return (originalIndexMap[a.id] ?? 0) - (originalIndexMap[b.id] ?? 0);
+            });
+
+            return list;
+        }
+
+        function updateLocalCountries() {
+            const sourceList = (currentMainTab === 'off') ? cachedOfflineCctvs : cachedCctvs;
+            const selected = localCountrySelect.value;
+            const values = [...new Set(sourceList.map(cam => cameraCountry(cam) || 'Negara belum diketahui'))].sort((a, b) => a.localeCompare(b));
+            const current = Array.from(localCountrySelect.options).slice(1).map(option => option.value);
+            if (JSON.stringify(current) === JSON.stringify(values)) return;
+            localCountrySelect.replaceChildren(new Option('All', ''));
+            values.forEach(value => localCountrySelect.add(new Option(value, value)));
+            localCountrySelect.value = values.includes(selected) ? selected : '';
+            if (selected !== localCountrySelect.value) currentPage = 1;
+        }
+
+        function getElapsedString(startTimeStr, isRec) {
+            if (!isRec || !startTimeStr) return "-";
+            const start = new Date(startTimeStr);
+            const now = new Date();
+            const diffSec = Math.floor((now - start) / 1000);
+            if (diffSec < 0) return "00:00:00";
+
+            const hrs = Math.floor(diffSec / 3600);
+            const mins = Math.floor((diffSec % 3600) / 60);
+            const secs = diffSec % 60;
+
+            const pad = (n) => n.toString().padStart(2, '0');
+            return `${pad(hrs)}:${pad(mins)}:${pad(secs)}`;
+        }
+
+        async function fetchStatus() {
+            try {
+                const res = await fetch('/api/status');
+                const data = await res.json();
+                cachedCctvs = data.cctvs || [];
+                cachedOfflineCctvs = data.offline_cctvs || [];
+                cachedStatuses = data.statuses || {};
+                cachedAutoRecord = data.auto_record || {};
+
+                originalIndexMap = {};
+                cachedCctvs.forEach((cam, idx) => {
+                    originalIndexMap[cam.id] = (cam.catalog_index !== undefined) ? cam.catalog_index : idx;
+                });
+
+                offlineIndexMap = {};
+                cachedOfflineCctvs.forEach((cam, idx) => {
+                    offlineIndexMap[cam.id] = idx;
+                });
+
+                updateLocalCountries();
+
+                const activeRecIds = cachedCctvs
+                    .filter(c => isCameraActiveRecording(c.id))
+                    .map(c => c.id)
+                    .sort();
+                const currentSignature = activeRecIds.join(',');
+                if (currentSignature && currentSignature !== lastRecordingSignature && currentMainTab === 'on') {
+                    currentPage = 1;
+                }
+                lastRecordingSignature = currentSignature;
+
+                const pinnedBadge = document.getElementById('pinned-rec-badge');
+                if (pinnedBadge) {
+                    if (activeRecIds.length > 0 && currentMainTab === 'on') {
+                        pinnedBadge.classList.remove('hidden');
+                        pinnedBadge.innerText = `🔥 ${activeRecIds.length} Kamera Sedang Direkam (Tampil Paling Atas)`;
+                    } else {
+                        pinnedBadge.classList.add('hidden');
+                    }
+                }
+
+                document.getElementById('stat-total').innerText = cachedCctvs.length;
+                const statOff = document.getElementById('stat-offline');
+                if (statOff) statOff.innerText = cachedOfflineCctvs.length;
+                const tabOnCount = document.getElementById('tab-on-count');
+                if (tabOnCount) tabOnCount.innerText = cachedCctvs.length;
+                const tabOffCount = document.getElementById('tab-off-count');
+                if (tabOffCount) tabOffCount.innerText = cachedOfflineCctvs.length;
+
+                document.getElementById('stat-active').innerText = data.active_count || 0;
+                document.getElementById('stat-disk').innerText = data.disk_free || '-';
+                if (data.recordings_dir) {
+                    document.getElementById('stat-path').innerText = data.recordings_dir;
+                }
+
+                drawPage();
+                if (data.auto_record) {
+                    updateAutoRecordUI(data.auto_record);
+                }
+            } catch (err) {
+                console.error("Error fetching status:", err);
+            }
+        }
+
+        function drawPage() {
+            const grid = document.getElementById('cctv-grid');
+            const visibleCctvs = filteredCameras();
+            const sourceList = (currentMainTab === 'off') ? cachedOfflineCctvs : cachedCctvs;
+
+            if (!sourceList || sourceList.length === 0) {
+                if (currentMainTab === 'off') {
+                    grid.innerHTML = `
+                        <div class="col-span-full text-center py-16 glass rounded-2xl border border-emerald-500/30">
+                            <i class="fa-solid fa-circle-check text-4xl text-emerald-400 mb-3"></i>
+                            <p class="text-slate-200 font-semibold">Tidak ada CCTV di Menu OFF (Mati)!</p>
+                            <p class="text-xs text-slate-400 mt-1">Semua kamera sudah aktif atau daftar OFF telah dibersihkan.</p>
+                        </div>`;
+                } else {
+                    grid.innerHTML = `
+                        <div class="col-span-full text-center py-20 glass rounded-2xl">
+                            <i class="fa-solid fa-video-slash text-4xl text-slate-600 mb-3"></i>
+                            <p class="text-slate-400">Belum ada CCTV ON terdaftar.</p>
+                            <button onclick="openScanModal()" class="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg text-xs">Scan Website CCTV</button>
+                        </div>`;
+                }
+                return;
+            }
+
+            if (visibleCctvs.length === 0) {
+                grid.innerHTML = '<div class="col-span-full text-center py-12 glass rounded-2xl"><p class="text-slate-400">Tidak ada kamera yang cocok dengan pencarian / filter negara saat ini.</p></div>';
+                return;
+            }
+            const isAllMode = pageSize === 'all';
+            const numericPageSize = isAllMode ? 12 : pageSize;
+            const totalPages = isAllMode ? 1 : Math.ceil(visibleCctvs.length / pageSize);
+            if (currentPage > totalPages) currentPage = totalPages;
+            if (currentPage < 1) currentPage = 1;
+
+            const startIdx = isAllMode ? 0 : (currentPage - 1) * pageSize;
+            const endIdx = isAllMode ? visibleCctvs.length : startIdx + pageSize;
+            const pageItems = isAllMode ? visibleCctvs : visibleCctvs.slice(startIdx, endIdx);
+
+            let html = pageItems.map(cam => {
+                const areaLoc = cam.location || 'Area CCTV';
+                const cityLoc = cam.city || (cam.source === 'jogjakota' ? 'Yogyakarta' : areaLoc);
+                const countryLoc = cameraCountry(cam) || 'Negara belum diketahui';
+                let fullLocDisplay = `${areaLoc}, ${cityLoc} • ${countryLoc}`;
+                if (areaLoc.toLowerCase().includes(cityLoc.toLowerCase())) {
+                    fullLocDisplay = `${areaLoc} • ${countryLoc}`;
+                }
+                const safeName = escapeJsStr(cam.name);
+                const safeUrl = escapeJsStr(cam.stream_url);
+                const safeId = escapeJsStr(cam.id);
+
+                if (currentMainTab === 'off') {
+                    const offIdx = (offlineIndexMap[cam.id] ?? 0) + 1;
+                    const reason = cam.offline_reason || 'Stream tidak merespons / mati';
+                    const failCount = cam.fail_count || 1;
+                    const lastChecked = cam.last_checked || '-';
+                    return `
+                    <div class="glass rounded-xl overflow-hidden transition border border-rose-500/30 hover:border-rose-400/60">
+                        <div class="bg-gradient-to-r from-rose-950/90 via-slate-900 to-rose-950/80 px-4 py-1.5 text-[10px] font-bold text-rose-300 flex justify-between items-center border-b border-rose-500/30">
+                            <span><i class="fa-solid fa-power-off mr-1 text-rose-400"></i> STATUS: CCTV OFF (KARANTINA)</span>
+                            <span class="font-mono text-amber-300">Gagal: ${failCount}x</span>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <div class="min-w-0 flex-1 overflow-hidden">
+                                    <h3 class="font-bold text-slate-100 text-sm whitespace-nowrap overflow-hidden text-ellipsis block" title="${cam.name}">
+                                        <span class="text-[10px] font-mono text-rose-400 mr-1">#OFF-${offIdx}</span>${cam.name}
+                                    </h3>
+                                    <div class="flex items-center space-x-1.5 text-[11px] text-slate-400 mt-0.5 whitespace-nowrap overflow-hidden text-ellipsis">
+                                        <i class="fa-solid fa-location-dot text-rose-400 text-[10px] shrink-0"></i>
+                                        <span class="truncate" title="${fullLocDisplay}">${fullLocDisplay}</span>
+                                    </div>
+                                </div>
+                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase shrink-0 bg-rose-950 text-rose-400 border border-rose-500/30">
+                                    OFFLINE
+                                </span>
+                            </div>
+
+                            <div class="bg-slate-900/80 rounded-lg p-2.5 my-2.5 text-[11px] space-y-1 border border-slate-800">
+                                <div class="flex justify-between items-center gap-2">
+                                    <span class="text-slate-400 shrink-0">Alasan Off:</span>
+                                    <span class="text-rose-300 font-mono truncate" title="${reason}">${reason}</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-slate-400">Terakhir Dicek:</span>
+                                    <span class="text-slate-300 font-mono">${lastChecked}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-1.5 pt-1">
+                                <button onclick="recheckCamera('${safeId}')" class="flex-1 h-8 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-semibold inline-flex items-center justify-center gap-1.5 transition shadow" title="Scan ulang kamera ini. Jika aktif otomatis pindah ke daftar ON!">
+                                    <i class="fa-solid fa-rotate text-[10px]"></i> <span>Scan / Cek Ulang</span>
+                                </button>
+                                <button onclick="previewStream('${safeName}', '${safeUrl}', '${safeId}')" class="px-2.5 h-8 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-semibold inline-flex items-center justify-center gap-1 border border-slate-700" title="Tes Play Stream">
+                                    <i class="fa-solid fa-eye text-[10px]"></i>
+                                </button>
+                                <button onclick="openEditModal('${safeId}')" class="px-2.5 h-8 bg-amber-600/80 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold inline-flex items-center justify-center" title="Edit Nama / Lokasi / URL Stream">
+                                    <i class="fa-solid fa-pen text-[10px]"></i>
+                                </button>
+                                <button onclick="deleteCamera('${safeId}')" class="px-2.5 h-8 bg-rose-600/90 hover:bg-rose-500 text-white rounded-lg text-xs font-semibold inline-flex items-center justify-center" title="Hapus Permanen Kamera Ini">
+                                    <i class="fa-solid fa-trash text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+
+                const st = cachedStatuses[cam.id] || { is_recording: false, bytes_recorded: 0, current_file: '' };
+                const isRec = isCameraActiveRecording(cam.id);
+                const sizeMb = ((st.bytes_recorded || 0) / 1024 / 1024).toFixed(1);
+                const origIdx = (originalIndexMap[cam.id] ?? 0) + 1;
+                const origPage = Math.ceil(origIdx / numericPageSize);
+
+                return `
+                <div class="glass rounded-xl overflow-hidden transition hover:border-slate-500 ${isRec ? 'glow-green border-emerald-500/70 ring-1 ring-emerald-500/40' : ''}">
+                    ${isRec ? `
+                    <div class="bg-gradient-to-r from-emerald-900/90 via-emerald-800/80 to-teal-900/90 px-4 py-1 text-[10px] font-bold text-emerald-200 flex justify-between items-center border-b border-emerald-500/30">
+                        <span><i class="fa-solid fa-thumbtack mr-1 text-amber-300"></i> SEDANG DIREKAM • PINNED PALING ATAS</span>
+                        <span class="text-emerald-300 font-mono">Asal: #${origIdx} (Hal ${origPage})</span>
+                    </div>` : ''}
+                    <div class="p-4">
+                        <div class="flex justify-between items-start gap-2 mb-2">
+                            <div class="min-w-0 flex-1 overflow-hidden">
+                                <h3 class="font-bold text-slate-100 text-sm whitespace-nowrap overflow-hidden text-ellipsis block" title="${cam.name}">
+                                    <span class="text-[10px] font-mono text-slate-400 mr-1">#${origIdx}</span>${cam.name}
+                                </h3>
+                                <div class="flex items-center space-x-1.5 text-[11px] text-slate-400 mt-0.5 whitespace-nowrap overflow-hidden text-ellipsis">
+                                    <i class="fa-solid fa-location-dot text-rose-400 text-[10px] shrink-0"></i>
+                                    <span class="truncate" title="${fullLocDisplay}">${fullLocDisplay}</span>
+                                </div>
+                            </div>
+                            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase shrink-0 flex items-center space-x-1 ${isRec ? 'bg-emerald-950 text-emerald-400 border border-emerald-500/30 animate-pulse' : 'bg-slate-800 text-slate-400'}">
+                                <i class="fa-solid fa-circle text-[7px] mr-1 ${isRec ? 'text-emerald-400' : 'text-slate-500'}"></i>
+                                ${isRec ? 'REC' : 'ON'}
+                            </span>
+                        </div>
+
+                        <!-- Compact Stats Box -->
+                        <div class="bg-slate-900/70 rounded-lg p-2.5 my-2.5 text-[11px] space-y-1 border border-slate-800">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">File:</span>
+                                <span class="text-slate-300 font-mono truncate max-w-[170px]" title="${st.current_file || '-'}">${st.current_file || '-'}</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Ukuran:</span>
+                                <span class="text-emerald-400 font-semibold">${sizeMb} MB</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Durasi:</span>
+                                <span class="text-amber-400 font-semibold font-mono">${getElapsedString(st.start_time, isRec)}</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Controls + CRUD -->
+                        <div class="flex items-center gap-1.5 pt-1">
+                            ${isRec ? 
+                                `<button onclick="stopStream('${safeId}')" class="flex-1 h-8 bg-rose-600 hover:bg-rose-500 text-white rounded-lg text-xs font-semibold inline-flex items-center justify-center gap-1.5 transition shadow">
+                                    <i class="fa-solid fa-square text-[10px] leading-none"></i> <span class="leading-none">Stop</span>
+                                 </button>` :
+                                `<button onclick="startStream('${safeId}')" class="flex-1 h-8 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-semibold inline-flex items-center justify-center gap-1.5 transition shadow">
+                                    <i class="fa-solid fa-play text-[10px] leading-none translate-y-[0.5px]"></i> <span class="leading-none">Record</span>
+                                 </button>`
+                            }
+                            <button onclick="previewStream('${safeName}', '${safeUrl}', '${safeId}')" class="px-3 h-8 bg-gradient-to-r from-rose-600 via-red-600 to-rose-700 hover:from-rose-500 hover:to-red-500 text-white font-semibold rounded-lg text-xs inline-flex items-center justify-center gap-1 transition shadow-md shadow-rose-950/40" title="Live Stream Preview">
+                                <i class="fa-solid fa-play text-[10px] leading-none translate-y-[0.5px]"></i> <span class="leading-none">Stream</span>
+                            </button>
+                            <button onclick="recheckCamera('${safeId}')" class="px-2 h-8 bg-slate-800 hover:bg-slate-700 text-sky-400 rounded-lg text-xs inline-flex items-center justify-center border border-slate-700" title="Cek Status Live (Jika mati otomatis pindah ke Menu OFF)">
+                                <i class="fa-solid fa-stethoscope text-[10px]"></i>
+                            </button>
+                            <button onclick="openEditModal('${safeId}')" class="px-2 h-8 bg-slate-800 hover:bg-slate-700 text-amber-400 rounded-lg text-xs inline-flex items-center justify-center border border-slate-700" title="Edit Kamera (CRUD)">
+                                <i class="fa-solid fa-pen text-[10px]"></i>
+                            </button>
+                            <button onclick="moveToOff('${safeId}')" class="px-2 h-8 bg-slate-800 hover:bg-slate-700 text-orange-400 rounded-lg text-xs inline-flex items-center justify-center border border-slate-700" title="Pindahkan ke Menu OFF">
+                                <i class="fa-solid fa-power-off text-[10px]"></i>
+                            </button>
+                            <button onclick="deleteCamera('${safeId}')" class="px-2 h-8 bg-slate-800 hover:bg-rose-600 text-rose-400 hover:text-white rounded-lg text-xs inline-flex items-center justify-center border border-slate-700 transition" title="Hapus Kamera">
+                                <i class="fa-solid fa-trash text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+
+            const modeLabel = (currentMainTab === 'off') ? 'CCTV OFF (Mati)' : 'CCTV ON (Aktif)';
+            if (isAllMode) {
+                html += `
+                <div class="col-span-full flex flex-col sm:flex-row justify-between items-center bg-slate-900/80 p-4 rounded-xl border border-slate-800 mt-4 gap-2">
+                    <span class="text-xs text-slate-300 font-medium">
+                        <i class="fa-solid fa-bolt text-amber-400 mr-1.5"></i>
+                        Menampilkan seluruh <span class="text-emerald-400 font-bold">${visibleCctvs.length}</span> ${modeLabel} sekaligus (Mode Scroll Bebas).
+                    </span>
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="px-3.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs rounded-lg font-medium flex items-center space-x-1">
+                        <i class="fa-solid fa-arrow-up"></i> <span>Kembali ke Atas</span>
+                    </button>
+                </div>`;
+            } else {
+                html += `
+                <div class="col-span-full flex flex-wrap justify-between items-center gap-2 bg-slate-900/80 p-4 rounded-xl border border-slate-800 mt-4">
+                    <span class="text-xs text-slate-400">Menampilkan ${startIdx + 1} - ${Math.min(endIdx, visibleCctvs.length)} dari ${visibleCctvs.length} ${modeLabel}</span>
+                    <div class="flex items-center space-x-1.5">
+                        <button onclick="currentPage = 1; drawPage()" ${currentPage === 1 ? 'disabled' : ''} class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-slate-200 text-xs rounded-lg font-medium">« Awal</button>
+                        <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''} class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-slate-200 text-xs rounded-lg font-medium">← Prev</button>
+                        <span class="px-3 py-1.5 text-xs text-slate-300 font-semibold">Hal ${currentPage} / ${totalPages}</span>
+                        <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''} class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-slate-200 text-xs rounded-lg font-medium">Next →</button>
+                        <button onclick="currentPage = ${totalPages}; drawPage()" ${currentPage === totalPages ? 'disabled' : ''} class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-slate-200 text-xs rounded-lg font-medium">Akhir »</button>
+                    </div>
+                </div>`;
+            }
+
+            grid.innerHTML = html;
+        }
+
+        function changePage(delta) {
+            currentPage += delta;
+            drawPage();
+        }
+
+        async function startStream(id) {
+            showToast("Memastikan CCTV aktif & memulai perekaman...");
+            try {
+                const res = await fetch(`/api/stream/start/${id}`, { method: 'POST' });
+                const data = await res.json();
+                if (data && data.switched) {
+                    showToast(`⚠️ '${data.from_name}' offline (dipindah ke Menu OFF) -> dialihkan ke CCTV aktif: '${data.cam_name}'!`);
+                } else if (data && data.status === 'ok') {
+                    showToast(`✅ Perekaman dimulai: ${data.cam_name || id}`);
+                } else if (data && data.error) {
+                    showToast(`❌ ${data.error}`);
+                }
+            } catch (e) {
+                showToast("Gagal memulai stream.");
+            }
+            fetchStatus();
+        }
+
+        async function stopStream(id) {
+            await fetch(`/api/stream/stop/${id}`, { method: 'POST' });
+            showToast("Perekaman dihentikan.");
+            fetchStatus();
+        }
+
+        async function startAll() {
+            await fetch('/api/stream/start_all', { method: 'POST' });
+            showToast("Semua perekaman CCTV dimulai!");
+            fetchStatus();
+        }
+
+        async function stopAll() {
+            await fetch('/api/stream/stop_all', { method: 'POST' });
+            showToast("Semua perekaman CCTV dihentikan.");
+            fetchStatus();
+        }
+
+        function showCustomAlert(msg, title = "Pemberitahuan Sistem", type = "info") {
+            document.getElementById('custom-alert-title').innerText = title;
+            document.getElementById('custom-alert-message').innerText = msg;
+            
+            const iconBox = document.getElementById('custom-alert-icon-box');
+            const icon = document.getElementById('custom-alert-icon');
+            
+            if (type === "error") {
+                iconBox.className = "p-2 rounded-xl bg-rose-500/20 text-rose-400";
+                icon.className = "fa-solid fa-triangle-exclamation text-xl";
+            } else if (type === "success") {
+                iconBox.className = "p-2 rounded-xl bg-emerald-500/20 text-emerald-400";
+                icon.className = "fa-solid fa-circle-check text-xl";
+            } else {
+                iconBox.className = "p-2 rounded-xl bg-sky-500/20 text-sky-400";
+                icon.className = "fa-solid fa-circle-info text-xl";
+            }
+
+            document.getElementById('custom-alert-modal').classList.remove('hidden');
+        }
+
+        function closeCustomAlert() {
+            document.getElementById('custom-alert-modal').classList.add('hidden');
+        }
+
+        async function openFolder(areaName) {
+            try {
+                const url = areaName ? `/api/open_folder?area=${encodeURIComponent(areaName)}` : '/api/open_folder';
+                const res = await fetch(url, { method: 'POST' });
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    showToast("Membuka folder rekaman...");
+                } else {
+                    showCustomAlert("Gagal membuka folder: " + (data.error || 'Unknown error'), "Error Buka Folder", "error");
+                }
+            } catch (err) {
+                showCustomAlert("Gagal terhubung ke server aplikasi.", "Koneksi Error", "error");
+            }
+        }
+
+        async function openScanModal() { 
+            document.getElementById('scan-modal').classList.remove('hidden'); 
+            try {
+                const res = await fetch('/api/settings');
+                const data = await res.json();
+                if (data.saved_website_urls && data.saved_website_urls.length > 0) {
+                    document.getElementById('scan-urls-input').value = data.saved_website_urls.join('\n');
+                }
+            } catch (e) {
+                console.error("Error loading saved website URLs:", e);
+            }
+        }
+        function closeScanModal() { document.getElementById('scan-modal').classList.add('hidden'); }
+
+        async function processCustomScan() {
+            const rawText = document.getElementById('scan-urls-input').value;
+            const urls = rawText.split('\n').map(u => u.trim()).filter(u => u.length > 0);
+            
+            if (urls.length === 0) {
+                showCustomAlert("Mohon masukkan minimal 1 URL website CCTV.", "Peringatan", "error");
+                return;
+            }
+
+            const btn = document.getElementById('btn-custom-scan');
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> <span>Menganalisis Browser & Network...</span>`;
+
+            try {
+                showToast("Scanning website lewat Playwright Headless... Ini butuh beberapa detik.");
+                const res = await fetch('/api/scan', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ urls: urls })
+                });
+                const data = await res.json();
+                if (res.ok && data.status === 'ok') {
+                    const baru = data.newly_found || 0;
+                    const total = data.count || 0;
+                    let msg = `✅ Pemindaian Website Selesai!\n\n`;
+                    if (baru > 0) {
+                        msg += `🎉 Berhasil menemukan ${baru} stream CCTV baru!\n`;
+                    } else {
+                        msg += `Semua stream dari website ini sudah ada atau tidak ada penambahan baru.\n`;
+                    }
+                    msg += `Total CCTV Aktif di Dashboard: ${total} Kamera.`;
+                    showCustomAlert(msg, "Hasil Scan Website", "success");
+                    closeScanModal();
+                    fetchStatus();
+                } else {
+                    const errDetail = data.error || "Gagal melakukan pemindaian stream CCTV.";
+                    showCustomAlert(errDetail, "Error Scan", "error");
+                }
+            } catch (err) {
+                showCustomAlert("Terjadi kesalahan koneksi saat memproses scan website.", "Error Scan", "error");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i> <span>Mulai Scan Website</span>`;
+            }
+        }
+
+        function switchSettingsTab(tab) {
+            const btnAuto = document.getElementById('tab-btn-auto');
+            const btnStorage = document.getElementById('tab-btn-storage');
+            const btnAbout = document.getElementById('tab-btn-about');
+            const contentAuto = document.getElementById('tab-content-auto');
+            const contentStorage = document.getElementById('tab-content-storage');
+            const contentAbout = document.getElementById('tab-content-about');
+
+            const activeCls = "px-3.5 py-2 text-xs font-bold border-b-2 border-amber-500 text-amber-400 flex items-center space-x-1.5 shrink-0";
+            const inactiveCls = "px-3.5 py-2 text-xs font-semibold text-slate-400 hover:text-slate-200 border-b-2 border-transparent flex items-center space-x-1.5 shrink-0";
+
+            if (btnAuto) btnAuto.className = (tab === 'auto') ? activeCls : inactiveCls;
+            if (btnStorage) btnStorage.className = (tab === 'storage') ? activeCls : inactiveCls;
+            if (btnAbout) btnAbout.className = (tab === 'about') ? activeCls : inactiveCls;
+
+            if (contentAuto) contentAuto.classList.toggle('hidden', tab !== 'auto');
+            if (contentStorage) contentStorage.classList.toggle('hidden', tab !== 'storage');
+            if (contentAbout) contentAbout.classList.toggle('hidden', tab !== 'about');
+        }
+
+        function setAutoDurationPreset(val) {
+            document.getElementById('setting-auto-duration').value = val;
+        }
+
+        function setAutoRepeatPreset(val) {
+            document.getElementById('setting-auto-repeat').value = val;
+            document.getElementById('setting-auto-loop').checked = (val === 0);
+        }
+
+        function toggleAutoLoop(checked) {
+            if (checked) {
+                document.getElementById('setting-auto-repeat').value = 0;
+            } else {
+                if (parseInt(document.getElementById('setting-auto-repeat').value) === 0) {
+                    document.getElementById('setting-auto-repeat').value = 5;
+                }
+            }
+        }
+
+        function onAutoCamModeChange() {
+            const mode = document.getElementById('setting-auto-cam-mode').value;
+            const wrapperCount = document.getElementById('wrapper-cam-count');
+            const wrapperSelected = document.getElementById('wrapper-cam-selected');
+
+            if (mode === 'random' || mode === 'count') {
+                wrapperCount.classList.remove('hidden');
+                wrapperSelected.classList.add('hidden');
+            } else if (mode === 'selected') {
+                wrapperCount.classList.add('hidden');
+                wrapperSelected.classList.remove('hidden');
+                renderCameraChecklist();
+            } else { // 'all'
+                wrapperCount.classList.add('hidden');
+                wrapperSelected.classList.add('hidden');
+            }
+        }
+
+        function renderCameraChecklist(selectedIds = []) {
+            const container = document.getElementById('auto-cam-checklist');
+            if (!container) return;
+            if (!cachedCctvs || cachedCctvs.length === 0) {
+                container.innerHTML = `<span class="text-slate-500 text-[11px]">Belum ada CCTV terdaftar.</span>`;
+                return;
+            }
+
+            container.innerHTML = cachedCctvs.map(cam => {
+                const isChecked = selectedIds.includes(cam.id) ? 'checked' : '';
+                return `
+                <label class="flex items-center space-x-2 p-1.5 rounded hover:bg-slate-800/80 cursor-pointer text-[11px] text-slate-300">
+                    <input type="checkbox" name="auto_cctv_select" value="${cam.id}" ${isChecked} class="rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-0">
+                    <span class="font-medium">${cam.name}</span>
+                    <span class="text-slate-500 text-[10px]">(${cam.location || 'Jogja'})</span>
+                </label>`;
+            }).join('');
+        }
+
+        async function openSettingsModal(defaultTab = 'auto') {
+            document.getElementById('settings-modal').classList.remove('hidden');
+            switchSettingsTab(defaultTab);
+
+            try {
+                const res = await fetch('/api/settings');
+                const data = await res.json();
+                document.getElementById('setting-rec-dir').value = data.recordings_dir || '';
+                if (data.segment_duration_minutes) {
+                    document.getElementById('setting-duration-min').value = data.segment_duration_minutes.toString();
+                }
+
+                // Folder Organization
+                const foldOrg = data.folder_organization || 'single';
+                if (foldOrg === 'per_session') {
+                    if (document.getElementById('folder-org-session')) document.getElementById('folder-org-session').checked = true;
+                    if (document.getElementById('auto-folder-org-session')) document.getElementById('auto-folder-org-session').checked = true;
+                } else if (foldOrg === 'per_camera') {
+                    if (document.getElementById('folder-org-camera')) document.getElementById('folder-org-camera').checked = true;
+                    if (document.getElementById('auto-folder-org-single')) document.getElementById('auto-folder-org-single').checked = true;
+                } else {
+                    if (document.getElementById('folder-org-single')) document.getElementById('folder-org-single').checked = true;
+                    if (document.getElementById('auto-folder-org-single')) document.getElementById('auto-folder-org-single').checked = true;
+                }
+
+                // Auto Record Fields
+                if (data.auto_record_duration_minutes !== undefined) {
+                    document.getElementById('setting-auto-duration').value = data.auto_record_duration_minutes;
+                }
+                if (data.auto_record_repeat_count !== undefined) {
+                    document.getElementById('setting-auto-repeat').value = data.auto_record_repeat_count;
+                    document.getElementById('setting-auto-loop').checked = (parseInt(data.auto_record_repeat_count) === 0);
+                }
+                if (data.auto_record_interval_seconds !== undefined) {
+                    document.getElementById('setting-auto-interval').value = data.auto_record_interval_seconds.toString();
+                }
+                if (data.auto_record_camera_mode) {
+                    document.getElementById('setting-auto-cam-mode').value = data.auto_record_camera_mode;
+                }
+                if (data.auto_record_camera_count) {
+                    document.getElementById('setting-auto-cam-count').value = data.auto_record_camera_count;
+                }
+                onAutoCamModeChange();
+                renderCameraChecklist(data.auto_record_selected_cams || []);
+            } catch (err) {
+                console.error("Gagal mengambil settings:", err);
+            }
+        }
+
+        function getSettingsPayload() {
+            const recDir = document.getElementById('setting-rec-dir').value.trim();
+            const durMin = document.getElementById('setting-duration-min').value;
+
+            // Folder Organization
+            let foldOrg = 'single';
+            const autoTabVisible = !document.getElementById('tab-content-auto').classList.contains('hidden');
+            if (autoTabVisible) {
+                if (document.getElementById('auto-folder-org-session') && document.getElementById('auto-folder-org-session').checked) {
+                    foldOrg = 'per_session';
+                } else {
+                    foldOrg = 'single';
+                }
+            } else {
+                if (document.getElementById('folder-org-session') && document.getElementById('folder-org-session').checked) {
+                    foldOrg = 'per_session';
+                } else if (document.getElementById('folder-org-camera') && document.getElementById('folder-org-camera').checked) {
+                    foldOrg = 'per_camera';
+                } else {
+                    foldOrg = 'single';
+                }
+            }
+
+            const autoDur = parseFloat(document.getElementById('setting-auto-duration').value) || 1.0;
+            const isLoop = document.getElementById('setting-auto-loop').checked;
+            const autoRepeat = isLoop ? 0 : (parseInt(document.getElementById('setting-auto-repeat').value) || 5);
+            const autoInterval = parseInt(document.getElementById('setting-auto-interval').value) || 0;
+            const autoMode = document.getElementById('setting-auto-cam-mode').value;
+            const autoCount = parseInt(document.getElementById('setting-auto-cam-count').value) || 3;
+
+            // Ambil selected cams jika mode selected
+            const selectedCams = [];
+            document.querySelectorAll('input[name="auto_cctv_select"]:checked').forEach(el => {
+                selectedCams.push(el.value);
+            });
+
+            return {
+                recordings_dir: recDir,
+                segment_duration_minutes: parseInt(durMin) || 60,
+                folder_organization: foldOrg,
+                auto_record_duration_minutes: autoDur,
+                auto_record_repeat_count: autoRepeat,
+                auto_record_interval_seconds: autoInterval,
+                auto_record_camera_mode: autoMode,
+                auto_record_camera_count: autoCount,
+                auto_record_selected_cams: selectedCams
+            };
+        }
+
+        async function saveSettingsOnly() {
+            const payload = getSettingsPayload();
+            if (!payload.recordings_dir) {
+                showCustomAlert("Folder rekaman tidak boleh kosong.", "Peringatan", "error");
+                return;
+            }
+
+            try {
+                const res = await fetch('/api/settings', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    showToast("Pengaturan berhasil disimpan!");
+                    closeSettingsModal();
+                    fetchStatus();
+                } else {
+                    showCustomAlert("Gagal menyimpan: " + (data.error || 'Error'), "Error Simpan", "error");
+                }
+            } catch (err) {
+                showCustomAlert("Terjadi kesalahan sistem saat menyimpan settings.", "Error", "error");
+            }
+        }
+
+                async function toggleAutoRecordDirect() {
+            if (cachedAutoRecord && cachedAutoRecord.is_running) {
+                await stopAutoRecord();
+                return;
+            }
+            try {
+                const res = await fetch('/api/auto_record/start', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({})
+                });
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    showToast('Auto Rekam langsung dimulai!');
+                    fetchStatus();
+                } else {
+                    showCustomAlert("Gagal memulai auto rekam: " + (data.error || 'Error'), "Error", "error");
+                }
+            } catch (err) {
+                showCustomAlert("Terjadi kesalahan sistem saat memulai auto rekam.", "Error", "error");
+            }
+        }
+
+        async function startAutoRecordFromModal() {
+            const payload = getSettingsPayload();
+            if (!payload.recordings_dir) {
+                showCustomAlert("Folder rekaman tidak boleh kosong.", "Peringatan", "error");
+                return;
+            }
+
+            try {
+                await fetch('/api/settings', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const res = await fetch('/api/auto_record/start', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    closeSettingsModal();
+                    const cycText = payload.auto_record_repeat_count === 0 ? 'tanpa batas' : `${payload.auto_record_repeat_count}x`;
+                    showToast(`🔁 Auto Rekam dimulai (${cycText} @ ${payload.auto_record_duration_minutes}m)!`);
+                    fetchStatus();
+                } else {
+                    showCustomAlert("Gagal memulai auto rekam: " + (data.error || 'Error'), "Error", "error");
+                }
+            } catch (err) {
+                showCustomAlert("Terjadi kesalahan sistem saat memulai auto rekam.", "Error", "error");
+            }
+        }
+
+        async function stopAutoRecord() {
+            try {
+                const res = await fetch('/api/auto_record/stop', { method: 'POST' });
+                const data = await res.json();
+                showToast("⏹ Auto Rekam berhasil dihentikan.");
+                fetchStatus();
+            } catch (err) {
+                showCustomAlert("Gagal menghentikan auto rekam.", "Error", "error");
+            }
+        }
+
+        function updateAutoRecordUI(ar) {
+            const banner = document.getElementById('auto-record-banner');
+            const navBtn = document.getElementById('btn-auto-record-nav');
+            const navIcon = document.getElementById('nav-auto-icon');
+            const navText = document.getElementById('nav-auto-text');
+            const modalBtnStop = document.getElementById('btn-modal-stop-auto');
+
+            if (!ar || !ar.is_running) {
+                if (banner) banner.classList.add('hidden');
+                if (navIcon) navIcon.className = "fa-solid fa-arrows-rotate";
+                if (navText) navText.innerText = "Auto Rekam";
+                if (navBtn) navBtn.className = "bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow";
+                if (modalBtnStop) modalBtnStop.classList.add('hidden');
+                return;
+            }
+
+            if (banner) banner.classList.remove('hidden');
+            if (navIcon) navIcon.className = "fa-solid fa-arrows-rotate animate-spin text-amber-300";
+            const totCycleStr = ar.total_cycles === 0 ? '∞' : ar.total_cycles;
+            if (navText) navText.innerText = `Auto (${ar.current_cycle}/${totCycleStr})`;
+            if (navBtn) navBtn.className = "bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition shadow ring-2 ring-emerald-400/50 animate-pulse";
+            if (modalBtnStop) modalBtnStop.classList.remove('hidden');
+
+            const cycleEl = document.getElementById('auto-banner-cycle');
+            if (cycleEl) cycleEl.innerText = `Siklus ${ar.current_cycle} / ${totCycleStr}`;
+
+            const badge = document.getElementById('auto-banner-status-badge');
+            const timerLabel = document.getElementById('auto-banner-timer-label');
+            const timer = document.getElementById('auto-banner-timer');
+
+            const m = Math.floor(ar.remaining_seconds / 60);
+            const s = ar.remaining_seconds % 60;
+            const timeStr = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            if (timer) timer.innerText = timeStr;
+
+            if (ar.state === 'waiting') {
+                if (badge) {
+                    badge.className = "text-[10px] font-bold uppercase tracking-wider text-sky-300 px-2.5 py-0.5 bg-sky-950 rounded-full border border-sky-500/40";
+                    badge.innerText = "⏸ Jeda Antar Siklus";
+                }
+                if (timerLabel) timerLabel.innerText = "Mulai Siklus Berikutnya:";
+            } else {
+                if (badge) {
+                    badge.className = "text-[10px] font-bold uppercase tracking-wider text-emerald-300 px-2.5 py-0.5 bg-emerald-950 rounded-full border border-emerald-500/40 animate-pulse";
+                    badge.innerText = "● Merekam Sesi";
+                }
+                if (timerLabel) timerLabel.innerText = "Sisa Sesi:";
+            }
+
+            const camModeLabels = {
+                'random': '🎲 Acak / Random',
+                'count': '🔢 Jumlah Tertentu',
+                'all': '🌐 Semua Kamera',
+                'selected': '📌 Kamera Pilihan'
+            };
+            const modeText = camModeLabels[ar.camera_mode] || ar.camera_mode;
+            const camNames = (ar.active_camera_names && ar.active_camera_names.length > 0) ? ar.active_camera_names.join(', ') : 'Menghubungkan stream...';
+            const infoEl = document.getElementById('auto-banner-info');
+            if (infoEl) {
+                infoEl.innerHTML = `
+                    <span class="text-amber-300 font-semibold">Mode: ${modeText} (${ar.camera_count} Kamera)</span>
+                    <span class="text-slate-600">|</span>
+                    <span class="text-slate-300 truncate max-w-[500px]" title="${camNames}">Target: ${camNames}</span>
+                `;
+            }
+        }
+
+        async function browseFolderFor(type) {
+            showToast("Membuka jendela pemilihan folder...");
+            try {
+                const res = await fetch('/api/browse_folder', { method: 'POST' });
+                const data = await res.json();
+                if (data.status === 'ok' && data.path) {
+                    document.getElementById('setting-rec-dir').value = data.path;
+                    showToast("Folder dipilih: " + data.path);
+                } else if (data.status === 'cancelled') {
+                    // user cancel, no action needed
+                } else if (data.error) {
+                    showCustomAlert("Gagal membuka browser folder: " + data.error, "Error", "error");
+                }
+            } catch (err) {
+                showCustomAlert("Terjadi kesalahan saat memanggil folder browser.", "Error", "error");
+            }
+        }
+
+        async function setDefaultRecordingsPath() {
+            try {
+                const res = await fetch('/api/settings/default');
+                const data = await res.json();
+                if (data.default_recordings_dir) {
+                    document.getElementById('setting-rec-dir').value = data.default_recordings_dir;
+                    showToast("Path rekaman diatur ke default bawaan.");
+                }
+            } catch (err) {
+                console.error("Gagal ambil default settings:", err);
+            }
+        }
+
+        function closeSettingsModal() {
+            document.getElementById('settings-modal').classList.add('hidden');
+        }
+
+        let activePreviewCamId = null;
+
+        function previewStream(name, url, camId = null) {
+            if (!url) {
+                showCustomAlert("URL Stream belum dikonfigurasi.", "Peringatan", "error");
+                return;
+            }
+            const sbyMatch = url.match(/http:\/\/36\.66\.208\.101:5000\/hls\/(cctv_\d+)\/stream\.m3u8/);
+            const mlgMatch = url.match(/https:\/\/cctv\.malangkota\.go\.id\/cctv-stream\/streams\/(.+\.m3u8)/);
+            const playUrl = sbyMatch
+                ? `/api/surabaya_hls/${sbyMatch[1]}/stream.m3u8`
+                : (mlgMatch ? `/api/malang_hls/${mlgMatch[1]}` : url);
+            activePreviewCamId = camId;
+            document.getElementById('modal-title').innerText = "Stream: " + name;
+            const statusBadge = document.getElementById('modal-stream-status');
+            statusBadge.className = "px-2 py-0.5 rounded text-[10px] font-bold bg-amber-950 text-amber-400 border border-amber-500/30 animate-pulse";
+            statusBadge.innerText = "MEMERIKSA STREAM...";
+
+            const recordBtn = document.getElementById('modal-btn-record');
+            if (camId) {
+                recordBtn.style.display = "inline-flex";
+            } else {
+                recordBtn.style.display = "none";
+            }
+
+            document.getElementById('video-modal').classList.remove('hidden');
+
+            const video = document.getElementById('player');
+            
+            if (Hls.isSupported()) {
+                if (hlsPlayer) hlsPlayer.destroy();
+                hlsPlayer = new Hls();
+                hlsPlayer.loadSource(playUrl);
+                hlsPlayer.attachMedia(video);
+                hlsPlayer.on(Hls.Events.MANIFEST_PARSED, () => {
+                    video.play();
+                    statusBadge.className = "px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-950 text-emerald-400 border border-emerald-500/30";
+                    statusBadge.innerText = "ONLINE & BERHASIL KONEK";
+                });
+                hlsPlayer.on(Hls.Events.ERROR, (event, data) => {
+                    if (data.fatal) {
+                        statusBadge.className = "px-2 py-0.5 rounded text-[10px] font-bold bg-rose-950 text-rose-400 border border-rose-500/30";
+                        statusBadge.innerText = "OFFLINE / TIDAK ADA KONEKSI";
+                    }
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = playUrl;
+                video.play();
+                statusBadge.className = "px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-950 text-emerald-400 border border-emerald-500/30";
+                statusBadge.innerText = "ONLINE & BERHASIL KONEK";
+            }
+        }
+
+        async function confirmRecordFromModal() {
+            if (activePreviewCamId) {
+                await startStream(activePreviewCamId);
+                closeModal();
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('video-modal').classList.add('hidden');
+            const video = document.getElementById('player');
+            video.pause();
+            if (hlsPlayer) hlsPlayer.destroy();
+            activePreviewCamId = null;
+        }
+
+        function showToast(msg) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'glass bg-slate-800 text-slate-200 px-4 py-2.5 rounded-xl shadow-xl text-xs font-medium flex items-center space-x-2 border border-slate-700 border-l-4 border-l-amber-500 animate-bounce';
+            toast.innerHTML = `<i class="fa-solid fa-circle-check text-amber-400"></i> <span>${msg}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => toast.remove(), 3500);
+        }
+
+        async function checkForUpdate(showMessage = false) {
+            const button = document.getElementById('btn-update');
+            const original = button.innerHTML;
+            button.disabled = true;
+            button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Mengecek...</span>';
+            try {
+                const info = await fetch('/api/update/check').then(r => r.json());
+                if (info.status !== 'ok') throw new Error(info.message || 'Gagal mengecek update');
+                if (!info.update_available) {
+                    showCustomAlert(`Versi terbaru sudah digunakan (v${info.current_version}).`, 'Update', 'info');
+                    return;
+                }
+                if (!confirm(`Versi baru v${info.latest_version} tersedia. Download dan pasang sekarang?\n\nAplikasi akan ditutup sementara.`)) return;
+                button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Mengunduh...</span>';
+                const result = await fetch('/api/update/install', {method: 'POST'}).then(r => r.json());
+                if (result.status === 'started') showCustomAlert('Installer update sedang dibuka. Ikuti petunjuk installer.', 'Update', 'success');
+                else throw new Error(result.message || 'Update gagal');
+            } catch (err) { showCustomAlert(err.message, 'Update gagal', 'error'); }
+            finally { button.disabled = false; button.innerHTML = original; }
+        }
+
+        // Auto polling status
+        fetchStatus();
+        setInterval(fetchStatus, 3000);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,1314 @@
+[
+  {
+    "id": "denpasar_001",
+    "name": "Simpang Gunung Agung",
+    "location": "Simpang Wahidin - Gunung Agung (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A001GUNUNGAGUNGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_002",
+    "name": "Simpang Kapten Sujana",
+    "location": "Simpang Buluh Indah - Gunung Agung (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A002KAPTENSUJANAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_003",
+    "name": "Simpang Gunung Salak",
+    "location": "Simpang Teuku Umar Barat - Gunung Salak (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A003GUNUNGSALAKPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_004",
+    "name": "Simpang Teuku Umar 1",
+    "location": "Simpang Imam Bonjol -Teuku Umar (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A004TEUKUUMARPTZ1/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_005",
+    "name": "Simpang Teuku Umar 2",
+    "location": "Simpang Imam Bonjol -Teuku Umar (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A004TEUKUUMARPTZ2/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_006",
+    "name": "Simpang Batanta",
+    "location": "Simpang Teuku Umar - Batanta (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A005BATANTAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_007",
+    "name": "Simpang Soputan",
+    "location": "Simpang Imam Bonjol - Gunung Soputan (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A006SOPUTANPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_008",
+    "name": "Simpang Mahendradatta",
+    "location": "Simpang Teuku Umar Barat - Western Ring Road (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A008MAHENDRADATTAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_009",
+    "name": "Simpang Balun",
+    "location": "Simpang Cokroaminoto - Maruti (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A007BALUNPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_010",
+    "name": "Simpang Perumnas",
+    "location": "Simpang Western Ring Road - Buana Raya (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A009PERUMNASPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_011",
+    "name": "Simpang Permata Hijau",
+    "location": "Simpang Western Ring Road - Permata Hijau (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A010PERMATAHIJAUPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_012",
+    "name": "Simpang Merpati",
+    "location": "Simpang Mahendradatta Utara - Merpati (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A011MERPATIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_013",
+    "name": "Simpang Pulau Saelus",
+    "location": "Simpang Diponegoro - Pulau Saelus (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A012PULAUSAELUSPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_014",
+    "name": "Simpang Sidakarya",
+    "location": "Simpang Diponegoro - Sidakarya (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A013SIDAKARYAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_015",
+    "name": "Simpang Kapten Japa",
+    "location": "Simpang Hayam Wuruk - Kapten Japa (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A014KAPTENJAPAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_016",
+    "name": "Simpang Melati",
+    "location": "Simpang Hayam Wuruk - Melati (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A015MELATIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_017",
+    "name": "Simpang Yos Sudarso",
+    "location": "Simpang Pb Sudirman - Yos Sudarso (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A016YOSSUDARSOPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_018",
+    "name": "Simpang Puputan",
+    "location": "Simpang Pb Sudirman - Raya Puputan (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A017PUPUTANPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_019",
+    "name": "Simpang Dewi Sartika",
+    "location": "Simpang Diponegoro - Dewi Sartika (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A018DEWISARTIKAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_020",
+    "name": "Simpang Fe Unud",
+    "location": "Simpang Pb Sudirman - Serma Mendra (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A019FEUNUDPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_021",
+    "name": "Simpang Waturenggong",
+    "location": "Simpang Pb Sudirman - Waturenggong (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A020WATURENGGONGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_022",
+    "name": "Simpang Pulau Buton",
+    "location": "Simpang Diponegoro - Pulau Buton (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A021PULAUBUTONPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_023",
+    "name": "Simpang Pulau Buton Panoramic",
+    "location": "Simpang Diponegoro - Pulau Buton (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A021PULAUBUTONPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_024",
+    "name": "Simpang Ubung 1",
+    "location": "Simpang Gatot Subroto - Cokroaminoto (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A022UBUNGPTZ1/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_025",
+    "name": "Simpang Ubung 2",
+    "location": "Simpang Gatot Subroto - Cokroaminoto (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A022UBUNGPTZ2/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_026",
+    "name": "Simpang Caturmuka",
+    "location": "Simpang Udayana - Surapati (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A023CATURMUKAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_027",
+    "name": "Simpang Arjuna",
+    "location": "Simpang Gajah Mada - Arjuna (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A024ARJUNAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_028",
+    "name": "Simpang Thamrin",
+    "location": "Simpang Imam Bonjol - Thamrin (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A025THAMRINPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_029",
+    "name": "Simpang Pulau Biak",
+    "location": "Simpang Imam Bonjol - Pulau Biak (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A026PULAUBIAKPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_030",
+    "name": "Simpang Gunung Subur",
+    "location": "Simpang Imam Bonjol - Gunung Subur (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A027GUNUNGSUBURPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_031",
+    "name": "Simpang Pulau Galang",
+    "location": "Simpang Imam Bonjol - Pulau Galang (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A028PULAUGALANGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_032",
+    "name": "Simpang Tangkuban Perahu",
+    "location": "Simpang Teuku Umar Barat - Gunung Lumut (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A029TANGKUBANPERAHUPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_033",
+    "name": "Simpang Cargo",
+    "location": "Simpang Gatot Subroto - Cargo (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A030CARGOPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_034",
+    "name": "Simpang Pidada",
+    "location": "Simpang Gatot Subroto - Pidada (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A031PIDADAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_035",
+    "name": "Simpang Ahmad Yani",
+    "location": "Simpang Gatot Subroto - Ahmad Yani (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A032AHMADYANIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_036",
+    "name": "Simpang Nangka 1",
+    "location": "Simpang Gatot Subroto - Nangka (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A033NANGKAPTZ1/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_037",
+    "name": "Simpang Nangka 2",
+    "location": "Simpang Gatot Subroto - Nangka (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A033NANGKAPTZ2/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_038",
+    "name": "Simpang Kenyeri",
+    "location": "Simpang Gatot Subroto - Kenyeri (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A034KENYERIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_039",
+    "name": "Simpang Noja",
+    "location": "Simpang Gatot Subroto - Noja (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A035NOJAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_040",
+    "name": "Simpang Trengguli",
+    "location": "Simpang Gatot Subroto - Trenggana (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A036TRENGGULIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_041",
+    "name": "Simpang Ken Arok",
+    "location": "Simpang Ahmad Yani - Ken Arok (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A037KENAROKPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_042",
+    "name": "Simpang Tohpati",
+    "location": "Simpang Gatot Subroto - Wr Supratman (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A038TOHPATIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_043",
+    "name": "Simpang Kebo Iwa",
+    "location": "Simpang Gatot Subroto - Kebo Iwa (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A039KEBOIWAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_044",
+    "name": "Simpang Sekarsari",
+    "location": "Simpang Ib Mantra - Sekarsari (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A040SEKARSARIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_045",
+    "name": "Simpang Gemitir",
+    "location": "Simpang Ib Mantra - Gemitir (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A041GEMITIRPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_046",
+    "name": "Simpang Sedap Malam",
+    "location": "Simpang Hang Tuah - Sedap Malam (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A042SEDAPMALAMPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_047",
+    "name": "Simpang Gunung Galunggung",
+    "location": "Simpang Cokroaminoto - Gunung Galunggung (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A043GUNUNGGALUNGGUNGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_048",
+    "name": "Simpang Waribang",
+    "location": "Simpang Wr Supratman - Waribang (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A044WARIBANGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_049",
+    "name": "Simpang Surabi",
+    "location": "Simpang Wr Supratman - Surabi (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A045SURABIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_050",
+    "name": "Simpang Subita",
+    "location": "Simpang Wr Supratman - Subita (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A046SUBITAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_051",
+    "name": "Simpang Kecubung",
+    "location": "Simpang Wr Supratman - Kecubung (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A047KECUBUNGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_052",
+    "name": "Simpang Nusa Indah",
+    "location": "Simpang Hayam Wuruk - Nusa Indah (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A048NUSAINDAHPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_053",
+    "name": "Simpang Tukad Unda",
+    "location": "Simpang Raya Puputan - Tukad Unda (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A049TUKADUNDAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_054",
+    "name": "Simpang Tukad Barito",
+    "location": "Simpang Tukad Barito - Tukad Batanghari (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A113TUKADBARITOPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_055",
+    "name": "Simpang Tukad Barito Panoramic",
+    "location": "Simpang Tukad Barito - Tukad Batanghari (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A113TUKADBARITOPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_056",
+    "name": "Simpang Suradipa",
+    "location": "Simpang Ahmad Yani Utara - Suradipa (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A114SURADIPAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_057",
+    "name": "Simpang Suradipa Panoramic",
+    "location": "Simpang Ahmad Yani Utara - Suradipa (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A114SURADIPAPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_058",
+    "name": "Simpang Antasura",
+    "location": "Simpang Antasura - Astasura (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A115ANTASURAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_059",
+    "name": "Simpang Antasura Panoramic",
+    "location": "Simpang Antasura - Astasura (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A115ANTASURAPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_060",
+    "name": "Simpang Pemogan",
+    "location": "Simpang Pemogan - Pulau Galang (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A116PEMOGANPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_061",
+    "name": "Simpang Pemogan Panoramic",
+    "location": "Simpang Pemogan - Pulau Galang (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A116PEMOGANPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_062",
+    "name": "Simpang Gunung Sanghyang",
+    "location": "Simpang Gunung Agung - Gunung Tangkuban Perahu (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A117GUNUNGSANGHYANGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_063",
+    "name": "Simpang Gunung Sanghyang Panoramic",
+    "location": "Simpang Gunung Agung - Gunung Tangkuban Perahu (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A117GUNUNGSANGHYANGPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_064",
+    "name": "Simpang Kapten Agung",
+    "location": "Simpang Surapati - Kapten Agung (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A052KAPTENAGUNGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_065",
+    "name": "Simpang 6 Teuku Umar",
+    "location": "Simpang 6 Teuku Umar (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A053SIMPANG6TEUKUUMARPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_066",
+    "name": "Simpang 6 Teuku Umar Panoramic",
+    "location": "Simpang 6 Teuku Umar (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A053SIMPANG6TEUKUUMARPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_067",
+    "name": "Simpang Gajah Mada Barat",
+    "location": "Simpang Wahidin - Gajah Mada (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A054GAJAHMADATIMURPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_068",
+    "name": "Gajah Mada Barat Panoramic",
+    "location": "Simpang Wahidin - Gajah Mada (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A103GAJAHBADABARATPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_069",
+    "name": "Pelabuhan Sanur 1",
+    "location": "Pelabuhan Matahari Terbit (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A063PANTAIMATAHARITERBITPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_070",
+    "name": "Pelabuhan Sanur 2",
+    "location": "Pelabuhan Matahari Terbit (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A064PANTAIMATAHARITERBITPTZ2/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_071",
+    "name": "Ruas Jalan Udayana",
+    "location": "Jalan Udayana (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A065UDAYANAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_072",
+    "name": "Ruas Jalan Raya Puputan",
+    "location": "Jalan Raya Puputan (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A066PUPUTANPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_073",
+    "name": "Simpang Nangka Utara-Kemuda",
+    "location": "Simpang Nangka Utara - Kemuda (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A067NANGKAUTARAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_074",
+    "name": "Simpang Seroja-Kemuda",
+    "location": "Simpang Kemuda - Seroja (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A068SEROJAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_075",
+    "name": "Simpang Trenggana-Padma",
+    "location": "Simpang Trenggana - Padma (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A069PADMAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_076",
+    "name": "Patung Titi Banda",
+    "location": "Patung Titi Banda (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A070TITIBANDAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_077",
+    "name": "Bundaran Hang Tuah",
+    "location": "Bundaran Hang Tuah (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A071BUNDARANHANGTUAHPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_078",
+    "name": "Durian - Kaliasem",
+    "location": "Simpang Durian - Kaliasem (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A072DURIAN-KALIASEMPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_079",
+    "name": "Durian - Kaliasem Panoramic",
+    "location": "Simpang Durian - Kaliasem (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/072DURIAN-KALIASEMPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_080",
+    "name": "Ahmad Yani - Maruti",
+    "location": "Simpang Ahmad Yani - Maruti (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A073AHMADYANI-MARUTIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_081",
+    "name": "Ahmad Yani - Maruti Panoramic",
+    "location": "Simpang Ahmad Yani - Maruti (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A073AHMADYANI-MARUTIPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_082",
+    "name": "Ahmad Yani - Mulawarman",
+    "location": "Simpang Ahmad Yani - Mulawarman (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A074AHMADYANI-MULAWARMANPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_083",
+    "name": "Ahmad Yani - Mulawarman Panoramic",
+    "location": "Simpang Ahmad Yani - Mulawarman (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A074AHMADYANI-MULAWARMANPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_084",
+    "name": "Pasar Satria",
+    "location": "Ruas Jalan Veteran (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A075PASARSATRIAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_085",
+    "name": "Pasar Satria Panoramic",
+    "location": "Ruas Jalan Veteran (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A075PASARSATRIAPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_086",
+    "name": "Banjar Tainsiat",
+    "location": "Simpang Nangka Selatan - Pattimura (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A076BANJARTAINSIATPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_087",
+    "name": "Banjar Tainsiat Panoramic",
+    "location": "Simpang Nangka Selatan - Pattimura (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A076BANJARTAINSIATPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_088",
+    "name": "Banjar Balun",
+    "location": "Simpang Setiabudi - Sutomo (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A077BANJARBALUNPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_089",
+    "name": "Banjar Balun Panoramic",
+    "location": "Simpang Setiabudi - Sutomo (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A077BANJARBALUNPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_090",
+    "name": "Wibisana - Setiabudi",
+    "location": "Simpang Setiabudi - Wibisana (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A078WIBISANA-SETIABUDIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_091",
+    "name": "Wibisana - Setiabudi Panoramic",
+    "location": "Simpang Setiabudi - Wibisana (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A078WIBISANA-SETIABUDIPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_092",
+    "name": "Lapang Puputan Utara",
+    "location": "Ruas Jalan Surapati (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A079LAPANGPUPUTANUTARAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_093",
+    "name": "Lapang Puputan Utara Panoramic",
+    "location": "Ruas Jalan Surapati (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A079LAPANGPUPUTANUTARAPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_094",
+    "name": "Suli - Sari Gading",
+    "location": "Simpang Suli - Sari Gading (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A080SULI-SARIGADINGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_095",
+    "name": "Suli - Sari Gading Panoramic",
+    "location": "Simpang Suli - Sari Gading (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A080SULI-SARIGADINGPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_096",
+    "name": "Banjar Tampak Gangsul",
+    "location": "Simpang Nakula - Werkudara (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A081BANJARTAMPAKGANGSULPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_097",
+    "name": "Banjar Tampak Gangsul Panoramic",
+    "location": "Simpang Nakula - Werkudara (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A081BANJARTAMPAKGANGSULPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_098",
+    "name": "Veteran - Abimanyu",
+    "location": "Simpang Veteran - Abimanyu (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A082VETERAN-ABIMANYUPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_099",
+    "name": "Veteran - Abimanyu Panoramic",
+    "location": "Simpang Veteran - Abimanyu (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A082VETERAN-ABIMANYUPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_100",
+    "name": "Pura Dalem Yang Batu",
+    "location": "Ruas Jalan Cok Agung Tresna (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A083PURADALEMYANGBATUPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_101",
+    "name": "Pura Dalem Yang Batu Panoramic",
+    "location": "Ruas Jalan Cok Agung Tresna (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A083PURADALEMYANGBATUPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_102",
+    "name": "Pojok Selatan Museum Bali",
+    "location": "Simpang Sugianyar - Mudita (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A084POJOKSELATANMUSEUMBALIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_103",
+    "name": "Pojok Selatan Museum Bali Panoramic",
+    "location": "Simpang Sugianyar - Mudita (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A084POJOKSELATANMUSEUMBALIPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_104",
+    "name": "Pojok Utara Jagatnatha",
+    "location": "Simpang Surapati - Kaliasem (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A085POJOKUTARAJAGATNATHAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_105",
+    "name": "Pojok Utara Jagatnatha Panoramic",
+    "location": "Simpang Surapati - Kaliasem (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A085POJOKUTARAJAGATNATHAPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_106",
+    "name": "Trenggana - Siulan",
+    "location": "Simpang Trenggana - Siulan (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A086TRENGGANA-SIULANPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_107",
+    "name": "Trenggana - Siulan Panoramic",
+    "location": "Simpang Trenggana - Siulan (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A086TRENGGANA-SIULANPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_108",
+    "name": "Pasar Agung Peninjoan",
+    "location": "Simpang Padma - Cekomaria (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A087PASARAGUNGPENINJOANPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_109",
+    "name": "Pasar Agung Peninjoan Panoramic",
+    "location": "Simpang Padma - Cekomaria (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A087PASARAGUNGPENINJOANPANORAMICZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_110",
+    "name": "Terminal Kereneng",
+    "location": "Simpang Lely - Rampai (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A088TERMINALKERENENGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_111",
+    "name": "Terminal Kereneng Panoramic",
+    "location": "Simpang Lely - Rampai (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A088TERMINALKERENENGPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_112",
+    "name": "Raya Puputan - Tantular",
+    "location": "Simpang Raya Puputan - Tantular (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A089RAYAPUPUTAN-LETDATANTULARPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_113",
+    "name": "Raya Puputan - Tantular Panoramic",
+    "location": "Simpang Raya Puputan - Tantular (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A089RAYAPUPUTAN-LETDATANTULARPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_114",
+    "name": "Kapten Agung - Kapten Regug",
+    "location": "Simpang Kapten Agung - Kapten Regug (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A090KAPTENAGUNG-KAPTENREGUGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_115",
+    "name": "Kapten Agung - Kapten Regug Panoramic",
+    "location": "Simpang Kapten Agung - Kapten Regug (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A090KAPTENAGUNG-KAPTENREGUGPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_116",
+    "name": "Kamboja - Angsoka",
+    "location": "Simpang Kamboja - Angsoka (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A091KAMBOJA-ANGSOKAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_117",
+    "name": "Kamboja - Angsoka Panoramic",
+    "location": "Simpang Kamboja - Angsoka (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A091KAMBOJA-ANGSOKAPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_118",
+    "name": "Kamboja - Rijasa",
+    "location": "Simpang Kamboja - Rijasa (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A092KAMBOJA-RIJASAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_119",
+    "name": "Kamboja - Rijasa Panoramic",
+    "location": "Simpang Kamboja - Rijasa (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A092KAMBOJA-RIJASAPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_120",
+    "name": "Dprd Kota Denpasar",
+    "location": "Simpang Melati - Cempaka (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A093DPRDKOTADENPASARPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_121",
+    "name": "Dprd Kota Denpasar Panoramic",
+    "location": "Simpang Melati - Cempaka (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A093DPRDKOTADENPASARPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_122",
+    "name": "Kamboja - Rampai",
+    "location": "Simpang Kamboja - Rampai (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A094KAMBOJA-RAMPAIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_123",
+    "name": "Kamboja - Rampai Panoramic",
+    "location": "Simpang Kamboja - Rampai (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A094KAMBOJA-RAMPAIPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_124",
+    "name": "Hayam Wuruk - Lely",
+    "location": "Simpang Hayam Wuruk - Lely (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A095HAYAMWURUK-LELYPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_125",
+    "name": "Hayam Wuruk - Lely Panoramic",
+    "location": "Simpang Hayam Wuruk - Lely (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A095HAYAMWURUK-LELYPTZPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_126",
+    "name": "Sidakarya - Bedugul",
+    "location": "Simpang Bedugul - Sidakarya (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A096SIDAKARYA-BEDUGULPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_127",
+    "name": "Sidakarya - Bedugul Panoramic",
+    "location": "Simpang Bedugul - Sidakarya (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A096SIDAKARYA-BEDUGULPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_128",
+    "name": "Waturenggong - Tukad Yeh Aya",
+    "location": "Simpang Waturenggong - Tukad Yeh Aya (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A097WATURENGGONG-TUKADYEHAYAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_129",
+    "name": "Waturenggong - Tukad Yeh Aya Panoramic",
+    "location": "Simpang Waturenggong - Tukad Yeh Aya (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A097WATURENGGONG-TUKADYEHAYAPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_130",
+    "name": "Tukad Barito - Tukad Badung",
+    "location": "Simpang Tukad Barito - Tukad Badung (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A098TUKADBARITO-TUKADBADUNGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_131",
+    "name": "Tukad Barito - Tukad Badung Panoramic",
+    "location": "Simpang Tukad Barito - Tukad Badung (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A098TUKADBARITO-TUKADBADUNGPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_132",
+    "name": "Hasanudin - Sumatera",
+    "location": "Simpang Hasanudin - Sumatera (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A099SUCIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_133",
+    "name": "Hasanudin - Sumatera Panoramic",
+    "location": "Simpang Hasanudin - Sumatera (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A099SUCIPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_134",
+    "name": "Teuku Umar Barat - Pura Demak",
+    "location": "Simpang Teuku Umar Barat - Pura Demak (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A100PURADEMAKPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_135",
+    "name": "Teuku Umar Barat - Pura Demak Panoramic",
+    "location": "Simpang Teuku Umar Barat - Pura Demak (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A100PURADEMAKPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_136",
+    "name": "Batukaru - Rinjani",
+    "location": "Simpang Batukaru - Rinjani (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream//A101BATUKARU-RINJANIPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_137",
+    "name": "Batukaru - Rinjani Panoramic",
+    "location": "Simpang Batukaru - Rinjani (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A101BATUKARU-RINJANIPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_138",
+    "name": "Beliton - Udayana",
+    "location": "Simpang Udayana - Beliton (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A102UDAYANA-BELITON/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_139",
+    "name": "Beliton - Udayana Panoramic",
+    "location": "Simpang Udayana - Beliton (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A102UDAYANA-BELITONPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_140",
+    "name": "Gajah Mada - Thamrin",
+    "location": "Simpang Gajah Mada - Thamrin (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A103GAJAHMADABARATPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_141",
+    "name": "Gajah Mada - Thamrin Panoramic",
+    "location": "Simpang Gajah Mada - Thamrin (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A103GAJAHMADABARATPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_142",
+    "name": "Sutoyo - Hasanudin",
+    "location": "Simpang Sutoyo - Hasanudin (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A104SUTOYO-HASANUDINPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_143",
+    "name": "Sutoyo - Hasanudin Panoramic",
+    "location": "Simpang Sutoyo - Hasanudin (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A104SUTOYO-HASANUDINPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_144",
+    "name": "Rsad Udayana",
+    "location": "Simpang Pb Sudirman -Rsad (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A105RSADUDAYANAPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_145",
+    "name": "Rsad Udayana Panoramic",
+    "location": "Simpang Pb Sudirman -Rsad (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A105RSADUDAYANAPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_146",
+    "name": "Enggano - Bungin",
+    "location": "Simpang Pulau Bungin - Pulau Enggano (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A106ENGGANO-BUNGINPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_147",
+    "name": "Enggano - Bungin Panoramic",
+    "location": "Simpang Pulau Bungin - Pulau Enggano (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A106ENGGANO-BUNGINPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_148",
+    "name": "Gatsu Barat - Gunung Catur",
+    "location": "Simpang Gatot Subroto Barat - Gunung Catur (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A107GATSUBARAT-GUNUNGCATURPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_149",
+    "name": "Gatsu Barat - Gunung Catur Panoramic",
+    "location": "Simpang Gatot Subroto Barat - Gunung Catur (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A107GATSUBARAT-GUNUNGCATURPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_150",
+    "name": "Pasar Sanglah",
+    "location": "Simpang Diponegoro - Waturenggong (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A108PASARSANGLAHPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_151",
+    "name": "Teuku Umar - Pulau Seram",
+    "location": "Simpang Teuku Umar - Pulau Seram (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A109TEUKUUMAR-PULAUSERAMPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_152",
+    "name": "Teuku Umar - Pulau Seram Panoramic",
+    "location": "Simpang Teuku Umar - Pulau Seram (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A109TEUKUUMAR-PULAUSERAMPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_153",
+    "name": "Pulau Kawe - Satelit",
+    "location": "Simpang Pulau Kawe - Satelit (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A110PULAUKAWE-SATELITPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_154",
+    "name": "Pulau Kawe - Satelit Panoramic",
+    "location": "Simpang Pulau Kawe - Satelit (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A110PULAUKAWE-SATELITPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_155",
+    "name": "Taman Pancing",
+    "location": "Simpang Taman Pancing - Pemogan (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A119TAMANPANCINGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_156",
+    "name": "Taman Pancing Panoramic",
+    "location": "Simpang Taman Pancing - Pemogan (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A119TAMANPANCINGPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_157",
+    "name": "Tukad Pakerisan",
+    "location": "Simpang Tukad Pakerisan - Tukad Barito (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A120TUKADPAKERISANPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_158",
+    "name": "Tukad Pakerisan Panoramic",
+    "location": "Simpang Tukad Pakerisan - Tukad Barito (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A120TUKADPAKERISANPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_159",
+    "name": "Jalan Gunung Agung",
+    "location": "Ruas Jalan Gunung Agung (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A050JALANGUNUNGAGUNGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_160",
+    "name": "Jalan Gunung Agung Panoramic",
+    "location": "Ruas Jalan Gunung Agung (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A050JALANGUNUNGAGUNGPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_161",
+    "name": "Mahendradata - Soputan",
+    "location": "Simpang Mahendradata - Soputan (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A051MAHENDRADATTA-SOPUTANPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_162",
+    "name": "Mahendradata - Soputan Panoramic",
+    "location": "Simpang Mahendradata - Soputan (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A051MAHENDRADATTA-SOPUTANPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_163",
+    "name": "Pasar Badung",
+    "location": "Simpang Gajah Mada - Sulawesi (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A055PASARBADUNGPTZ/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "denpasar_164",
+    "name": "Pasar Badung Panoramic",
+    "location": "Simpang Gajah Mada - Sulawesi (Denpasar)",
+    "stream_url": "https://atcs.denpasarkota.go.id/stream/A055PASARBADUNGPANORAMIC/index.m3u8",
+    "enabled": true,
+    "source": "atcs.denpasarkota.go.id"
+  }
+]
