@@ -1,5 +1,19 @@
 [
   {
+    "id": "czechia-lmk-hory",
+    "name": "LMK Hory Airfield",
+    "location": "Hory airfield",
+    "city": "Hory",
+    "country": "Czechia",
+    "stream_url": "https://kamery.wolfnet.cz/185.73.102.35-lmk.m3u8",
+    "website_url": "https://opencctv.org/cameras/czechia/hory/lmk-hory-modelarske-letiste-103878",
+    "enabled": true,
+    "source": "LMK Hory public webcam",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "portugal-carcavelos-calhau",
     "name": "Carcavelos Calhau Beachcam",
     "location": "Carcavelos beach",
