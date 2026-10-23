@@ -32,4 +32,4 @@ if ($LASTEXITCODE -ne 0) { throw 'Build EXE gagal' }
 $compiler = Join-Path ${env:ProgramFiles(x86)} 'Inno Setup 6\ISCC.exe'
 & $compiler installer.iss
 if ($LASTEXITCODE -ne 0) { throw 'Build installer gagal' }
-Get-Item 'dist\CCTV_ZIQVA_Setup_1.0.21.exe' | Select-Object FullName, Length
+Get-Item 'dist\CCTV_ZIQVA_Setup_1.0.22.exe' | Select-Object FullName, Length

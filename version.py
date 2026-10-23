@@ -1,6 +1,6 @@
 """Application version and GitHub update settings."""
 
-APP_VERSION = "1.0.21"
+APP_VERSION = "1.0.22"
 GITHUB_OWNER = "effands"
 GITHUB_REPOSITORY = "cctvziqva"
 GITHUB_RELEASES_API = (
