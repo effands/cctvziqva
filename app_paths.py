@@ -27,6 +27,21 @@ def initialize_data():
                 destination.write_text(json.dumps(settings, indent=2, ensure_ascii=False), encoding="utf-8")
             else:
                 shutil.copy2(source, destination)
+    # Tambahkan kamera baru dari installer ke daftar pengguna tanpa menimpa
+    # kamera custom atau perubahan konfigurasi yang sudah ada.
+    default_cameras = RESOURCE_DIR / "defaults" / "cctv_streams.json"
+    user_cameras = DATA_DIR / "cctv_streams.json"
+    if default_cameras.exists() and user_cameras.exists():
+        try:
+            defaults = json.loads(default_cameras.read_text(encoding="utf-8"))
+            current = json.loads(user_cameras.read_text(encoding="utf-8"))
+            known_ids = {str(cam.get("id")) for cam in current if cam.get("id")}
+            additions = [cam for cam in defaults if cam.get("id") and str(cam["id"]) not in known_ids]
+            if additions:
+                current.extend(additions)
+                user_cameras.write_text(json.dumps(current, indent=2, ensure_ascii=False), encoding="utf-8")
+        except (OSError, ValueError, TypeError):
+            pass
     os.environ["PLAYWRIGHT_BROWSERS_PATH"] = str(RESOURCE_DIR / "browsers")
 
 

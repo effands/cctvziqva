@@ -1,5 +1,20 @@
 [
   {
+    "id": "aqi_india_kuppuchipalayam",
+    "name": "AQI Live Camera - Kuppuchipalayam",
+    "location": "Kuppuchipalayam, Tiruppur, Tamil Nadu",
+    "city": "Tiruppur",
+    "country": "India",
+    "stream_url": "https://stream.aqi.in/live/03880002000614d3dbef.m3u8",
+    "website_url": "https://www.aqi.in/live-camera/india/tamil-nadu/tiruppur/kuppuchipalayam",
+    "enabled": true,
+    "source": "aqi.in",
+    "last_checked": "2026-10-24 00:00:00",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "cctv_244",
     "name": "Simpang Galeria (Ptz)",
     "location": "Gondokusuman",
