@@ -58,6 +58,8 @@ def load_settings() -> dict:
         "auto_record_camera_count": 3,       # Berapa kamera yang direkam jika mode random/count
         "auto_record_area": "all",          # 'all', 'malang', 'surabaya', 'yogyakarta', 'india'
         "auto_record_selected_cams": [],     # Daftar ID kamera jika mode selected
+        "auto_record_geo_scope": "world",   # world, region, country, city
+        "auto_record_geo_value": "",
         "saved_website_urls": [
             "http://36.66.208.101:5000/",
             "https://cctvsurabaya.24hour.id/",
@@ -171,6 +173,8 @@ class AutoRecordScheduler:
             self.camera_count = 3
         self.selected_cams = list(st.get("auto_record_selected_cams", []))
         self.area_filter = str(st.get("auto_record_area", "all")).strip().lower() or "all"
+        self.geo_scope = str(st.get("auto_record_geo_scope", "world")).strip().lower() or "world"
+        self.geo_value = str(st.get("auto_record_geo_value", "")).strip()
 
     def start(self, config_override: Optional[dict] = None):
         """Memulai auto record scheduler"""
@@ -419,6 +423,32 @@ class AutoRecordScheduler:
             valid_cams = scoped
             if not valid_cams:
                 logger.warning(f"Area auto-rekam '{area}' tidak memiliki kamera aktif; tidak ada kamera dipilih.")
+                return []
+
+        scope = self.geo_scope
+        value = self.geo_value.casefold()
+        if scope != "world" and value:
+            region_map = {
+                "asia": ("india", "indonesia", "japan", "china", "singapore", "malaysia", "thailand"),
+                "europe": ("germany", "france", "italy", "spain", "united kingdom", "uk"),
+                "americas": ("usa", "united states", "canada", "brazil", "mexico"),
+                "africa": ("south africa", "nigeria", "kenya"),
+                "oceania": ("australia", "new zealand"),
+            }
+            filtered = []
+            for cam in valid_cams:
+                country = str(cam.get("country", "")).casefold()
+                city = str(cam.get("city", cam.get("location", ""))).casefold()
+                haystack = " ".join(str(cam.get(k, "")) for k in ("name", "location", "city", "country", "source")).casefold()
+                if scope == "country" and value in country:
+                    filtered.append(cam)
+                elif scope == "city" and value in city:
+                    filtered.append(cam)
+                elif scope == "region" and any(token in haystack for token in region_map.get(value, (value,))):
+                    filtered.append(cam)
+            valid_cams = filtered
+            if not valid_cams:
+                logger.warning(f"Geo filter '{scope}:{self.geo_value}' tidak memiliki kamera aktif.")
                 return []
 
         mode = self.camera_mode

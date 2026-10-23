@@ -574,6 +574,12 @@ def manage_settings():
             area = str(data["auto_record_area"]).strip().lower()
             if area in ("all", "malang", "surabaya", "yogyakarta", "india"):
                 st["auto_record_area"] = area
+        if "auto_record_geo_scope" in data:
+            scope = str(data["auto_record_geo_scope"]).strip().lower()
+            if scope in ("world", "region", "country", "city"):
+                st["auto_record_geo_scope"] = scope
+        if "auto_record_geo_value" in data:
+            st["auto_record_geo_value"] = str(data["auto_record_geo_value"]).strip()[:120]
         if "auto_record_selected_cams" in data:
             st["auto_record_selected_cams"] = list(data["auto_record_selected_cams"])
 
@@ -670,7 +676,8 @@ def start_auto_record():
         st = load_settings()
         for k in ["auto_record_duration_minutes", "auto_record_repeat_count",
                   "auto_record_interval_seconds", "auto_record_camera_mode",
-                  "auto_record_camera_count", "auto_record_selected_cams", "auto_record_area"]:
+                  "auto_record_camera_count", "auto_record_selected_cams", "auto_record_area",
+                  "auto_record_geo_scope", "auto_record_geo_value"]:
             if k in data:
                 st[k] = data[k]
         save_settings(st)

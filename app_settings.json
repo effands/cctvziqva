@@ -10,6 +10,8 @@
   "auto_record_camera_mode": "random",
   "auto_record_camera_count": 8,
   "auto_record_area": "all",
+  "auto_record_geo_scope": "world",
+  "auto_record_geo_value": "",
   "auto_record_selected_cams": [],
   "saved_website_urls": [
     "http://36.66.208.101:5000/",

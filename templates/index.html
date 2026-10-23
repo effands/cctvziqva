@@ -450,6 +450,17 @@
                                 </select>
                                 <p class="text-[10px] text-slate-500 mt-1">Random, count, dan failover akan dibatasi ke area ini.</p>
                             </div>
+                            <div class="mt-3 border-t border-slate-700 pt-3">
+                                <label for="setting-auto-geo-scope" class="text-[11px] font-semibold text-slate-300 block mb-1">Filter geografis dinamis:</label>
+                                <select id="setting-auto-geo-scope" onchange="refreshGeoValues()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-slate-200 font-semibold focus:outline-none focus:border-amber-500">
+                                    <option value="world">🌐 Random World / Semua Dunia</option>
+                                    <option value="region">🌍 Random Region / Benua</option>
+                                    <option value="country">🏳️ Random Negara</option>
+                                    <option value="city">📍 Random Kota / Lokal</option>
+                                </select>
+                                <select id="setting-auto-geo-value" class="w-full mt-2 bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-slate-200 font-semibold focus:outline-none focus:border-amber-500"></select>
+                                <p class="text-[10px] text-slate-500 mt-1">Pilihan dibuat otomatis dari negara/kota pada daftar CCTV.</p>
+                            </div>
                         </div>
 
                         <!-- Jeda Antar Siklus -->
@@ -1531,6 +1542,24 @@
             }).join('');
         }
 
+        function refreshGeoValues(selected = '') {
+            const scope = document.getElementById('setting-auto-geo-scope')?.value || 'world';
+            const select = document.getElementById('setting-auto-geo-value');
+            if (!select) return;
+            const values = new Set();
+            const regionByCountry = { Indonesia: 'Asia', India: 'Asia', Singapore: 'Asia', Malaysia: 'Asia', Thailand: 'Asia', Japan: 'Asia', China: 'Asia', Australia: 'Oceania', 'United States': 'Americas', Canada: 'Americas', Brazil: 'Americas', Germany: 'Europe', France: 'Europe', Italy: 'Europe', Spain: 'Europe', Nigeria: 'Africa', Kenya: 'Africa', 'South Africa': 'Africa' };
+            (cachedCctvs || []).forEach(cam => {
+                const country = (cam.country || '').trim();
+                const city = (cam.city || cam.location || '').trim();
+                if (scope === 'country' && country) values.add(country);
+                if (scope === 'city' && city) values.add(city);
+                if (scope === 'region' && country) values.add(regionByCountry[country] || 'Other');
+            });
+            select.innerHTML = scope === 'world' ? '<option value="">Semua lokasi dunia</option>' : [...values].sort().map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+            if (selected && [...select.options].some(o => o.value === selected)) select.value = selected;
+            select.disabled = scope === 'world';
+        }
+
         async function openSettingsModal(defaultTab = 'auto') {
             document.getElementById('settings-modal').classList.remove('hidden');
             switchSettingsTab(defaultTab);
@@ -1574,6 +1603,8 @@
                     document.getElementById('setting-auto-cam-count').value = data.auto_record_camera_count;
                 }
                 document.getElementById('setting-auto-area').value = data.auto_record_area || 'all';
+                document.getElementById('setting-auto-geo-scope').value = data.auto_record_geo_scope || 'world';
+                refreshGeoValues(data.auto_record_geo_value || '');
                 onAutoCamModeChange();
                 renderCameraChecklist(data.auto_record_selected_cams || []);
             } catch (err) {
@@ -1611,6 +1642,8 @@
             const autoMode = document.getElementById('setting-auto-cam-mode').value;
             const autoCount = parseInt(document.getElementById('setting-auto-cam-count').value) || 3;
             const autoArea = document.getElementById('setting-auto-area').value;
+            const geoScope = document.getElementById('setting-auto-geo-scope').value;
+            const geoValue = document.getElementById('setting-auto-geo-value').value;
 
             // Ambil selected cams jika mode selected
             const selectedCams = [];
@@ -1628,6 +1661,8 @@
                 auto_record_camera_mode: autoMode,
                 auto_record_camera_count: autoCount,
                 auto_record_area: autoArea,
+                auto_record_geo_scope: geoScope,
+                auto_record_geo_value: geoValue,
                 auto_record_selected_cams: selectedCams
             };
         }
