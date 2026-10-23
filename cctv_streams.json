@@ -1,5 +1,33 @@
 [
   {
+    "id": "south-korea-seoul-hongeun-yeonhui",
+    "name": "Hongeun, Yeonhui Road Traffic Camera",
+    "location": "Hongeun, Yeonhui Road",
+    "city": "Seoul",
+    "country": "South Korea",
+    "stream_url": "https://topiscctv1.eseoul.go.kr/sd1/ch1.stream/playlist.m3u8",
+    "website_url": "https://opencctv.org/cameras/south-korea/seoul/hongeun-yeonhui-road-122052",
+    "enabled": true,
+    "source": "Seoul public traffic camera",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
+    "id": "south-korea-daegu-bokhyeon",
+    "name": "Bokhyeon Intersection Traffic Camera",
+    "location": "Bokhyeon Intersection",
+    "city": "Daegu",
+    "country": "South Korea",
+    "stream_url": "https://carcctv.daegu.go.kr/live2/_definst_/ch144.stream/playlist.m3u8",
+    "website_url": "https://opencctv.org/cameras/south-korea/daegu/bokhyeon-intersection-daegu-122727",
+    "enabled": true,
+    "source": "Daegu public traffic camera",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "czechia-lmk-hory",
     "name": "LMK Hory Airfield",
     "location": "Hory airfield",
