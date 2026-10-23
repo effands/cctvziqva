@@ -1,5 +1,19 @@
 [
   {
+    "id": "croatia-moscenicka-draga-whatsupcams",
+    "name": "Mošćenička Draga Beach",
+    "location": "Mošćenička Draga beach",
+    "city": "Mošćenička Draga",
+    "country": "Croatia",
+    "stream_url": "https://cdn-003.whatsupcams.com/hls/hr_mdraga02.m3u8",
+    "website_url": "https://www.vugla.com/moscenicka-draga-plaza-webkamera-livestream.html",
+    "enabled": true,
+    "source": "WhatsUpCams public webcam",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "croatia-makarska-whatsupcams",
     "name": "Makarska Waterfront",
     "location": "Makarska waterfront",
