@@ -75,7 +75,9 @@ def main():
 
     tk.Button(root, text="Hentikan dan Tutup", command=close, width=26).pack()
     root.protocol("WM_DELETE_WINDOW", close)
-    webbrowser.open(url)
+    # Jangan membuka Chrome otomatis setiap kali launcher dijalankan.
+    # Pengguna bisa membuka dashboard lewat tombol agar tidak muncul popup/tab
+    # baru tanpa sengaja ketika aplikasi restart atau selesai update.
     root.mainloop()
 
 
