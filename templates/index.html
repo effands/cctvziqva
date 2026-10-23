@@ -439,6 +439,17 @@
                                     <span class="text-xs text-slate-400">Kamera dari total yang tersedia</span>
                                 </div>
                             </div>
+                            <div class="mt-3">
+                                <label for="setting-auto-area" class="text-[11px] font-semibold text-slate-300 block mb-1">Area Random / Rekaman:</label>
+                                <select id="setting-auto-area" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-slate-200 font-semibold focus:outline-none focus:border-amber-500">
+                                    <option value="all">🌐 All Area</option>
+                                    <option value="malang">📍 Malang saja</option>
+                                    <option value="surabaya">📍 Surabaya saja</option>
+                                    <option value="yogyakarta">📍 Jogja / Yogyakarta saja</option>
+                                    <option value="india">🇮🇳 India saja</option>
+                                </select>
+                                <p class="text-[10px] text-slate-500 mt-1">Random, count, dan failover akan dibatasi ke area ini.</p>
+                            </div>
                         </div>
 
                         <!-- Jeda Antar Siklus -->
@@ -1562,6 +1573,7 @@
                 if (data.auto_record_camera_count) {
                     document.getElementById('setting-auto-cam-count').value = data.auto_record_camera_count;
                 }
+                document.getElementById('setting-auto-area').value = data.auto_record_area || 'all';
                 onAutoCamModeChange();
                 renderCameraChecklist(data.auto_record_selected_cams || []);
             } catch (err) {
@@ -1598,6 +1610,7 @@
             const autoInterval = parseInt(document.getElementById('setting-auto-interval').value) || 0;
             const autoMode = document.getElementById('setting-auto-cam-mode').value;
             const autoCount = parseInt(document.getElementById('setting-auto-cam-count').value) || 3;
+            const autoArea = document.getElementById('setting-auto-area').value;
 
             // Ambil selected cams jika mode selected
             const selectedCams = [];
@@ -1614,6 +1627,7 @@
                 auto_record_interval_seconds: autoInterval,
                 auto_record_camera_mode: autoMode,
                 auto_record_camera_count: autoCount,
+                auto_record_area: autoArea,
                 auto_record_selected_cams: selectedCams
             };
         }

@@ -56,6 +56,7 @@ def load_settings() -> dict:
         "auto_record_interval_seconds": 0,   # Jeda antar putaran (detik)
         "auto_record_camera_mode": "random", # 'all', 'random', 'count', 'selected'
         "auto_record_camera_count": 3,       # Berapa kamera yang direkam jika mode random/count
+        "auto_record_area": "all",          # 'all', 'malang', 'surabaya', 'yogyakarta', 'india'
         "auto_record_selected_cams": [],     # Daftar ID kamera jika mode selected
         "saved_website_urls": [
             "http://36.66.208.101:5000/",
@@ -68,6 +69,7 @@ def load_settings() -> dict:
             "https://dishub.kedirikota.go.id/live-streaming-atcs/",
             "https://atcs.denpasarkota.go.id/",
             "https://www.skylinewebcams.com/en/webcam.html"
+            ,"https://www.aqi.in/live-camera/india/tamil-nadu/tiruppur/kuppuchipalayam"
         ]
     }
     if SETTINGS_FILE.exists():
@@ -168,6 +170,7 @@ class AutoRecordScheduler:
         except (ValueError, TypeError):
             self.camera_count = 3
         self.selected_cams = list(st.get("auto_record_selected_cams", []))
+        self.area_filter = str(st.get("auto_record_area", "all")).strip().lower() or "all"
 
     def start(self, config_override: Optional[dict] = None):
         """Memulai auto record scheduler"""
@@ -202,6 +205,8 @@ class AutoRecordScheduler:
                         pass
                 if "selected_cams" in config_override:
                     self.selected_cams = list(config_override["selected_cams"])
+                if "area_filter" in config_override:
+                    self.area_filter = str(config_override["area_filter"]).strip().lower() or "all"
 
             self.is_running = True
             self.state = "starting"
@@ -395,6 +400,26 @@ class AutoRecordScheduler:
         valid_cams = self._load_valid_cams()
         if not valid_cams:
             return []
+
+        # Filter vóór random/count/all zodat ook failover binnen dezelfde regio blijft.
+        area = self.area_filter
+        area_aliases = {
+            "malang": ("malang", "malangkota"),
+            "surabaya": ("surabaya", "suroboyo"),
+            "yogyakarta": ("yogyakarta", "jogja", "jogjakarta"),
+            "india": ("india", "tiruppur", "tamil nadu", "tamil-nadu"),
+        }
+        if area in area_aliases:
+            tokens = area_aliases[area]
+            scoped = []
+            for cam in valid_cams:
+                haystack = " ".join(str(cam.get(k, "")) for k in ("name", "location", "city", "country", "source")).lower()
+                if any(token in haystack for token in tokens):
+                    scoped.append(cam)
+            valid_cams = scoped
+            if not valid_cams:
+                logger.warning(f"Area auto-rekam '{area}' tidak memiliki kamera aktif; tidak ada kamera dipilih.")
+                return []
 
         mode = self.camera_mode
         if mode == "all":

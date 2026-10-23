@@ -570,6 +570,10 @@ def manage_settings():
                 st["auto_record_camera_count"] = max(1, int(data["auto_record_camera_count"]))
             except (ValueError, TypeError):
                 pass
+        if "auto_record_area" in data:
+            area = str(data["auto_record_area"]).strip().lower()
+            if area in ("all", "malang", "surabaya", "yogyakarta", "india"):
+                st["auto_record_area"] = area
         if "auto_record_selected_cams" in data:
             st["auto_record_selected_cams"] = list(data["auto_record_selected_cams"])
 
@@ -666,7 +670,7 @@ def start_auto_record():
         st = load_settings()
         for k in ["auto_record_duration_minutes", "auto_record_repeat_count",
                   "auto_record_interval_seconds", "auto_record_camera_mode",
-                  "auto_record_camera_count", "auto_record_selected_cams"]:
+                  "auto_record_camera_count", "auto_record_selected_cams", "auto_record_area"]:
             if k in data:
                 st[k] = data[k]
         save_settings(st)
