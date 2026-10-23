@@ -760,6 +760,11 @@ class CCTVRecorder:
         if stream_url.lower().startswith(("rtsp://", "rtsps://")):
             return True
 
+        # YouTube live webcam: URL halaman/channel bersifat stabil, sedangkan
+        # URL media HLS-nya ditandatangani dan berubah-ubah. Resolve saat cek.
+        if self._is_youtube_url(stream_url):
+            return bool(self._resolve_youtube_url(stream_url))
+
         try:
             self._ensure_on_demand_stream(stream_url)
             import requests
@@ -789,6 +794,42 @@ class CCTVRecorder:
             return False
         except Exception:
             return False
+
+    @staticmethod
+    def _is_youtube_url(stream_url: str) -> bool:
+        value = (stream_url or "").lower()
+        return "youtube.com/" in value or "youtu.be/" in value
+
+    @staticmethod
+    def _resolve_youtube_url(stream_url: str) -> Optional[str]:
+        """Resolve URL YouTube live menjadi URL media sementara untuk FFmpeg."""
+        try:
+            import yt_dlp
+            opts = {
+                "quiet": True,
+                "no_warnings": True,
+                "noplaylist": True,
+                "skip_download": True,
+            }
+            with yt_dlp.YoutubeDL(opts) as ydl:
+                info = ydl.extract_info(stream_url, download=False)
+            if info:
+                formats = [f for f in info.get("formats", []) if f.get("url")]
+                # Prefer a combined video+audio HLS rendition; otherwise use
+                # the highest available video rendition FFmpeg can copy.
+                formats.sort(key=lambda f: (
+                    f.get("protocol", "") in ("m3u8", "m3u8_native"),
+                    f.get("vcodec", "none") != "none",
+                    f.get("acodec", "none") != "none",
+                    f.get("height") or 0,
+                ), reverse=True)
+                if formats:
+                    return str(formats[0]["url"])
+                if info.get("url"):
+                    return str(info["url"])
+        except Exception as exc:
+            logger.warning(f"Gagal resolve YouTube live {stream_url}: {exc}")
+        return None
 
     def load_offline_configs(self) -> list:
         """Membaca daftar kamera yang sedang OFFLINE / Mati dari cctv_offline.json"""
@@ -1227,6 +1268,13 @@ class CCTVRecorder:
             output_path = None
             proc = None
             try:
+                # Resolve ulang setiap percobaan/segmen karena URL YouTube
+                # memiliki token sementara dan tidak boleh disimpan ke JSON.
+                media_url = stream_url
+                if self._is_youtube_url(stream_url):
+                    media_url = self._resolve_youtube_url(stream_url)
+                    if not media_url:
+                        raise RuntimeError("YouTube live sedang offline atau gagal di-resolve")
                 if first_Check:
                     if not self.is_stream_online(stream_url):
                         raise RuntimeError("Stream CCTV sedang offline atau tidak merespons playlist HLS")
@@ -1247,7 +1295,7 @@ class CCTVRecorder:
 
                 output_path = self._get_output_path(cctv_id, cam_name, session_folder=session_folder)
                 cmd = self.ffmpeg_command = self.get_ffmpeg_command(
-                    stream_url,
+                    media_url,
                     str(output_path),
                     max_duration_seconds=rem_seconds
                 )

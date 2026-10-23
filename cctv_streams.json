@@ -9573,6 +9573,48 @@
     "fail_count": 0
   },
   {
+    "id": "japan-kyoto-live-webcam",
+    "name": "Kyoto Live Webcam",
+    "location": "Kyoto",
+    "city": "Kyoto",
+    "country": "Japan",
+    "stream_url": "https://www.youtube.com/watch?v=QKqHuf0O3yw",
+    "website_url": "https://spotnow.net/live/1dcbb745f400",
+    "enabled": true,
+    "source": "Spotnow / 京都観光混雑状況Live (YouTube live)",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
+    "id": "thailand-ko-samui-live-webcam",
+    "name": "Ko Samui Live Webcam",
+    "location": "Ko Samui",
+    "city": "Ko Samui",
+    "country": "Thailand",
+    "stream_url": "https://www.youtube.com/watch?v=UNbOvsRAx9U",
+    "website_url": "https://spotnow.net/live/708479ae76a5",
+    "enabled": true,
+    "source": "Spotnow / The Real Samui Webcam (YouTube live)",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
+    "id": "australia-sydney-harbour-live-webcam",
+    "name": "Sydney Harbour Live Webcam",
+    "location": "Sydney Harbour",
+    "city": "Sydney",
+    "country": "Australia",
+    "stream_url": "https://www.youtube.com/watch?v=6Xxb5uikewE",
+    "website_url": "https://spotnow.net/live/4a874974b082",
+    "enabled": true,
+    "source": "Spotnow / SurveillanceMap Foundation (YouTube live)",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "sby_55",
     "name": "Gn.Sari Rolak Selatan Fix",
     "location": "Surabaya Selatan (Surabaya)",
