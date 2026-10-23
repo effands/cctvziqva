@@ -1,5 +1,19 @@
 [
   {
+    "id": "portugal-carcavelos-calhau",
+    "name": "Carcavelos Calhau Beachcam",
+    "location": "Carcavelos beach",
+    "city": "Carcavelos",
+    "country": "Portugal",
+    "stream_url": "https://video-auth1.iol.pt/beachcam/carcavelos2/playlist.m3u8",
+    "website_url": "https://opencctv.org/cameras/portugal/carcavelos-calhau/carcavelos-calhau-390582",
+    "enabled": true,
+    "source": "Portugal beachcam",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "netherlands-harlingen-binnenhaven",
     "name": "Harlingen Binnenhaven",
     "location": "Binnenhaven harbor",
