@@ -1,5 +1,33 @@
 [
   {
+    "id": "argentina-villa-gesell-buenos-aires-playa",
+    "name": "Buenos Aires y Playa Villa Gesell",
+    "location": "Buenos Aires y Playa",
+    "city": "Villa Gesell",
+    "country": "Argentina",
+    "stream_url": "https://cambsasyplaya.gesell.com.ar/playlist.m3u8",
+    "website_url": "https://opencctv.org/cameras/argentina/buenos-aires/villa-gesell/buenos-aires-y-playa-villa-gesell-290897",
+    "enabled": true,
+    "source": "Villa Gesell public beach webcam",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
+    "id": "brazil-ubatuba-sp055-km073",
+    "name": "SP055 km 73 Ubatuba Traffic Camera",
+    "location": "SP055 km 73, Doutor Manoel Hyppolito Rego",
+    "city": "Ubatuba",
+    "country": "Brazil",
+    "stream_url": "https://34.104.32.249.nip.io/SP055-KM073/stream.m3u8",
+    "website_url": "https://opencctv.org/cameras/brazil/sao-paulo/ubatuba/sp055-km-73-doutor-manoel-hyppolito-rego-105197",
+    "enabled": true,
+    "source": "São Paulo public highway camera",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "south-korea-seoul-hongeun-yeonhui",
     "name": "Hongeun, Yeonhui Road Traffic Camera",
     "location": "Hongeun, Yeonhui Road",
