@@ -1,5 +1,19 @@
 [
   {
+    "id": "croatia-makarska-whatsupcams",
+    "name": "Makarska Waterfront",
+    "location": "Makarska waterfront",
+    "city": "Makarska",
+    "country": "Croatia",
+    "stream_url": "https://cdn-001.whatsupcams.com/hls/hr_makarska02.m3u8",
+    "website_url": "https://www.whatsupcams.com/en/webcams/croatia/makarska/",
+    "enabled": true,
+    "source": "WhatsUpCams public webcam",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "lithuania-ignalina-ignet",
     "name": "Ignalina Live Camera",
     "location": "Ignalina town",
