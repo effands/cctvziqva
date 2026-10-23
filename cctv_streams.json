@@ -1,5 +1,33 @@
 [
   {
+    "id": "webcam_germany_uhu",
+    "name": "Uhu Wildlife Live Camera",
+    "location": "Uhu Webcam, Germany",
+    "city": "Germany",
+    "country": "Germany",
+    "stream_url": "https://uhu.streaming.pixtura.de/live/Uhu2.stream/playlist.m3u8",
+    "website_url": "https://uhu.webcam.pixtura.de/hilfe/",
+    "enabled": true,
+    "source": "Uhu Webcam Germany",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
+    "id": "webcam_poland_krakow_cityhall",
+    "name": "Krakow City Hall Mogilska Live",
+    "location": "City Hall Mogilska, Krakow",
+    "city": "Krakow",
+    "country": "Poland",
+    "stream_url": "https://hoktastream1.webcamera.pl/krakow_cam_9a3b91/krakow_cam_9a3b91.stream/playlist.m3u8",
+    "website_url": "https://app.qoe.agh.edu.pl/public/kamery/",
+    "enabled": true,
+    "source": "WebCamera Poland",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "webcam_poland_krakow_florian",
     "name": "Krakow Florianska Street Live",
     "location": "Florianska Street, Krakow",
