@@ -1,5 +1,29 @@
 [
   {
+    "id": "norway-vegvesen-3000158-2", "name": "Øvre Helligskogen 2", "location": "E8, Finland", "city": "Skibotn", "country": "Norway", "stream_url": "https://kamera.vegvesen.no/public/3000158_2/manifest.m3u8", "website_url": "https://www.vegvesen.no/trafikk/kart", "enabled": true, "source": "Statens vegvesen", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "norway-vegvesen-3000153-1", "name": "Lullemoen", "location": "E8, Finland", "city": "Skibotn", "country": "Norway", "stream_url": "https://kamera.vegvesen.no/public/3000153_1/manifest.m3u8", "website_url": "https://www.vegvesen.no/trafikk/kart", "enabled": true, "source": "Statens vegvesen", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "norway-vegvesen-1429012-1", "name": "Borlaugkrysset aust", "location": "E16, Lærdal", "city": "Lærdal", "country": "Norway", "stream_url": "https://kamera.vegvesen.no/public/1429012_1/manifest.m3u8", "website_url": "https://www.vegvesen.no/trafikk/kart", "enabled": true, "source": "Statens vegvesen", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "norway-vegvesen-1129036-1", "name": "Mortavika ferjekai", "location": "E39, Kaien", "city": "Rennesøy", "country": "Norway", "stream_url": "https://kamera.vegvesen.no/public/1129036_1/manifest.m3u8", "website_url": "https://www.vegvesen.no/trafikk/kart", "enabled": true, "source": "Statens vegvesen", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "norway-vegvesen-1229036-1", "name": "Leiro bom", "location": "R7, Geilo", "city": "Geilo", "country": "Norway", "stream_url": "https://kamera.vegvesen.no/public/1229036_1/manifest.m3u8", "website_url": "https://www.vegvesen.no/trafikk/kart", "enabled": true, "source": "Statens vegvesen", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "norway-vegvesen-3000958-1", "name": "Hopseidet", "location": "F888, Bekkarfjord", "city": "Bekkarfjord", "country": "Norway", "stream_url": "https://kamera.vegvesen.no/public/3000958_1/manifest.m3u8", "website_url": "https://www.vegvesen.no/trafikk/kart", "enabled": true, "source": "Statens vegvesen", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "norway-vegvesen-1229047-1", "name": "Midtlæger", "location": "E134, Røldal", "city": "Røldal", "country": "Norway", "stream_url": "https://kamera.vegvesen.no/public/1229047_1/manifest.m3u8", "website_url": "https://www.vegvesen.no/trafikk/kart", "enabled": true, "source": "Statens vegvesen", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "norway-vegvesen-1429019-1", "name": "Vikafjellet", "location": "R13, Vinje", "city": "Vinje", "country": "Norway", "stream_url": "https://kamera.vegvesen.no/public/1429019_1/manifest.m3u8", "website_url": "https://www.vegvesen.no/trafikk/kart", "enabled": true, "source": "Statens vegvesen", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
     "id": "norway-vegvesen-3000061-1",
     "name": "Fjøsangerveien v/BKK",
     "location": "E39, sentrum",
