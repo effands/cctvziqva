@@ -1,5 +1,33 @@
 [
   {
+    "id": "traffic_usa_maryland_i97",
+    "name": "Maryland Traffic Camera - I-97 North",
+    "location": "I-97 North of Exit 16, Maryland",
+    "city": "Glen Burnie",
+    "country": "United States",
+    "stream_url": "https://strmr5.sha.maryland.gov/rtplive/0900adbd00ee00e30051fa36c4235c0a/playlist.m3u8",
+    "website_url": "https://data.imap.maryland.gov/datasets/445e40f92443482fb3cdba9d2934c61b_0/explore",
+    "enabled": true,
+    "source": "Maryland CHART",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
+    "id": "traffic_usa_maryland_us50",
+    "name": "Maryland Traffic Camera - US 50",
+    "location": "US 50 at MD 424, Maryland",
+    "city": "Annapolis",
+    "country": "United States",
+    "stream_url": "https://strmr5.sha.maryland.gov/rtplive/000109f6004b00a6004af03676235daa/playlist.m3u8",
+    "website_url": "https://data.imap.maryland.gov/datasets/445e40f92443482fb3cdba9d2934c61b_0/explore",
+    "enabled": true,
+    "source": "Maryland CHART",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "traffic_usa_delaware_kcam002",
     "name": "Delaware Traffic Camera - West Dover Connector",
     "location": "W North St, Dover, Delaware",
