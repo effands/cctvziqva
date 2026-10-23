@@ -1,5 +1,47 @@
 [
   {
+    "id": "webcam_poland_krakow_florian",
+    "name": "Krakow Florianska Street Live",
+    "location": "Florianska Street, Krakow",
+    "city": "Krakow",
+    "country": "Poland",
+    "stream_url": "https://hoktastream4.webcamera.pl/krakow_cam_904168/krakow_cam_904168.stream/playlist.m3u8",
+    "website_url": "https://app.qoe.agh.edu.pl/public/kamery/",
+    "enabled": true,
+    "source": "WebCamera Poland",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
+    "id": "webcam_norway_storlidalen",
+    "name": "Storlidalen Live Camera",
+    "location": "Storlidalen, Oppdal",
+    "city": "Oppdal",
+    "country": "Norway",
+    "stream_url": "https://hls.vitnett.com:444/hls/storlidalen.m3u8",
+    "website_url": "https://neas.no/live-kamera-og-vaer/storlidalen/",
+    "enabled": true,
+    "source": "NEAS Norway",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
+    "id": "webcam_poland_krakow_horn",
+    "name": "Krakow Bagry Marina Live",
+    "location": "Bagry Lake, Krakow",
+    "city": "Krakow",
+    "country": "Poland",
+    "stream_url": "https://horncam.mkilinski.dev/hls/stream.m3u8",
+    "website_url": "https://horncam.mkilinski.dev/",
+    "enabled": true,
+    "source": "HORN Sailing Club Poland",
+    "status_health": "online",
+    "offline_reason": "",
+    "fail_count": 0
+  },
+  {
     "id": "aqi_india_kuppuchipalayam",
     "name": "AQI Live Camera - Kuppuchipalayam",
     "location": "Kuppuchipalayam, Tiruppur, Tamil Nadu",
