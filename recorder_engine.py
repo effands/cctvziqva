@@ -1187,7 +1187,16 @@ def load_settings() -> dict:
     "https://worldcam.eu/webcams/europe/italy",
     "https://worldcam.eu/webcams/africa/south-africa",
     "https://worldcam.eu/webcams/africa/kenya",
-    "https://worldcam.eu/webcams/south-america/brazil"
+    "https://worldcam.eu/webcams/south-america/brazil",
+    "https://worldcam.eu/webcams/europe/spain",
+    "https://worldcam.eu/webcams/europe/portugal",
+    "https://worldcam.eu/webcams/europe/russia",
+    "https://worldcam.eu/webcams/europe/norway",
+    "https://worldcam.eu/webcams/africa/morocco",
+    "https://worldcam.eu/webcams/asia/philippines",
+    "https://worldcam.eu/webcams/north-america/canada",
+    "https://worldcam.eu/webcams/south-america/chile",
+    "https://worldcam.eu/webcams/australia-oceania/new-zealand"
         ]
     }
     if SETTINGS_FILE.exists():
