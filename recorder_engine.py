@@ -361,7 +361,8 @@ def load_settings() -> dict:
         "https://vanwatch.live/weather",
         "https://city-webcams.com/streaming-fiji",
         "https://www.vadernu.com/oceania/samoa/tuamasaga/apia/webcam",
-        "https://www.easeweather.com/oceania/tonga/tongatapu/kolofoou/nukualofa/webcam"
+        "https://www.easeweather.com/oceania/tonga/tongatapu/kolofoou/nukualofa/webcam",
+        "https://www.pictimo.com/suriname/paramaribo/21873/webcam-ip-camera-paramaribo"
         ]
     }
     if SETTINGS_FILE.exists():
