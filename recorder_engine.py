@@ -133,7 +133,10 @@ def load_settings() -> dict:
               "https://www.bkom.cz/traffic-cameras",
               "https://www.doprava-brno.cz/",
               "https://www.trafficthess.imet.gr/",
-              "https://www.iroads.co.il/"
+              "https://www.iroads.no/",
+              "https://veikamera.no/",
+              "https://trafikkort.vejdirektoratet.dk/prototype/index.html",
+              "https://www.gov.ie/en/department-of-transport/services/view-maps-and-gis-content-from-transport-infrastructure-ireland/"
         ]
     }
     if SETTINGS_FILE.exists():
