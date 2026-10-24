@@ -259,7 +259,9 @@ defaults = {
         "https://admtrafic.ma/?map=true",
         "https://www.adm.co.ma/fr/adm-trafic",
         "https://opencctv.org/cameras/traffic",
-        "https://orbisviews.com/en/"
+        "https://orbisviews.com/en/",
+        "https://kufiri.live/en/",
+        "https://uzivokamere.com/en/"
     ]
 }
 
