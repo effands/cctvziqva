@@ -1416,6 +1416,16 @@ def load_settings() -> dict:
     "https://www.skylinewebcams.com/en/webcam/italia/emilia-romagna/rimini/rimini.html",
     "https://www.skylinewebcams.com/en/webcam/italia/friuli-venezia-giulia/trieste/piazza-unita-italia.html",
     "https://www.skylinewebcams.com/en/webcam/italia/lazio/roma/fontana-di-trevi.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/lazio/roma/piazza-venezia.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/lazio/roma/roma-colosseo.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/lazio/roma/roma-skyline.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/lazio/roma/via-del-corso.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/liguria/genova/boccadasse-genova.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/liguria/genova/camogli.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/liguria/genova/sestri-levante.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/lombardia/milano/duomo-milano.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/lombardia/milano/piazza-san-babila.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/puglia/bari/polignano-a-mare.html",
     "https://www.skylinewebcams.com/en/webcam/italia/lazio/roma/piazza-navona.html"
         ]
     }
