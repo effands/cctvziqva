@@ -1220,7 +1220,16 @@ def load_settings() -> dict:
     "https://freetvgarden.com/webcam/underwater/",
     "https://freetvgarden.com/webcam/usa/",
     "https://freetvgarden.com/webcam/volcano/",
-    "https://freetvgarden.com/webcam/weather/"
+    "https://freetvgarden.com/webcam/weather/",
+    "https://livecamsmap.com/webcam/australia/webcamsydney-1-live-stream-of-harbour-24-7-4k-yt-5uZa3-RMFos",
+    "https://livecamsmap.com/webcam/canada/pier-b-cam-yt-c1kfkIoF0k0",
+    "https://livecamsmap.com/webcam/france/andernos-les-bains-aerodrome-andernos-1793907843",
+    "https://livecamsmap.com/webcam/greece/kos-east-1793897683",
+    "https://livecamsmap.com/webcam/italy/milo-east-mount-etna-1642712028",
+    "https://livecamsmap.com/webcam/morocco/oukaimeden-south-east-observatoire-trappist-1622904818",
+    "https://livecamsmap.com/webcam/norway/ny-alesund-north-east-kongsfjorden-1447838456",
+    "https://livecamsmap.com/webcam/portugal/monte-pico-do-arieiro-1401283880",
+    "https://livecamsmap.com/webcam/tunisia/jaidane-mohamed-south-east-1722869946"
         ]
     }
     if SETTINGS_FILE.exists():
