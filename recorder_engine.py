@@ -329,7 +329,10 @@ def load_settings() -> dict:
         "https://argosatlas.com/en/cameras/luxembourg/",
         "https://ltm.saikat.com.bd/",
         "https://city-webcams.com/bangladesh/dhaka",
-        "https://opencctv.org/cameras/nepal/kathmandu/live-camera-axis-m2026-le-mkii-141328"
+        "https://opencctv.org/cameras/nepal/kathmandu/live-camera-axis-m2026-le-mkii-141328",
+        "https://argosatlas.com/camaras/china/",
+        "https://livecam.tw/",
+        "https://live.focustaiwan.net/"
         ]
     }
     if SETTINGS_FILE.exists():
