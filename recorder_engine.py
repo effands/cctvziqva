@@ -246,7 +246,11 @@ def load_settings() -> dict:
               "https://opencctv.org/cameras/japan",
               "https://opencctv.org/cameras/turkiye",
               "https://opencctv.org/cameras/south-korea",
-              "https://opencctv.org/cameras/taiwan"
+        "https://opencctv.org/cameras/taiwan",
+        "https://opencctv.org/cameras/thailand",
+        "https://opencctv.org/cameras/vietnam",
+        "https://opencctv.org/cameras/indonesia",
+        "https://opencctv.org/cameras/philippines"
         ]
     }
     if SETTINGS_FILE.exists():
