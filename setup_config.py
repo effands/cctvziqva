@@ -160,7 +160,11 @@ defaults = {
         "https://opencctv.org/cameras/north-macedonia",
         "https://opencctv.org/cameras/cyprus",
         "https://opencctv.org/cameras/bahamas",
-        "https://opencctv.org/cameras/trinidad-and-tobago"
+        "https://opencctv.org/cameras/trinidad-and-tobago",
+        "https://opencctv.org/cameras/pakistan",
+        "https://opencctv.org/cameras/iran",
+        "https://opencctv.org/cameras/lebanon",
+        "https://opencctv.org/cameras/oman"
     ]
 }
 
