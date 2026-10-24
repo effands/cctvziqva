@@ -321,7 +321,11 @@ defaults = {
         "https://www.skylinewebcams.com/en/webcam/madagascar.html",
         "https://city-webcams.com/live?streaming=cameroon&webcam=Yaound%C3%A9&l=cs",
         "https://www.pictimo.com/republic-of-the-congo/brazzaville/31821/webcam-live-cam-view-brazzaville",
-        "https://www.vadernu.com/africa/gabon/estuaire/libreville/webcam"
+        "https://www.vadernu.com/africa/gabon/estuaire/libreville/webcam",
+        "https://opencctv.org/cameras/kosovo/district-of-prishtina/pristina",
+        "https://kufiri.live/kamera-kosove/",
+        "https://worldcam.eu/webcams/europe/macedonia/21622-traffic",
+        "https://www.everywebcam.com/europe/belarus"
     ]
 }
 
