@@ -1254,7 +1254,19 @@ defaults = {
     "https://camlisted.com/country/united-kingdom.html",
     "https://camlisted.com/country/united-states.html",
     "https://camlisted.com/country/venezuela.html",
-    "https://camlisted.com/country/vietnam.html"
+    "https://camlisted.com/country/vietnam.html",
+    "https://www.earthcam.com/",
+    "https://www.skylinewebcams.com/en/webcam.html",
+    "https://www.skylinewebcams.com/en/top-live-cams.html",
+    "https://www.skylinewebcams.com/en/webcam/senegal.html",
+    "https://www.skylinewebcams.com/en/webcam/zanzibar.html",
+    "https://www.skylinewebcams.com/en/webcam/bolivia.html",
+    "https://www.skylinewebcams.com/en/webcam/luxembourg.html",
+    "https://www.skylinewebcams.com/en/webcam/zambia.html",
+    "https://www.skylinewebcams.com/en/webcam/argentina.html",
+    "https://www.skylinewebcams.com/en/webcam/bosnia-and-herzegovina.html",
+    "https://www.skylinewebcams.com/en/webcam/grenada.html",
+    "https://www.skylinewebcams.com/en/webcam/jordan.html"
     ]
 }
 
