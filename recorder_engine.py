@@ -150,7 +150,8 @@ def load_settings() -> dict:
               "https://montevideo.gub.uy/tipo/area-tematica/movilidad/gestion-de-la-movilidad/camaras-de-monitoreo-del-transito",
               "https://aireambiente.quito.gob.ec/Modules/Realtime/SiteCamView.aspx",
               "https://vivopanama.com/",
-              "https://argosatlas.com/camaras/costa-rica/"
+              "https://argosatlas.com/camaras/costa-rica/",
+              "https://earthlive.tv/country/qatar"
         ]
     }
     if SETTINGS_FILE.exists():
