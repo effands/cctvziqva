@@ -423,7 +423,13 @@ defaults = {
         "https://city-webcams.com/ghana/accra?l=en",
         "https://www.pictimo.com/ghana/accra",
         "https://opencctv.org/cameras/kenya",
-        "https://worldviewstream.com/webcams/africa/kenya"
+        "https://worldviewstream.com/webcams/africa/kenya",
+        "https://opencctv.org/cameras/tanzania",
+        "https://argosatlas.com/camaras/tanzania/",
+        "https://www.pictimo.com/rwanda/kigali/31383/webcam-ip-camera-kigali",
+        "https://ipv4.earthlive24.com/city/kampala",
+        "https://www.discoverourglobe.com/country/uganda",
+        "https://freetvgarden.com/webcam/"
     ]
 }
 
