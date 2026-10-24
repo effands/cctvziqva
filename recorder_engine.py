@@ -521,7 +521,10 @@ def load_settings() -> dict:
         "https://worldcam.io/webcams/philippines",
         "https://argosatlas.com/en/cameras/philippines/",
         "https://findpubliccam.com/en",
-        "https://globenow.tv/live/taiwan"
+        "https://globenow.tv/live/taiwan",
+        "https://opencctv.org/cameras/mozambique",
+        "https://worldcam.eu/webcams/africa/mozambique",
+        "https://www.vision-environnement.com/webcams/mozambique/maputo/"
         ]
     }
     if SETTINGS_FILE.exists():
