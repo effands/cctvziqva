@@ -464,7 +464,13 @@ def load_settings() -> dict:
         "https://city-webcams.com/pakistan?l=en",
         "https://city-webcams.com/streaming-pakistan",
         "https://city-webcams.com/sri-lanka?l=en",
-        "https://city-webcams.com/streaming-sri-lanka"
+        "https://city-webcams.com/streaming-sri-lanka",
+        "https://www.pictimo.com/nepal/kathmandu/4371/webcam-kathmandu-street-cam",
+        "https://www.skylinewebcams.com/en/webcam/nepal/kathmandu.html",
+        "https://worldcam.eu/webcams/asia/nepal",
+        "https://www.discoverourglobe.com/country/bhutan",
+        "https://www.meteohorizon.com/asia/bhutan/thimphu-district/thimphu/webcam",
+        "https://livepublicwebcams.com/"
         ]
     }
     if SETTINGS_FILE.exists():
