@@ -125,7 +125,11 @@ def load_settings() -> dict:
               "https://www.rwsverkeersinfo.nl/cameras/",
               "https://trafiroutes.wallonie.be/",
               "https://drogi.gddkia.gov.pl/",
-              "https://vif.lu.ch/webcams"
+              "https://vif.lu.ch/webcams",
+              "https://ibb.istanbul/tum-hizmetler/e-belediye-hizmetleri/e-bilgi/kameralar/",
+              "https://argosatlas.com/camaras/argentina/",
+              "https://www.alertaperu.org.pe/",
+              "https://orbisviews.com/"
         ]
     }
     if SETTINGS_FILE.exists():
