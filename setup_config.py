@@ -405,7 +405,9 @@ defaults = {
         "https://openwebcamdb.com/countries/montenegro",
         "https://ubtraffic.mn/",
         "https://opencctv.org/cameras/china/macau",
-        "https://opendata.000.taipei/"
+        "https://opendata.000.taipei/",
+        "https://earthlive.tv/country/oman",
+        "https://city-webcams.com/bangladesh/dhaka"
     ]
 }
 
