@@ -365,7 +365,9 @@ def load_settings() -> dict:
         "https://www.pictimo.com/suriname/paramaribo/21873/webcam-ip-camera-paramaribo",
         "https://www.easeweather.com/africa/malawi/central-region/lilongwe-district/lilongwe/webcam",
         "https://www.pictimo.com/haiti/port-au-prince/15596/webcam-ip-camera-port-au-prince",
-        "https://www.discoverourglobe.com/country/bhutan"
+        "https://www.discoverourglobe.com/country/bhutan",
+        "https://www.pictimo.com/benin/cotonou/19829/webcam-ip-camera-cotonou",
+        "https://www.vadernu.com/africa/togo/maritime/lome/webcam"
         ]
     }
     if SETTINGS_FILE.exists():
