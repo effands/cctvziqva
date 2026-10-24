@@ -329,7 +329,10 @@ defaults = {
         "https://www.totallybarbados.com/webcams/",
         "https://iwcpinc.com/cameras/pebbles_radisson",
         "https://grenadaexplorer.net/webcam/",
-        "https://www.vision-environnement.com/webcam/grenade/saint-georges/20793-skyline-grenada-springs-marina/"
+        "https://www.vision-environnement.com/webcam/grenade/saint-georges/20793-skyline-grenada-springs-marina/",
+        "https://villededjibouti.dj/",
+        "https://www.pictimo.com/sao-tome-and-principe/sao-tome/39922/webcam-sao-tome-ip-camera",
+        "https://worldcam.io/"
     ]
 }
 
