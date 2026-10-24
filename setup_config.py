@@ -458,7 +458,11 @@ defaults = {
         "https://couchtourist.com/cams/armenia/",
         "https://atollcam.com/",
         "https://www.pictimo.com/maldives/male",
-        "https://balticlivecam.com/cameras/maldives/male/"
+        "https://balticlivecam.com/cameras/maldives/male/",
+        "https://www.see.cam/zw",
+        "https://opencctv.org/cameras/zimbabwe",
+        "https://www.vision-environnement.com/en/webcam/zambie/province-de-lusaka/22435-skyline-zambia-mafuta-zambezi-national-park/",
+        "https://www.vision-environnement.com/en/webcams/zambie/"
     ]
 }
 
