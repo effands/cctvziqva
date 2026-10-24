@@ -407,7 +407,10 @@ def load_settings() -> dict:
         "https://www.pictimo.com/burkina-faso/ouagadougou/43987/webcam-ouagadougou-ip-camera",
         "https://www.discoverourglobe.com/country/chad",
         "https://ortm.net/",
-        "https://www.easeweather.com/africa/niger/webcam"
+        "https://www.easeweather.com/africa/niger/webcam",
+        "https://www.discoverourglobe.com/country/comoros",
+        "https://webcams.windy.com/webcams/public/embed/player?forceFullScreenOnOverlayPlay=false&interactive=true&loop=false&playerType=month&webcamId=1760626993",
+        "https://www.weer1.com/amp/africa/liberia/montserrado/monrovia?page=webcam"
         ]
     }
     if SETTINGS_FILE.exists():
