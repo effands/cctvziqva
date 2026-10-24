@@ -198,7 +198,12 @@ def load_settings() -> dict:
               "https://opencctv.org/cameras/honduras",
               "https://opencctv.org/cameras/paraguay",
               "https://opencctv.org/cameras/venezuela",
-              "https://opencctv.org/cameras/jamaica"
+              "https://opencctv.org/cameras/jamaica",
+              "https://opencctv.org/cameras/mauritius",
+              "https://opencctv.org/cameras/mozambique",
+              "https://opencctv.org/cameras/cape-verde",
+              "https://opencctv.org/cameras/lesotho",
+              "https://opencctv.org/cameras/seychelles"
         ]
     }
     if SETTINGS_FILE.exists():
