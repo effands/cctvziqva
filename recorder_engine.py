@@ -208,7 +208,12 @@ def load_settings() -> dict:
               "https://opencctv.org/cameras/malta",
               "https://opencctv.org/cameras/luxembourg",
               "https://opencctv.org/cameras/kosovo",
-              "https://opencctv.org/cameras/faroe-islands"
+              "https://opencctv.org/cameras/faroe-islands",
+              "https://opencctv.org/cameras/china",
+              "https://opencctv.org/cameras/north-macedonia",
+              "https://opencctv.org/cameras/cyprus",
+              "https://opencctv.org/cameras/bahamas",
+              "https://opencctv.org/cameras/trinidad-and-tobago"
         ]
     }
     if SETTINGS_FILE.exists():
