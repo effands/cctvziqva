@@ -492,7 +492,13 @@ def load_settings() -> dict:
         "https://webcamromania.ro/trafic/",
         "https://webcamromania.ro/webcam-live/municipiul-bucuresti/",
         "https://webcamsbg.com/",
-        "https://kbcnet.rs/beograd-uzivo"
+        "https://kbcnet.rs/beograd-uzivo",
+        "https://earthlive.tv/country/qatar",
+        "https://www.cruisingearth.com/port-webcams/middle-east/doha-qatar/",
+        "https://www.eta-il.com/en/webcams",
+        "https://www.earthcam.com/world/israel/jerusalem/?cam=jerusal",
+        "https://tabi.cam/jordan/amman-cityscapes-259084/",
+        "https://www.earthtv.com/en/webcam/amman-historic-center"
         ]
     }
     if SETTINGS_FILE.exists():
