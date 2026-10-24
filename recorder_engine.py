@@ -335,7 +335,9 @@ def load_settings() -> dict:
         "https://live.focustaiwan.net/",
         "https://www.andsa.md/camerele-video-amplasate-pe-drumurile-nationale/",
         "https://argosatlas.com/en/cameras/ukraine/",
-        "https://www.pictimo.com/country/algeria/"
+        "https://www.pictimo.com/country/algeria/",
+        "https://servicos.infraestruturasdeportugal.pt/index.php/pt-pt/viajar-na-estrada/transito-em-tempo-real",
+        "https://www.arcgis.com/home/item.html?id=8061c55d6a9a481885fa8f913101dcdd&sublayer=0"
         ]
     }
     if SETTINGS_FILE.exists():
