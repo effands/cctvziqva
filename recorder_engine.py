@@ -432,7 +432,9 @@ def load_settings() -> dict:
         "https://www.discoverourglobe.com/country/brunei",
         "https://www.vadernu.com/asia/timor-leste/dili/webcam",
         "https://www.easeweather.com/oceania/solomon-islands/honiara/webcam",
-        "https://makotrav.com/tropical-reef-webcam/"
+        "https://makotrav.com/tropical-reef-webcam/",
+        "https://opencctv.org/cameras/falkland-islands/stanley/stanley-public-jetty-103855",
+        "https://spotcameras.com/en/cams/South-America/Falkland-Islands/10953-Stanley-Falkland-Islands"
         ]
     }
     if SETTINGS_FILE.exists():
