@@ -606,7 +606,9 @@ def load_settings() -> dict:
         "https://www.see.cam/bq",
         "https://opencctv.org/cameras/senegal",
         "https://www.pictimo.com/country/lebanon",
-        "https://earthlive.tv/country/cyprus"
+        "https://earthlive.tv/country/cyprus",
+        "https://www.see.cam/pf",
+        "https://www.see.cam/gu"
         ]
     }
     if SETTINGS_FILE.exists():
