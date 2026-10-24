@@ -854,7 +854,26 @@ def load_settings() -> dict:
     "https://webcamera24.com/countries/ukraine/",
     "https://webcamera24.com/countries/us-virgin-islands/",
     "https://webcamera24.com/countries/vatican/",
-    "https://webcamera24.com/countries/vietnam/"
+    "https://webcamera24.com/countries/vietnam/",
+    "https://www.camscape.com/location/antarctica/",
+    "https://www.camscape.com/location/bosnia-and-herzegovina/",
+    "https://www.camscape.com/location/czech-republic/",
+    "https://www.camscape.com/location/dominican-republic/",
+    "https://www.camscape.com/location/el-salvador/",
+    "https://www.camscape.com/location/french-polynesia/",
+    "https://www.camscape.com/location/georgia-country/",
+    "https://www.camscape.com/location/kosovo/",
+    "https://www.camscape.com/location/kyrgyzstan/",
+    "https://www.camscape.com/location/micronesia/",
+    "https://www.camscape.com/location/new-brunswick/",
+    "https://www.camscape.com/location/nepal/",
+    "https://www.camscape.com/location/channel-islands/",
+    "https://www.camscape.com/location/cape-verde/",
+    "https://www.camscape.com/location/bonaire/",
+    "https://www.camscape.com/location/cayman-islands/",
+    "https://www.camscape.com/location/alberta/",
+    "https://www.camscape.com/location/andorra/",
+    "https://www.camscape.com/location/barbados/"
         ]
     }
     if SETTINGS_FILE.exists():
