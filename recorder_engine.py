@@ -334,7 +334,8 @@ def load_settings() -> dict:
         "https://livecam.tw/",
         "https://live.focustaiwan.net/",
         "https://www.andsa.md/camerele-video-amplasate-pe-drumurile-nationale/",
-        "https://argosatlas.com/en/cameras/ukraine/"
+        "https://argosatlas.com/en/cameras/ukraine/",
+        "https://www.pictimo.com/country/algeria/"
         ]
     }
     if SETTINGS_FILE.exists():
