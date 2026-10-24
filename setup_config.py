@@ -42,7 +42,11 @@ defaults = {
         "https://www.i-traffic.co.za/map",
         "https://rodovias.grupoccr.com.br/riosp/cameras-ao-vivo/",
         "https://ledrium.live/",
-        "https://traffic.com.gh/"
+        "https://traffic.com.gh/",
+        "https://www.giaothong.hochiminhcity.gov.vn/",
+        "https://mmda-redesign.vercel.app/",
+        "https://ccc.rajasthan.gov.in/",
+        "https://amanroads.gov.ae/"
     ]
 }
 

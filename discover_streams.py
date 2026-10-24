@@ -545,6 +545,11 @@ async def discover_streams(custom_urls: list = None):
                 # Scan website HTML & network packets via browser
                 streams = await scan_website_url(url, browser=browser)
                 domain = url.split("/")[2].replace("www.", "")
+                # Portal ini memuat video tutorial/hero, bukan feed CCTV.
+                # Tetap dipertahankan sebagai sumber rujukan, tetapi jangan
+                # memasukkan asset MP4 statis sebagai kamera rekaman.
+                if domain == "amanroads.gov.ae":
+                    streams = []
                 source_meta = {
                     "dishub.kedirikota.go.id": ("Indonesia", "Kediri", "Kota Kediri"),
                     "www.mlit.go.jp": ("Japan", "Japan", "Japan Road Camera"),
@@ -556,6 +561,10 @@ async def discover_streams(custom_urls: list = None):
                     "www.livetraffic.com": ("Australia", "New South Wales", "Live Traffic NSW"),
                     "www.fl511.com": ("United States", "Florida", "Florida 511"),
                     "klccc.dbkl.gov.my": ("Malaysia", "Kuala Lumpur", "Kuala Lumpur"),
+                    "www.giaothong.hochiminhcity.gov.vn": ("Vietnam", "Ho Chi Minh City", "Ho Chi Minh City"),
+                    "mmda-redesign.vercel.app": ("Philippines", "Manila", "Metro Manila"),
+                    "ccc.rajasthan.gov.in": ("India", "Rajasthan", "Rajasthan"),
+                    "amanroads.gov.ae": ("United Arab Emirates", "Abu Dhabi", "Abu Dhabi"),
                 }
                 country, city, location = source_meta.get(domain, ("Live Webcams", "Global", domain.title()))
                 for s_idx, stream_url in enumerate(streams, 1):
@@ -627,7 +636,11 @@ if __name__ == "__main__":
         "https://www.i-traffic.co.za/map",
         "https://rodovias.grupoccr.com.br/riosp/cameras-ao-vivo/",
         "https://ledrium.live/",
-        "https://traffic.com.gh/"
+        "https://traffic.com.gh/",
+        "https://www.giaothong.hochiminhcity.gov.vn/",
+        "https://mmda-redesign.vercel.app/",
+        "https://ccc.rajasthan.gov.in/",
+        "https://amanroads.gov.ae/"
     ]
     asyncio.run(discover_streams(test_urls))
 
