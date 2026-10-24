@@ -279,7 +279,8 @@ def load_settings() -> dict:
         "https://opencctv.org/cameras/liechtenstein",
         "https://opencctv.org/cameras/vatican-city",
         "https://opencctv.org/cameras/greenland",
-        "https://opencctv.org/cameras/cook-islands"
+        "https://opencctv.org/cameras/cook-islands",
+        "https://worldcammap.com/public-cctv/"
         ]
     }
     if SETTINGS_FILE.exists():
