@@ -434,7 +434,12 @@ defaults = {
         "https://webcamscostarica.com/zona/valle-central/",
         "https://vivopanama.com/",
         "https://www.see.cam/pa",
-        "https://www.youtube.com/watch?v=8iF0NK4loqk"
+        "https://www.youtube.com/watch?v=8iF0NK4loqk",
+        "https://www.infobuz.ro/en/traffic-romania/",
+        "https://webcamromania.ro/trafic/",
+        "https://webcamromania.ro/webcam-live/municipiul-bucuresti/",
+        "https://webcamsbg.com/",
+        "https://kbcnet.rs/beograd-uzivo"
     ]
 }
 
