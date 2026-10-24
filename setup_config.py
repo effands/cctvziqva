@@ -130,7 +130,9 @@ defaults = {
         "https://www.llm.gov.my/maps/index",
         "https://www.ppj.gov.my/second-page/live-trafik",
         "https://www.traffic.delhipolice.gov.in/en",
-        "https://argosatlas.com/en/cameras/kenya/"
+        "https://argosatlas.com/en/cameras/kenya/",
+        "https://argosatlas.com/en/cameras/bosnia-and-herz/",
+        "https://opencctv.org/livetraffic/albania"
     ]
 }
 
