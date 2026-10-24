@@ -262,7 +262,9 @@ defaults = {
         "https://orbisviews.com/en/",
         "https://kufiri.live/en/",
         "https://uzivokamere.com/en/",
-        "https://opencctv.org/cameras/bosnia-and-herzegovina"
+        "https://opencctv.org/cameras/bosnia-and-herzegovina",
+        "https://opencctv.org/cameras/kenya",
+        "https://opencctv.org/cameras/namibia"
     ]
 }
 
