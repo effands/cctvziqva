@@ -99,7 +99,9 @@ def load_settings() -> dict:
             "https://www.giaothong.hochiminhcity.gov.vn/",
             "https://mmda-redesign.vercel.app/",
             "https://ccc.rajasthan.gov.in/",
-            "https://amanroads.gov.ae/"
+            "https://amanroads.gov.ae/",
+            "https://trafficvision.live/map",
+            "https://openwebcamdb.com/"
         ]
     }
     if SETTINGS_FILE.exists():
