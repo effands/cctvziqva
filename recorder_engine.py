@@ -422,7 +422,11 @@ def load_settings() -> dict:
         "https://www.skylinewebcams.com/webcam/saint-vincent-and-the-grenadines.html",
         "https://argosatlas.com/en/cameras/georgia/",
         "https://opencctv.org/cameras/north-macedonia",
-        "https://worldviewstream.com/webcams/europe/kosovo"
+        "https://worldviewstream.com/webcams/europe/kosovo",
+        "https://www.meteocanada.com/africa/mauritania/nouakchott/webcam",
+        "https://www.easeweather.com/africa/libya/tripoli/webcam",
+        "https://www.discoverourglobe.com/country/somalia",
+        "https://www.weather25.com/africa/somalia/banaadir/mogadishu?page=webcam"
         ]
     }
     if SETTINGS_FILE.exists():
