@@ -1489,7 +1489,7 @@ defaults = {
     "https://www.camguide.net/usa/scarolina/hilton-head-island-live/sea-pines-resort-beach-club/",
     "https://www.camguide.net/usa/tennessee/gatlinburg/moonshine-mountain-coaster/",
     "https://www.camguide.net/usa/wisconsin/green-bay/park/",
-+    "https://www.webcamhopper.com/africa/south_africa.html",
+    "https://www.webcamhopper.com/africa/south_africa.html",
     "https://www.webcamhopper.com/airport.html",
     "https://www.webcamhopper.com/animal.html",
     "https://www.webcamhopper.com/asia/south_korea.html",
