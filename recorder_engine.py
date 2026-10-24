@@ -136,7 +136,10 @@ def load_settings() -> dict:
               "https://www.iroads.no/",
               "https://veikamera.no/",
               "https://trafikkort.vejdirektoratet.dk/prototype/index.html",
-              "https://www.gov.ie/en/department-of-transport/services/view-maps-and-gis-content-from-transport-infrastructure-ireland/"
+              "https://www.gov.ie/en/department-of-transport/services/view-maps-and-gis-content-from-transport-infrastructure-ireland/",
+              "https://www.sba.bg/cctv",
+              "https://www.amss.org.rs/na-putu/stanje-na-putu/strana/policijske-kamere",
+              "https://www.infobuz.ro/en/traffic-romania/"
         ]
     }
     if SETTINGS_FILE.exists():
