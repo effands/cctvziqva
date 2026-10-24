@@ -112,7 +112,10 @@ defaults = {
         "https://www.traffic.gov.scot/traffic-cameras",
         "https://www.hamburg.de/verkehr/stau-und-baustellen/aktuelle-verkehrslage/verkehrskameras",
         "https://www.utic.go.kr/map/map.do?menu=cctv",
-        "https://doanhnghiep.viettel.vn/en/vi/cong-nghe-thong-tin/viettel-traffic-information-system-1.html"
+        "https://doanhnghiep.viettel.vn/en/vi/cong-nghe-thong-tin/viettel-traffic-information-system-1.html",
+        "https://www.quebec511.info/en/Default.aspx",
+        "https://www.drivebc.ca/cameras/",
+        "https://511.alberta.ca/"
     ]
 }
 
