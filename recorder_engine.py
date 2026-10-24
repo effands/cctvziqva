@@ -170,7 +170,9 @@ def load_settings() -> dict:
               "https://www.drivebc.ca/cameras/",
               "https://511.alberta.ca/",
               "https://cetsp.com.br/consultas/cameras-cet.aspx",
-              "https://dersp.der.sp.gov.br/WebSite/Servicos/ServicosOnline/CamerasOnlineMapa.aspx"
+              "https://dersp.der.sp.gov.br/WebSite/Servicos/ServicosOnline/CamerasOnlineMapa.aspx",
+              "https://trafficeye.com.ng/",
+              "https://observatory.frsc.gov.ng/"
         ]
     }
     if SETTINGS_FILE.exists():
