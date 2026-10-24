@@ -906,7 +906,31 @@ def load_settings() -> dict:
     "https://worldcam.eu/webcams/south-america",
     "https://worldcam.eu/webcams/australia-oceania",
     "https://worldcam.eu/webcams/poles",
-    "https://worldcam.eu/webcams/asia/japan/okinawa"
+    "https://worldcam.eu/webcams/asia/japan/okinawa",
+    "https://opencam.live/cameras/australia",
+    "https://opencam.live/cameras/austria",
+    "https://opencam.live/cameras/canada",
+    "https://opencam.live/cameras/czechia",
+    "https://opencam.live/cameras/finland",
+    "https://opencam.live/cameras/france",
+    "https://opencam.live/cameras/germany",
+    "https://opencam.live/cameras/hong-kong/hong-kong",
+    "https://opencam.live/cameras/italy",
+    "https://opencam.live/cameras/japan",
+    "https://opencam.live/cameras/netherlands/amsterdam",
+    "https://opencam.live/cameras/new-zealand/queenstown",
+    "https://opencam.live/cameras/norway",
+    "https://opencam.live/cameras/poland",
+    "https://opencam.live/cameras/south-korea",
+    "https://opencam.live/cameras/spain",
+    "https://opencam.live/cameras/sweden",
+    "https://opencam.live/cameras/switzerland",
+    "https://opencam.live/cameras/taiwan",
+    "https://opencam.live/cameras/united-kingdom",
+    "https://opencam.live/traffic-cameras/california",
+    "https://opencam.live/traffic-cameras/florida",
+    "https://opencam.live/traffic-cameras/i-5",
+    "https://opencam.live/traffic-cameras/texas"
         ]
     }
     if SETTINGS_FILE.exists():
