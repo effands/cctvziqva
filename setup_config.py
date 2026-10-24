@@ -270,7 +270,10 @@ defaults = {
         "https://pixelsgy.com/cam-dashboard/",
         "https://www.iplivecams.com/live-cams/georgetown-guyana/",
         "https://www.pictimo.com/guyana/georgetown/16279/webcam-ip-camera-georgetown",
-        "https://worldcam.eu/webcams/south-america/bolivia"
+        "https://worldcam.eu/webcams/south-america/bolivia",
+        "https://www.mobilitat.ad/totes-les-cameres",
+        "https://andorratools.com/en/andorra-webcams/",
+        "https://argosatlas.com/en/cameras/luxembourg/"
     ]
 }
 
