@@ -628,7 +628,18 @@ def load_settings() -> dict:
     "https://city-webcams.com/",
     "https://webcamera24.com/countries/",
     "https://opencctv.org/cameras/live-webcams",
-    "https://overwatch.earth/webcams"
+    "https://overwatch.earth/webcams",
+    "https://www.vision-environnement.com/webcams/italie/",
+    "https://www.vision-environnement.com/webcams/france/",
+    "https://www.vision-environnement.com/webcams/pays-bas/",
+    "https://www.vision-environnement.com/webcams/pays-de-galles/",
+    "https://www.vision-environnement.com/webcams/saint-martin-pays-bas/",
+    "https://www.vision-environnement.com/webcams/pays-bas-caribeens/",
+    "https://www.vision-environnement.com/webcams/bresil/",
+    "https://www.vision-environnement.com/webcams/afrique-du-sud/",
+    "https://www.vision-environnement.com/webcams/japon/",
+    "https://www.vision-environnement.com/webcams/thailande/",
+    "https://www.vision-environnement.com/webcams/inde/"
         ]
     }
     if SETTINGS_FILE.exists():
