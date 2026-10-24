@@ -534,7 +534,10 @@ defaults = {
         "https://www.see.cam/cu",
         "https://www.see.cam/gd",
         "https://www.see.cam/ug",
-        "https://www.see.cam/tz"
+        "https://www.see.cam/tz",
+        "https://city-webcams.com/streaming-fiji",
+        "https://worldcams.tv/fiji/",
+        "https://www.vadernu.com/oceania/samoa/tuamasaga/apia/webcam"
     ]
 }
 
