@@ -415,7 +415,11 @@ def load_settings() -> dict:
         "https://www.pictimo.com/country/syria",
         "https://www.tiempo3.com/north-america/cuba/ciudad-de-la-habana/havana?page=webcam",
         "https://www.tiempo3.com/oceania/tuvalu/funafuti?page=webcam",
-        "https://www.meteohorizon.com/oceania/marshall-islands/majuro-atoll/webcam"
+        "https://www.meteohorizon.com/oceania/marshall-islands/majuro-atoll/webcam",
+        "https://www.viewstkitts.com/fort-street-basseterre/",
+        "https://www.pictimo.com/saint-kitts-and-nevis/basseterre/31302/webcam-online-webcam-basseterre",
+        "https://caribbeanweather.org/webcams/",
+        "https://www.skylinewebcams.com/webcam/saint-vincent-and-the-grenadines.html"
         ]
     }
     if SETTINGS_FILE.exists():
