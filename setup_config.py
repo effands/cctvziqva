@@ -234,7 +234,10 @@ defaults = {
         "https://trafficvision.live/blog/argentina-traffic-cameras",
         "https://trafficvision.live/blog/brazil-traffic-cameras",
         "https://trafficvision.live/blog/colombia-traffic-cameras",
-        "https://trafficvision.live/blog/chile-traffic-cameras"
+        "https://trafficvision.live/blog/chile-traffic-cameras",
+        "https://trafficvision.live/blog/mexico-traffic-cameras",
+        "https://trafficvision.live/blog/peru-traffic-cameras",
+        "https://trafficvision.live/blog/costa-rica-traffic-cameras"
     ]
 }
 
