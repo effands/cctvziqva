@@ -399,7 +399,11 @@ def load_settings() -> dict:
         "https://www.easeweather.com/asia/turkmenistan/ashgabat/webcam",
         "https://city-webcams.com/afghanistan/kabul",
         "https://www.pictimo.com/country/afghanistan",
-        "https://livecamatlas.org/live-cameras/afghanistan/"
+        "https://livecamatlas.org/live-cameras/afghanistan/",
+        "https://city-webcams.com/lesotho?l=en",
+        "https://city-webcams.com/streaming-ethiopia",
+        "https://city-webcams.com/streaming-guinea",
+        "https://city-webcams.com/streaming-guineabissau-v"
         ]
     }
     if SETTINGS_FILE.exists():
