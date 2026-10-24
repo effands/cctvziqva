@@ -178,7 +178,10 @@ def load_settings() -> dict:
               "https://eismoinfo.lt/",
               "https://tik.teeilm.ee/en",
               "https://livetrafik.com/lv",
-              "https://argosatlas.com/camaras/letonia/"
+              "https://argosatlas.com/camaras/letonia/",
+              "https://argosatlas.com/en/cameras/vietnam/",
+              "https://www.llm.gov.my/maps/index",
+              "https://www.ppj.gov.my/second-page/live-trafik"
         ]
     }
     if SETTINGS_FILE.exists():
