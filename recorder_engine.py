@@ -105,7 +105,10 @@ def load_settings() -> dict:
             "https://live.traffictw.com/",
             "https://focustaiwan.net/roads/national",
             "https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images",
-            "https://www.td.gov.hk/en/transport_in_hong_kong/its/its_achievements/closed_circuit_television_images_on_the_internet/index.html"
+            "https://www.td.gov.hk/en/transport_in_hong_kong/its/its_achievements/closed_circuit_television_images_on_the_internet/index.html",
+            "https://www.c5.cdmx.gob.mx/",
+            "https://ameq.live/",
+            "https://codigoqro.mx/trafico"
         ]
     }
     if SETTINGS_FILE.exists():
