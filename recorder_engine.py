@@ -317,7 +317,8 @@ def load_settings() -> dict:
         "https://uzivokamere.com/en/",
         "https://opencctv.org/cameras/bosnia-and-herzegovina",
         "https://opencctv.org/cameras/kenya",
-        "https://opencctv.org/cameras/namibia"
+        "https://opencctv.org/cameras/namibia",
+        "https://www.pictimo.com/rwanda/kigali/31383/webcam-ip-camera-kigali"
         ]
     }
     if SETTINGS_FILE.exists():
