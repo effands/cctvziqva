@@ -417,7 +417,13 @@ defaults = {
         "https://worldcam.eu/webcams/asia/nepal",
         "https://www.discoverourglobe.com/country/bhutan",
         "https://www.meteohorizon.com/asia/bhutan/thimphu-district/thimphu/webcam",
-        "https://livepublicwebcams.com/"
+        "https://livepublicwebcams.com/",
+        "https://tv360.metfone.com.kh/tv/cctv-1?c=0&ch=385&col=12&page=home_live&sect=LIVE",
+        "https://www.see.cam/vn",
+        "https://city-webcams.com/ghana/accra?l=en",
+        "https://www.pictimo.com/ghana/accra",
+        "https://opencctv.org/cameras/kenya",
+        "https://worldviewstream.com/webcams/africa/kenya"
     ]
 }
 
