@@ -203,7 +203,12 @@ def load_settings() -> dict:
               "https://opencctv.org/cameras/mozambique",
               "https://opencctv.org/cameras/cape-verde",
               "https://opencctv.org/cameras/lesotho",
-              "https://opencctv.org/cameras/seychelles"
+              "https://opencctv.org/cameras/seychelles",
+              "https://opencctv.org/cameras/andorra",
+              "https://opencctv.org/cameras/malta",
+              "https://opencctv.org/cameras/luxembourg",
+              "https://opencctv.org/cameras/kosovo",
+              "https://opencctv.org/cameras/faroe-islands"
         ]
     }
     if SETTINGS_FILE.exists():
