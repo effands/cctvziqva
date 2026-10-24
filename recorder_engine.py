@@ -118,7 +118,10 @@ def load_settings() -> dict:
               "https://webcams.venetostrade.it/",
               "https://www.dgt.es/conoce-el-estado-del-trafico/camaras-de-trafico/",
               "https://servicos.infraestruturasdeportugal.pt/pt-pt/viajar-na-estrada/transito-em-tempo-real",
-              "https://www.viaverde.pt/ferramentas/informacao-de-transito"
+              "https://www.viaverde.pt/ferramentas/informacao-de-transito",
+              "https://511on.ca/",
+              "https://topis.seoul.go.kr/map/openCctvMap.do",
+              "https://www.utic.go.kr/main/main.do"
         ]
     }
     if SETTINGS_FILE.exists():
