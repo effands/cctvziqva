@@ -434,7 +434,12 @@ def load_settings() -> dict:
         "https://www.easeweather.com/oceania/solomon-islands/honiara/webcam",
         "https://makotrav.com/tropical-reef-webcam/",
         "https://opencctv.org/cameras/falkland-islands/stanley/stanley-public-jetty-103855",
-        "https://spotcameras.com/en/cams/South-America/Falkland-Islands/10953-Stanley-Falkland-Islands"
+        "https://spotcameras.com/en/cams/South-America/Falkland-Islands/10953-Stanley-Falkland-Islands",
+        "https://www.gov.im/transport/webcam/webcam.aspx",
+        "https://seeker.gg/Home/Webcam",
+        "https://www.jersey.co.uk/webcam/",
+        "https://www.beaches.gi/",
+        "https://pocketworld.org/webcams/country/fo"
         ]
     }
     if SETTINGS_FILE.exists():
