@@ -977,7 +977,18 @@ defaults = {
     "https://tripplanning.org/live-cams/sri-lanka/",
     "https://tripplanning.org/live-cams/tunisia/",
     "https://tripplanning.org/live-cams/zambia/",
-    "https://tripplanning.org/live-cams/venezuela/"
+    "https://tripplanning.org/live-cams/venezuela/",
+    "https://tripplanning.org/live-cams/categories/airports/",
+    "https://tripplanning.org/live-cams/categories/animals/",
+    "https://tripplanning.org/live-cams/categories/beaches/",
+    "https://tripplanning.org/live-cams/categories/churches/",
+    "https://tripplanning.org/live-cams/categories/cities/",
+    "https://tripplanning.org/live-cams/categories/harbors/",
+    "https://tripplanning.org/live-cams/categories/heritage-landmarks/",
+    "https://tripplanning.org/live-cams/categories/mountains/",
+    "https://tripplanning.org/live-cams/categories/railways/",
+    "https://tripplanning.org/live-cams/categories/rivers-lakes/",
+    "https://tripplanning.org/live-cams/categories/snow-ski/"
     ]
 }
 
