@@ -183,7 +183,11 @@ defaults = {
         "https://opencctv.org/cameras/reunion",
         "https://opencctv.org/cameras/guadeloupe",
         "https://opencctv.org/cameras/martinique",
-        "https://opencctv.org/cameras/french-polynesia"
+        "https://opencctv.org/cameras/french-polynesia",
+        "https://opencctv.org/cameras/bulgaria",
+        "https://opencctv.org/cameras/serbia",
+        "https://opencctv.org/cameras/croatia",
+        "https://opencctv.org/cameras/romania"
     ]
 }
 
