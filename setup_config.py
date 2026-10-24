@@ -48,7 +48,11 @@ defaults = {
         "https://ccc.rajasthan.gov.in/",
         "https://amanroads.gov.ae/",
         "https://trafficvision.live/map",
-        "https://openwebcamdb.com/"
+        "https://openwebcamdb.com/",
+        "https://live.traffictw.com/",
+        "https://focustaiwan.net/roads/national",
+        "https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images",
+        "https://www.td.gov.hk/en/transport_in_hong_kong/its/its_achievements/closed_circuit_television_images_on_the_internet/index.html"
     ]
 }
 
