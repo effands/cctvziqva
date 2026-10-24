@@ -211,7 +211,9 @@ defaults = {
         "https://kz.qaj.kz/",
         "https://trafico.gt/",
         "https://argosatlas.com/camaras/guatemala/",
-        "https://opencctv.org/cameras/el-salvador"
+        "https://opencctv.org/cameras/el-salvador",
+        "https://trafficvision.live/blog/armenia-traffic-cameras",
+        "https://worldviewstream.com/webcams/asia/armenia"
     ]
 }
 
