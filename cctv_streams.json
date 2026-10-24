@@ -17503,16 +17503,6 @@
     "fail_count": 0
   },
   {
-    "id": "custom_1645",
-    "name": "CCTV dishub.kedirikota.go.id #1",
-    "location": "Kota Kediri",
-    "city": "Kediri",
-    "country": "Indonesia",
-    "stream_url": "https://dishub.kedirikota.go.id/live-streaming-atcs/",
-    "enabled": true,
-    "source": "dishub.kedirikota.go.id"
-  },
-  {
     "id": "custom_1646",
     "name": "CCTV dishub.kedirikota.go.id #2",
     "location": "Kota Kediri",
@@ -17821,15 +17811,5 @@
     "stream_url": "https://atcs.denpasarkota.go.id/stream/A006SOPUTANPTZ/",
     "enabled": true,
     "source": "atcs.denpasarkota.go.id"
-  },
-  {
-    "id": "custom_1708",
-    "name": "CCTV mlit.go.jp #1",
-    "location": "Mlit.Go.Jp",
-    "city": "Global",
-    "country": "Live Webcams",
-    "stream_url": "https://www.mlit.go.jp/road/bosai/LIVEcamera.html",
-    "enabled": true,
-    "source": "mlit.go.jp"
   }
 ]
