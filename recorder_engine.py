@@ -1286,7 +1286,28 @@ def load_settings() -> dict:
     "https://camlisted.com/country/nepal.html",
     "https://camlisted.com/country/netherlands.html",
     "https://camlisted.com/country/new-zealand.html",
-    "https://camlisted.com/country/norway.html"
+    "https://camlisted.com/country/norway.html",
+    "https://camlisted.com/country/philippines.html",
+    "https://camlisted.com/country/poland.html",
+    "https://camlisted.com/country/portugal.html",
+    "https://camlisted.com/country/romania.html",
+    "https://camlisted.com/country/russia.html",
+    "https://camlisted.com/country/saudi-arabia.html",
+    "https://camlisted.com/country/singapore.html",
+    "https://camlisted.com/country/sint-maarten.html",
+    "https://camlisted.com/country/south-africa.html",
+    "https://camlisted.com/country/south-korea.html",
+    "https://camlisted.com/country/spain.html",
+    "https://camlisted.com/country/sweden.html",
+    "https://camlisted.com/country/switzerland.html",
+    "https://camlisted.com/country/taiwan.html",
+    "https://camlisted.com/country/thailand.html",
+    "https://camlisted.com/country/ukraine.html",
+    "https://camlisted.com/country/united-arab-emirates.html",
+    "https://camlisted.com/country/united-kingdom.html",
+    "https://camlisted.com/country/united-states.html",
+    "https://camlisted.com/country/venezuela.html",
+    "https://camlisted.com/country/vietnam.html"
         ]
     }
     if SETTINGS_FILE.exists():
