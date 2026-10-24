@@ -197,7 +197,11 @@ defaults = {
         "https://opencctv.org/cameras/thailand",
         "https://opencctv.org/cameras/vietnam",
         "https://opencctv.org/cameras/indonesia",
-        "https://opencctv.org/cameras/philippines"
+        "https://opencctv.org/cameras/philippines",
+        "https://opencctv.org/cameras/kyrgyzstan",
+        "https://opencctv.org/cameras/azerbaijan",
+        "https://opencctv.org/cameras/zimbabwe",
+        "https://opencctv.org/cameras/albania"
     ]
 }
 
