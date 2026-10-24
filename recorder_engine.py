@@ -1163,7 +1163,14 @@ def load_settings() -> dict:
     "https://tripplanning.org/live-cams/us-virgin-islands/",
     "https://tripplanning.org/live-cams/vatican-city/",
     "https://tripplanning.org/live-cams/vietnam/",
-    "https://tripplanning.org/live-cams/zimbabwe/"
+    "https://tripplanning.org/live-cams/zimbabwe/",
+    "https://tripplanning.org/live-cams/france/ile-de-france/paris/eiffel-tower/",
+    "https://tripplanning.org/live-cams/ireland/dublin/dublin-bay-port-view/",
+    "https://tripplanning.org/live-cams/japan/kyoto/kiyomizu-zaka/",
+    "https://tripplanning.org/live-cams/japan/okinawa/naha-airport-ntv/",
+    "https://tripplanning.org/live-cams/japan/osaka/dotonbori-and-ebisubashi-mbs/",
+    "https://tripplanning.org/live-cams/japan/tokyo/asahi-shimbun-ginza-sukiyabashi-crossing/",
+    "https://tripplanning.org/live-cams/japan/yamanashi/mt-fuji-from-oshino-hakkai/"
         ]
     }
     if SETTINGS_FILE.exists():
