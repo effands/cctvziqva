@@ -504,7 +504,11 @@ def load_settings() -> dict:
         "https://www.pictimo.com/country/mauritius",
         "https://opencctv.org/cameras/mauritius",
         "https://www.earthcam.com/world/mauritius/?cam=mauritius",
-        "https://www.discoverourglobe.com/country/tonga"
+        "https://www.discoverourglobe.com/country/tonga",
+        "https://worldcam.io/webcams/kyrgyzstan",
+        "https://kt.kg/ru/o-kompanii/online-camery/",
+        "https://kg.camera/en",
+        "https://couchtourist.com/cams/armenia/"
         ]
     }
     if SETTINGS_FILE.exists():
