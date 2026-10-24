@@ -304,7 +304,11 @@ defaults = {
         "https://www.pictimo.com/cambodia/phnom-penh/39093/webcam-live-view-in-phnom-penh",
         "https://tv360.metfone.com.kh/tv/cctv-1?c=0&ch=385&col=12&page=home_live&sect=LIVE",
         "https://trafficvision.live/blog/iraq-traffic-cameras",
-        "https://www.pictimo.com/kuwait/kuwait/4767/webcam-kuwait-small-street-view"
+        "https://www.pictimo.com/kuwait/kuwait/4767/webcam-kuwait-small-street-view",
+        "https://vanwatch.live/weather",
+        "https://city-webcams.com/streaming-fiji",
+        "https://www.vadernu.com/oceania/samoa/tuamasaga/apia/webcam",
+        "https://www.easeweather.com/oceania/tonga/tongatapu/kolofoou/nukualofa/webcam"
     ]
 }
 
