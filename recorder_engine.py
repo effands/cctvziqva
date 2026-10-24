@@ -129,7 +129,11 @@ def load_settings() -> dict:
               "https://ibb.istanbul/tum-hizmetler/e-belediye-hizmetleri/e-bilgi/kameralar/",
               "https://argosatlas.com/camaras/argentina/",
               "https://www.alertaperu.org.pe/",
-              "https://orbisviews.com/"
+              "https://orbisviews.com/",
+              "https://www.bkom.cz/traffic-cameras",
+              "https://www.doprava-brno.cz/",
+              "https://www.trafficthess.imet.gr/",
+              "https://www.iroads.co.il/"
         ]
     }
     if SETTINGS_FILE.exists():
