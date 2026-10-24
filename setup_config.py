@@ -407,7 +407,11 @@ defaults = {
         "https://opencctv.org/cameras/china/macau",
         "https://opendata.000.taipei/",
         "https://earthlive.tv/country/oman",
-        "https://city-webcams.com/bangladesh/dhaka"
+        "https://city-webcams.com/bangladesh/dhaka",
+        "https://city-webcams.com/pakistan?l=en",
+        "https://city-webcams.com/streaming-pakistan",
+        "https://city-webcams.com/sri-lanka?l=en",
+        "https://city-webcams.com/streaming-sri-lanka"
     ]
 }
 
