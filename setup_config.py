@@ -290,7 +290,8 @@ defaults = {
         "https://www.valais.ch/en/traffic",
         "https://argosatlas.com/en/cameras/switzerland/",
         "https://www.gotthard-live.ch/en",
-        "https://www4.ti.ch/dt/sg/sai/ugeo/temi/geoportale/mappe/mappe-tematiche/webcam"
+        "https://www4.ti.ch/dt/sg/sai/ugeo/temi/geoportale/mappe/mappe-tematiche/webcam",
+        "https://www.pictimo.com/country/egypt"
     ]
 }
 
