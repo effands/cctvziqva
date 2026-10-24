@@ -267,7 +267,11 @@ def load_settings() -> dict:
         "https://opencctv.org/cameras/el-salvador",
         "https://trafficvision.live/blog/armenia-traffic-cameras",
         "https://worldviewstream.com/webcams/asia/armenia",
-        "https://argosatlas.com/en/cameras/peru/"
+        "https://argosatlas.com/en/cameras/peru/",
+        "https://opencctv.org/cameras/san-marino",
+        "https://opencctv.org/cameras/liechtenstein",
+        "https://opencctv.org/cameras/vatican-city",
+        "https://opencctv.org/cameras/greenland"
         ]
     }
     if SETTINGS_FILE.exists():
