@@ -352,7 +352,10 @@ def load_settings() -> dict:
         "https://city-webcams.com/angola/luanda",
         "https://nowevio.com/",
         "https://orbisviews.com/en/",
-        "https://city-webcams.com/ghana/accra?l=en"
+        "https://city-webcams.com/ghana/accra?l=en",
+        "https://city-webcams.com/cambodia/cambodia",
+        "https://www.pictimo.com/cambodia/phnom-penh/39093/webcam-live-view-in-phnom-penh",
+        "https://tv360.metfone.com.kh/tv/cctv-1?c=0&ch=385&col=12&page=home_live&sect=LIVE"
         ]
     }
     if SETTINGS_FILE.exists():
