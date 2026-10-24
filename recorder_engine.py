@@ -1234,7 +1234,11 @@ def load_settings() -> dict:
     "https://livecamsmap.com/webcam/sweden/ukraine-live-cam-from-kyiv-odessa-kharkiv-kramatorsk-sloviansk-donetsk-dnipro-yt-e2gC37ILQmk",
     "https://livecamsmap.com/webcam/switzerland/einsiedeln-strada-statale-1-1467181139",
     "https://livecamsmap.com/webcam/switzerland/wadenswil-johannisburg-east-hu-tten-1155561911",
-    "https://livecamsmap.com/webcam/united-states/lake-hood-seaplane-base-anchorage-alaska-usa-streamtime-live-yt-61pi8UjLOlo"
+    "https://livecamsmap.com/webcam/united-states/lake-hood-seaplane-base-anchorage-alaska-usa-streamtime-live-yt-61pi8UjLOlo",
+    "https://livecamsmap.com/webcam/italy/malcantone-s-m-maddalena-ro-puntamento-nnw-1412703753",
+    "https://livecamsmap.com/webcam/italy/medicina-radiotelescopio-vlbi-1307983246",
+    "https://livecamsmap.com/webcam/italy/parma-north-west-1203536559",
+    "https://livecamsmap.com/webcam/canada/24-7-live-stream-in-a-luxury-toronto-bedroom-yt-oXvPA6l4pts"
         ]
     }
     if SETTINGS_FILE.exists():
