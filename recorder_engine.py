@@ -387,7 +387,10 @@ def load_settings() -> dict:
         "https://www.pictimo.com/sao-tome-and-principe/sao-tome/39922/webcam-sao-tome-ip-camera",
         "https://worldcam.io/",
         "https://www.pictimo.com/sudan/khartoum/37975/webcam-ip-camera-khartoum",
-        "https://city-webcams.com/streaming-eritrea?l=es"
+        "https://city-webcams.com/streaming-eritrea?l=es",
+        "https://www.kingscasino.com/web-cam",
+        "https://caribbeantelevision.org/live-stream/",
+        "https://www.tiempo3.com/north-america/dominica/saint-george/roseau?page=webcam"
         ]
     }
     if SETTINGS_FILE.exists():
