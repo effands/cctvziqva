@@ -1434,7 +1434,14 @@ def load_settings() -> dict:
     "https://www.earthcam.com/usa/california/losangeles/port/?cam=portofla",
     "https://www.earthcam.com/usa/hawaii/bigisland/waikoloa/",
     "https://www.earthcam.com/usa/illinois/chicago/skydeck/?cam=chicagoskydeck",
-    "https://www.earthcam.com/usa/ohio/cleveland/terminaltower/"
+    "https://www.earthcam.com/usa/ohio/cleveland/terminaltower/",
+    "https://www.earthcam.com/usa/california/losangeles/port/?cam=portofla2",
+    "https://www.earthcam.com/usa/michigan/gaylord/snowman/?cam=snowman",
+    "https://www.earthcam.com/usa/missouri/kansascity/",
+    "https://www.earthcam.com/usa/newmexico/ruidoso/?cam=ruidoso_lake",
+    "https://www.earthcam.com/usa/pennsylvania/pittsburgh/",
+    "https://www.earthcam.com/usa/tennessee/nashville/",
+    "https://www.earthcam.com/usa/wisconsin/milwaukee/"
         ]
     }
     if SETTINGS_FILE.exists():
