@@ -266,7 +266,10 @@ defaults = {
         "https://opencctv.org/cameras/kenya",
         "https://opencctv.org/cameras/namibia",
         "https://www.pictimo.com/rwanda/kigali/31383/webcam-ip-camera-kigali",
-        "https://livepublicwebcams.com/public-webcams-map"
+        "https://livepublicwebcams.com/public-webcams-map",
+        "https://pixelsgy.com/cam-dashboard/",
+        "https://www.iplivecams.com/live-cams/georgetown-guyana/",
+        "https://www.pictimo.com/guyana/georgetown/16279/webcam-ip-camera-georgetown"
     ]
 }
 
