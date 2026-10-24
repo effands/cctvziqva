@@ -1373,7 +1373,15 @@ defaults = {
     "https://www.skylinewebcams.com/en/webcam/italia/lombardia/milano/duomo-milano.html",
     "https://www.skylinewebcams.com/en/webcam/italia/lombardia/milano/piazza-san-babila.html",
     "https://www.skylinewebcams.com/en/webcam/italia/puglia/bari/polignano-a-mare.html",
-    "https://www.skylinewebcams.com/en/webcam/italia/lazio/roma/piazza-navona.html"
+    "https://www.skylinewebcams.com/en/webcam/italia/lazio/roma/piazza-navona.html",
+    "https://www.earthcam.com/world/canada/toronto/cntower/?cam=cntower1",
+    "https://www.earthcam.com/world/sintmaarten/",
+    "https://www.earthcam.com/world/spain/tamariu/",
+    "https://www.earthcam.com/usa/newyork/timessquare/?cam=tsnorth4k",
+    "https://www.earthcam.com/usa/california/losangeles/port/?cam=portofla",
+    "https://www.earthcam.com/usa/hawaii/bigisland/waikoloa/",
+    "https://www.earthcam.com/usa/illinois/chicago/skydeck/?cam=chicagoskydeck",
+    "https://www.earthcam.com/usa/ohio/cleveland/terminaltower/"
     ]
 }
 
