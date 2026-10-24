@@ -1238,7 +1238,15 @@ def load_settings() -> dict:
     "https://livecamsmap.com/webcam/italy/malcantone-s-m-maddalena-ro-puntamento-nnw-1412703753",
     "https://livecamsmap.com/webcam/italy/medicina-radiotelescopio-vlbi-1307983246",
     "https://livecamsmap.com/webcam/italy/parma-north-west-1203536559",
-    "https://livecamsmap.com/webcam/canada/24-7-live-stream-in-a-luxury-toronto-bedroom-yt-oXvPA6l4pts"
+    "https://livecamsmap.com/webcam/canada/24-7-live-stream-in-a-luxury-toronto-bedroom-yt-oXvPA6l4pts",
+    "https://freetvgarden.com/webcam/australia/",
+    "https://freetvgarden.com/webcam/brazil/",
+    "https://freetvgarden.com/webcam/canada/",
+    "https://freetvgarden.com/webcam/india/",
+    "https://freetvgarden.com/webcam/indonesia/",
+    "https://freetvgarden.com/webcam/philippines/",
+    "https://freetvgarden.com/webcam/uk/",
+    "https://freetvgarden.com/webcam/usa/"
         ]
     }
     if SETTINGS_FILE.exists():
