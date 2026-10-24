@@ -325,7 +325,11 @@ defaults = {
         "https://opencctv.org/cameras/kosovo/district-of-prishtina/pristina",
         "https://kufiri.live/kamera-kosove/",
         "https://worldcam.eu/webcams/europe/macedonia/21622-traffic",
-        "https://www.everywebcam.com/europe/belarus"
+        "https://www.everywebcam.com/europe/belarus",
+        "https://www.totallybarbados.com/webcams/",
+        "https://iwcpinc.com/cameras/pebbles_radisson",
+        "https://grenadaexplorer.net/webcam/",
+        "https://www.vision-environnement.com/webcam/grenade/saint-georges/20793-skyline-grenada-springs-marina/"
     ]
 }
 
