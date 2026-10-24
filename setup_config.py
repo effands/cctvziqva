@@ -343,7 +343,10 @@ defaults = {
         "https://www.webcams.org.ru/dushanbe.html",
         "https://www.vadernu.com/asia/tajikistan/webcam",
         "https://www.discoverourglobe.com/country/turkmenistan",
-        "https://www.easeweather.com/asia/turkmenistan/ashgabat/webcam"
+        "https://www.easeweather.com/asia/turkmenistan/ashgabat/webcam",
+        "https://city-webcams.com/afghanistan/kabul",
+        "https://www.pictimo.com/country/afghanistan",
+        "https://livecamatlas.org/live-cameras/afghanistan/"
     ]
 }
 
