@@ -608,7 +608,11 @@ def load_settings() -> dict:
         "https://www.pictimo.com/country/lebanon",
         "https://earthlive.tv/country/cyprus",
         "https://www.see.cam/pf",
-        "https://www.see.cam/gu"
+    "https://www.see.cam/gu",
+    "https://worldcam.eu/webcams/asia/china",
+    "https://worldcam.eu/webcams/asia/south-korea",
+    "https://worldcam.eu/webcams/asia/taiwan",
+    "https://worldcam.eu/webcams/asia/hong-kong"
         ]
     }
     if SETTINGS_FILE.exists():
