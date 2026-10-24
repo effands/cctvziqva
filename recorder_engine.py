@@ -1373,7 +1373,14 @@ def load_settings() -> dict:
     "https://www.skylinewebcams.com/en/webcam/sint-maarten.html",
     "https://www.skylinewebcams.com/en/webcam/slovenija.html",
     "https://www.skylinewebcams.com/en/webcam/south-africa.html",
-    "https://www.skylinewebcams.com/en/webcam/sri-lanka.html"
+    "https://www.skylinewebcams.com/en/webcam/sri-lanka.html",
+    "https://www.skylinewebcams.com/en/webcam/thailand.html",
+    "https://www.skylinewebcams.com/en/webcam/turkey.html",
+    "https://www.skylinewebcams.com/en/webcam/united-kingdom.html",
+    "https://www.skylinewebcams.com/en/webcam/united-states.html",
+    "https://www.skylinewebcams.com/en/webcam/uruguay.html",
+    "https://www.skylinewebcams.com/en/webcam/us-virgin-islands.html",
+    "https://www.skylinewebcams.com/en/webcam/vietnam.html"
         ]
     }
     if SETTINGS_FILE.exists():
