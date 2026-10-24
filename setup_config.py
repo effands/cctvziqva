@@ -519,7 +519,12 @@ defaults = {
         "https://www.see.cam/gr",
         "https://www.see.cam/tr",
         "https://www.see.cam/ge",
-        "https://www.see.cam/al"
+        "https://www.see.cam/al",
+        "https://www.see.cam/it",
+        "https://www.see.cam/fr",
+        "https://www.see.cam/de",
+        "https://www.see.cam/es",
+        "https://www.see.cam/gb"
     ]
 }
 
