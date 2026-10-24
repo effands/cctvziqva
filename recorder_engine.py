@@ -430,7 +430,9 @@ def load_settings() -> dict:
         "https://www.meteoart.com/amp/asia/laos/vientiane?page=webcam",
         "https://www.moi.gov.mm/livestream",
         "https://www.discoverourglobe.com/country/brunei",
-        "https://www.vadernu.com/asia/timor-leste/dili/webcam"
+        "https://www.vadernu.com/asia/timor-leste/dili/webcam",
+        "https://www.easeweather.com/oceania/solomon-islands/honiara/webcam",
+        "https://makotrav.com/tropical-reef-webcam/"
         ]
     }
     if SETTINGS_FILE.exists():
