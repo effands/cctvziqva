@@ -265,7 +265,8 @@ defaults = {
         "https://opencctv.org/cameras/bosnia-and-herzegovina",
         "https://opencctv.org/cameras/kenya",
         "https://opencctv.org/cameras/namibia",
-        "https://www.pictimo.com/rwanda/kigali/31383/webcam-ip-camera-kigali"
+        "https://www.pictimo.com/rwanda/kigali/31383/webcam-ip-camera-kigali",
+        "https://livepublicwebcams.com/public-webcams-map"
     ]
 }
 
