@@ -426,7 +426,11 @@ def load_settings() -> dict:
         "https://www.meteocanada.com/africa/mauritania/nouakchott/webcam",
         "https://www.easeweather.com/africa/libya/tripoli/webcam",
         "https://www.discoverourglobe.com/country/somalia",
-        "https://www.weather25.com/africa/somalia/banaadir/mogadishu?page=webcam"
+        "https://www.weather25.com/africa/somalia/banaadir/mogadishu?page=webcam",
+        "https://www.meteoart.com/amp/asia/laos/vientiane?page=webcam",
+        "https://www.moi.gov.mm/livestream",
+        "https://www.discoverourglobe.com/country/brunei",
+        "https://www.vadernu.com/asia/timor-leste/dili/webcam"
         ]
     }
     if SETTINGS_FILE.exists():
