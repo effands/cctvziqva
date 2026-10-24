@@ -298,7 +298,8 @@ defaults = {
         "https://www.pictimo.com/mozambique/maputo",
         "https://city-webcams.com/angola/luanda",
         "https://nowevio.com/",
-        "https://orbisviews.com/en/"
+        "https://orbisviews.com/en/",
+        "https://city-webcams.com/ghana/accra?l=en"
     ]
 }
 
