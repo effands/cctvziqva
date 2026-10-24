@@ -820,7 +820,31 @@ defaults = {
     "https://www.camscape.com/location/cayman-islands/",
     "https://www.camscape.com/location/alberta/",
     "https://www.camscape.com/location/andorra/",
-    "https://www.camscape.com/location/barbados/"
+    "https://www.camscape.com/location/barbados/",
+    "https://www.camscape.com/location/venezuela/",
+    "https://www.camscape.com/location/state-of-palestine/",
+    "https://www.camscape.com/location/serbia/",
+    "https://www.camscape.com/location/slovenia/",
+    "https://www.camscape.com/location/tanzania/",
+    "https://www.camscape.com/location/united-arab-emirates/",
+    "https://www.camscape.com/location/uruguay/",
+    "https://www.camscape.com/location/wales/",
+    "https://www.camscape.com/location/scotland/",
+    "https://www.camscape.com/location/northern-ireland/",
+    "https://www.camscape.com/location/sintmaarten/",
+    "https://www.camscape.com/location/saint-barts/",
+    "https://www.camscape.com/location/vatican-city/",
+    "https://www.camscape.com/location/world/",
+    "https://www.camscape.com/location/alabama/",
+    "https://www.camscape.com/location/alaska/",
+    "https://www.camscape.com/location/arizona/",
+    "https://www.camscape.com/location/california/",
+    "https://www.camscape.com/location/florida/",
+    "https://www.camscape.com/location/hawaii/",
+    "https://www.camscape.com/location/london/",
+    "https://www.camscape.com/location/new-york/",
+    "https://www.camscape.com/location/texas/",
+    "https://www.camscape.com/location/victoria/"
     ]
 }
 
