@@ -100,7 +100,9 @@ defaults = {
         "https://argosatlas.com/camaras/costa-rica/",
         "https://earthlive.tv/country/qatar",
         "https://opencctv.org/open-cameras",
-        "https://worldeye.app/cameras/countries"
+        "https://worldeye.app/cameras/countries",
+        "https://www.ubtraffic.mn/",
+        "https://www.dsat.gov.mo/realtime_core.aspx?lang=en"
     ]
 }
 
