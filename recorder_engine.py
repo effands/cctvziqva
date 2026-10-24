@@ -1441,7 +1441,15 @@ def load_settings() -> dict:
     "https://www.earthcam.com/usa/newmexico/ruidoso/?cam=ruidoso_lake",
     "https://www.earthcam.com/usa/pennsylvania/pittsburgh/",
     "https://www.earthcam.com/usa/tennessee/nashville/",
-    "https://www.earthcam.com/usa/wisconsin/milwaukee/"
+    "https://www.earthcam.com/usa/wisconsin/milwaukee/",
+    "https://worldcams.tv/",
+    "https://worldcams.tv/country/Germany",
+    "https://worldcams.tv/country/Ireland",
+    "https://worldcams.tv/country/Italy",
+    "https://worldcams.tv/country/Netherlands",
+    "https://worldcams.tv/country/RSA",
+    "https://worldcams.tv/country/United+Kingdom",
+    "https://worldcams.tv/country/United+States"
         ]
     }
     if SETTINGS_FILE.exists():
