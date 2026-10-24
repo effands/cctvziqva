@@ -326,7 +326,10 @@ def load_settings() -> dict:
         "https://worldcam.eu/webcams/south-america/bolivia",
         "https://andorratools.com/en/andorra-webcams/",
         "https://www.mobilitat.ad/totes-les-cameres",
-        "https://argosatlas.com/en/cameras/luxembourg/"
+        "https://argosatlas.com/en/cameras/luxembourg/",
+        "https://ltm.saikat.com.bd/",
+        "https://city-webcams.com/bangladesh/dhaka",
+        "https://opencctv.org/cameras/nepal/kathmandu/live-camera-axis-m2026-le-mkii-141328"
         ]
     }
     if SETTINGS_FILE.exists():

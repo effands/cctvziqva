@@ -273,7 +273,10 @@ defaults = {
         "https://worldcam.eu/webcams/south-america/bolivia",
         "https://www.mobilitat.ad/totes-les-cameres",
         "https://andorratools.com/en/andorra-webcams/",
-        "https://argosatlas.com/en/cameras/luxembourg/"
+        "https://argosatlas.com/en/cameras/luxembourg/",
+        "https://ltm.saikat.com.bd/",
+        "https://city-webcams.com/bangladesh/dhaka",
+        "https://opencctv.org/cameras/nepal/kathmandu/live-camera-axis-m2026-le-mkii-141328"
     ]
 }
 
