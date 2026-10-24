@@ -222,7 +222,11 @@ def load_settings() -> dict:
               "https://opencctv.org/cameras/belize",
               "https://opencctv.org/cameras/barbados",
               "https://opencctv.org/cameras/cayman-islands",
-              "https://opencctv.org/cameras/aruba"
+              "https://opencctv.org/cameras/aruba",
+              "https://opencctv.org/cameras/papua-new-guinea",
+              "https://opencctv.org/cameras/fiji",
+              "https://opencctv.org/cameras/vanuatu",
+              "https://opencctv.org/cameras/new-caledonia"
         ]
     }
     if SETTINGS_FILE.exists():
