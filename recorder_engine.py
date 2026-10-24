@@ -226,7 +226,11 @@ def load_settings() -> dict:
               "https://opencctv.org/cameras/papua-new-guinea",
               "https://opencctv.org/cameras/fiji",
               "https://opencctv.org/cameras/vanuatu",
-              "https://opencctv.org/cameras/new-caledonia"
+              "https://opencctv.org/cameras/new-caledonia",
+              "https://opencctv.org/cameras/belarus",
+              "https://opencctv.org/cameras/ukraine",
+              "https://opencctv.org/cameras/georgia",
+              "https://opencctv.org/cameras/montenegro"
         ]
     }
     if SETTINGS_FILE.exists():
