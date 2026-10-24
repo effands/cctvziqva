@@ -217,7 +217,12 @@ def load_settings() -> dict:
               "https://opencctv.org/cameras/pakistan",
               "https://opencctv.org/cameras/iran",
               "https://opencctv.org/cameras/lebanon",
-              "https://opencctv.org/cameras/oman"
+              "https://opencctv.org/cameras/oman",
+              "https://opencctv.org/cameras/madagascar",
+              "https://opencctv.org/cameras/belize",
+              "https://opencctv.org/cameras/barbados",
+              "https://opencctv.org/cameras/cayman-islands",
+              "https://opencctv.org/cameras/aruba"
         ]
     }
     if SETTINGS_FILE.exists():
