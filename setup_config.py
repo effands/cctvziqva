@@ -332,7 +332,9 @@ defaults = {
         "https://www.vision-environnement.com/webcam/grenade/saint-georges/20793-skyline-grenada-springs-marina/",
         "https://villededjibouti.dj/",
         "https://www.pictimo.com/sao-tome-and-principe/sao-tome/39922/webcam-sao-tome-ip-camera",
-        "https://worldcam.io/"
+        "https://worldcam.io/",
+        "https://www.pictimo.com/sudan/khartoum/37975/webcam-ip-camera-khartoum",
+        "https://city-webcams.com/streaming-eritrea?l=es"
     ]
 }
 
