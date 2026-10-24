@@ -133,7 +133,9 @@ defaults = {
         "https://argosatlas.com/en/cameras/kenya/",
         "https://argosatlas.com/en/cameras/bosnia-and-herz/",
         "https://opencctv.org/livetraffic/albania",
-        "https://argosatlas.com/en/cameras/namibia/"
+        "https://argosatlas.com/en/cameras/namibia/",
+        "https://argosatlas.com/en/cameras/puerto-rico/",
+        "https://opencctv.org/cameras"
     ]
 }
 
