@@ -188,7 +188,12 @@ def load_settings() -> dict:
               "https://opencctv.org/livetraffic/albania",
               "https://argosatlas.com/en/cameras/namibia/",
               "https://argosatlas.com/en/cameras/puerto-rico/",
-              "https://opencctv.org/cameras"
+              "https://opencctv.org/cameras",
+              "https://opencctv.org/cameras/egypt",
+              "https://opencctv.org/cameras/botswana",
+              "https://opencctv.org/cameras/moldova",
+              "https://opencctv.org/cameras/nepal",
+              "https://opencctv.org/cameras/zambia"
         ]
     }
     if SETTINGS_FILE.exists():
