@@ -612,7 +612,11 @@ def load_settings() -> dict:
     "https://worldcam.eu/webcams/asia/china",
     "https://worldcam.eu/webcams/asia/south-korea",
     "https://worldcam.eu/webcams/asia/taiwan",
-    "https://worldcam.eu/webcams/asia/hong-kong"
+    "https://worldcam.eu/webcams/asia/hong-kong",
+    "https://opencctv.org/cameras/thailand",
+    "https://japanlivenow.com/",
+    "https://worldeye.app/cameras/countries",
+    "https://thailivenow.com/en-us/"
         ]
     }
     if SETTINGS_FILE.exists():
