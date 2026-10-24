@@ -414,7 +414,7 @@ async def scan_website_url(page_url: str, browser=None):
             url = req.url
             # Filter hanya URL media; kata "live"/"stream" saja sering cocok
             # dengan halaman HTML, font, atau telemetry dan bukan video.
-            if any(ext in url.lower() for ext in [".m3u8", ".mp4", ".webm", ".ts", ".mkv", ".flv", "chunklist", ".ism/manifest"]):
+            if any(ext in url.lower() for ext in [".m3u8", ".mp4", ".webm", ".mkv", ".flv", "chunklist", ".ism/manifest"]):
                 if not any(ignored in url.lower() for ignored in ["analytics", "google", "facebook", "css", "js", "png", "jpg", "svg", "ico"]):
                     if url not in found_streams:
                         found_streams.append(url)
@@ -431,7 +431,7 @@ async def scan_website_url(page_url: str, browser=None):
             for v in videos:
                 src = await v.get_attribute("src")
                 if src and ("http" in src or "rtsp" in src):
-                    if src not in found_streams and any(ext in src.lower() for ext in [".m3u8", ".mp4", ".webm", ".ts", ".mkv", ".flv", ".ism/manifest"]):
+                    if src not in found_streams and any(ext in src.lower() for ext in [".m3u8", ".mp4", ".webm", ".mkv", ".flv", ".ism/manifest"]):
                         found_streams.append(src)
         except Exception as e:
             print(f"[WARNING] Gagal memuat {page_url}: {e}")
@@ -555,6 +555,7 @@ async def discover_streams(custom_urls: list = None):
                     "nationalhighways.co.uk": ("United Kingdom", "England", "National Highways"),
                     "www.livetraffic.com": ("Australia", "New South Wales", "Live Traffic NSW"),
                     "www.fl511.com": ("United States", "Florida", "Florida 511"),
+                    "klccc.dbkl.gov.my": ("Malaysia", "Kuala Lumpur", "Kuala Lumpur"),
                 }
                 country, city, location = source_meta.get(domain, ("Live Webcams", "Global", domain.title()))
                 for s_idx, stream_url in enumerate(streams, 1):
@@ -619,7 +620,14 @@ if __name__ == "__main__":
         "https://onemotoring.lta.gov.sg/content/onemotoring/home/driving/traffic_information.html",
         "https://nationalhighways.co.uk/roads-and-travel/live-travel-updates/",
         "https://www.livetraffic.com/",
-        "https://www.fl511.com/"
+        "https://www.fl511.com/",
+        "https://klccc.dbkl.gov.my/",
+        "https://www.llm.gov.my/awam/cctv1",
+        "https://zatca.gov.sa/en/pages/live-camera.aspx",
+        "https://www.i-traffic.co.za/map",
+        "https://rodovias.grupoccr.com.br/riosp/cameras-ao-vivo/",
+        "https://ledrium.live/",
+        "https://traffic.com.gh/"
     ]
     asyncio.run(discover_streams(test_urls))
 

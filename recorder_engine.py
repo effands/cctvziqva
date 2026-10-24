@@ -88,7 +88,14 @@ def load_settings() -> dict:
             "https://www.hak.hr/en#traffic-cameras",
             "https://www.dars.si/Traffic_information/Web_cameras",
             "https://www.road.is/",
-            "https://www.nzta.govt.nz/traffic-and-travel-information/traffic-cameras/"
+            "https://www.nzta.govt.nz/traffic-and-travel-information/traffic-cameras/",
+            "https://klccc.dbkl.gov.my/",
+            "https://www.llm.gov.my/awam/cctv1",
+            "https://zatca.gov.sa/en/pages/live-camera.aspx",
+            "https://www.i-traffic.co.za/map",
+            "https://rodovias.grupoccr.com.br/riosp/cameras-ao-vivo/",
+            "https://ledrium.live/",
+            "https://traffic.com.gh/"
         ]
     }
     if SETTINGS_FILE.exists():

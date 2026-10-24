@@ -17811,5 +17811,35 @@
     "stream_url": "https://atcs.denpasarkota.go.id/stream/A006SOPUTANPTZ/",
     "enabled": true,
     "source": "atcs.denpasarkota.go.id"
+  },
+  {
+    "id": "custom_1724",
+    "name": "CCTV klccc.dbkl.gov.my #1",
+    "location": "Kuala Lumpur",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "stream_url": "https://aapanel.youngera.tech/down/6zREJrgHb6wY.mp4",
+    "enabled": true,
+    "source": "klccc.dbkl.gov.my"
+  },
+  {
+    "id": "custom_1725",
+    "name": "CCTV klccc.dbkl.gov.my #2",
+    "location": "Kuala Lumpur",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "stream_url": "https://aapanel.youngera.tech/down/7FgGygIV0HDR.mp4",
+    "enabled": true,
+    "source": "klccc.dbkl.gov.my"
+  },
+  {
+    "id": "custom_1726",
+    "name": "CCTV klccc.dbkl.gov.my #3",
+    "location": "Kuala Lumpur",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "stream_url": "https://aapanel.youngera.tech/down/xd0mxbDKypRG.mp4",
+    "enabled": true,
+    "source": "klccc.dbkl.gov.my"
   }
 ]
