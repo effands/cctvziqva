@@ -230,7 +230,11 @@ defaults = {
         "https://worldcammap.com/public-cctv/",
         "https://www.traffic4cyprus.org.cy/",
         "https://cita.lu/",
-        "https://www.visitmalta.com/en/traveller-info/"
+        "https://www.visitmalta.com/en/traveller-info/",
+        "https://trafficvision.live/blog/argentina-traffic-cameras",
+        "https://trafficvision.live/blog/brazil-traffic-cameras",
+        "https://trafficvision.live/blog/colombia-traffic-cameras",
+        "https://trafficvision.live/blog/chile-traffic-cameras"
     ]
 }
 
