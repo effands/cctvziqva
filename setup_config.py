@@ -366,7 +366,10 @@ defaults = {
         "https://www.viewstkitts.com/fort-street-basseterre/",
         "https://www.pictimo.com/saint-kitts-and-nevis/basseterre/31302/webcam-online-webcam-basseterre",
         "https://caribbeanweather.org/webcams/",
-        "https://www.skylinewebcams.com/webcam/saint-vincent-and-the-grenadines.html"
+        "https://www.skylinewebcams.com/webcam/saint-vincent-and-the-grenadines.html",
+        "https://argosatlas.com/en/cameras/georgia/",
+        "https://opencctv.org/cameras/north-macedonia",
+        "https://worldviewstream.com/webcams/europe/kosovo"
     ]
 }
 
