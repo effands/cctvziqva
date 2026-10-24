@@ -204,7 +204,11 @@ defaults = {
         "https://opencctv.org/cameras/albania",
         "https://opencctv.org/cameras/maldives",
         "https://opencctv.org/cameras/guatemala",
-        "https://opencctv.org/cameras/dominican-republic"
+        "https://opencctv.org/cameras/dominican-republic",
+        "https://kt.kg/en/about-company/online-cameras/",
+        "https://joldor.gov.kg/camera/",
+        "https://digital.gov.uz/ru/uzavtoyul/pages/onlayn-rejimidagi-fotoradarlar-va-kameralar",
+        "https://kz.qaj.kz/"
     ]
 }
 
