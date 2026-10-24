@@ -314,7 +314,8 @@ def load_settings() -> dict:
         "https://opencctv.org/cameras/traffic",
         "https://orbisviews.com/en/",
         "https://kufiri.live/en/",
-        "https://uzivokamere.com/en/"
+        "https://uzivokamere.com/en/",
+        "https://opencctv.org/cameras/bosnia-and-herzegovina"
         ]
     }
     if SETTINGS_FILE.exists():
