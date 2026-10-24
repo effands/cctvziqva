@@ -57,7 +57,12 @@ defaults = {
         "https://ameq.live/",
         "https://codigoqro.mx/trafico",
         "https://www.bayerninfo.de/en/",
-        "https://www.verkehrsinfo-bw.de/verkehrskameras"
+        "https://www.verkehrsinfo-bw.de/verkehrskameras",
+        "https://www.bison-fute.gouv.fr/maintenant.html",
+        "https://www.vinci-autoroutes.com/fr/autoroutes-temps-reel/?filter=webcams",
+        "https://www.autostrade.it/it/webcam",
+        "https://www.muoversintoscana.it/telecamere",
+        "https://webcams.venetostrade.it/"
     ]
 }
 
