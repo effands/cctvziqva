@@ -455,7 +455,10 @@ defaults = {
         "https://worldcam.io/webcams/kyrgyzstan",
         "https://kt.kg/ru/o-kompanii/online-camery/",
         "https://kg.camera/en",
-        "https://couchtourist.com/cams/armenia/"
+        "https://couchtourist.com/cams/armenia/",
+        "https://atollcam.com/",
+        "https://www.pictimo.com/maldives/male",
+        "https://balticlivecam.com/cameras/maldives/male/"
     ]
 }
 
