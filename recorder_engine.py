@@ -367,7 +367,11 @@ def load_settings() -> dict:
         "https://www.pictimo.com/haiti/port-au-prince/15596/webcam-ip-camera-port-au-prince",
         "https://www.discoverourglobe.com/country/bhutan",
         "https://www.pictimo.com/benin/cotonou/19829/webcam-ip-camera-cotonou",
-        "https://www.vadernu.com/africa/togo/maritime/lome/webcam"
+        "https://www.vadernu.com/africa/togo/maritime/lome/webcam",
+        "https://webcamcaboverde.com/",
+        "https://opencctv.org/cameras/seychelles",
+        "https://webcams.org.ru/banjul.htm",
+        "https://www.skylinewebcams.com/en/webcam/madagascar.html"
         ]
     }
     if SETTINGS_FILE.exists():
