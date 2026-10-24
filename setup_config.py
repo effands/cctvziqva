@@ -462,7 +462,13 @@ defaults = {
         "https://www.see.cam/zw",
         "https://opencctv.org/cameras/zimbabwe",
         "https://www.vision-environnement.com/en/webcam/zambie/province-de-lusaka/22435-skyline-zambia-mafuta-zambezi-national-park/",
-        "https://www.vision-environnement.com/en/webcams/zambie/"
+        "https://www.vision-environnement.com/en/webcams/zambie/",
+        "https://klccc.dbkl.gov.my/",
+        "https://www.llm.gov.my/awam/cctv1",
+        "https://worldcam.io/webcams/philippines",
+        "https://argosatlas.com/en/cameras/philippines/",
+        "https://findpubliccam.com/en",
+        "https://globenow.tv/live/taiwan"
     ]
 }
 
