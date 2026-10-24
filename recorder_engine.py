@@ -355,7 +355,9 @@ def load_settings() -> dict:
         "https://city-webcams.com/ghana/accra?l=en",
         "https://city-webcams.com/cambodia/cambodia",
         "https://www.pictimo.com/cambodia/phnom-penh/39093/webcam-live-view-in-phnom-penh",
-        "https://tv360.metfone.com.kh/tv/cctv-1?c=0&ch=385&col=12&page=home_live&sect=LIVE"
+        "https://tv360.metfone.com.kh/tv/cctv-1?c=0&ch=385&col=12&page=home_live&sect=LIVE",
+        "https://trafficvision.live/blog/iraq-traffic-cameras",
+        "https://www.pictimo.com/kuwait/kuwait/4767/webcam-kuwait-small-street-view"
         ]
     }
     if SETTINGS_FILE.exists():
