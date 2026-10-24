@@ -308,7 +308,11 @@ def load_settings() -> dict:
         "https://trafficvision.live/blog/south-korea-traffic-cameras",
         "https://trafficvision.live/blog/saudi-arabia-traffic-cameras",
         "https://trafficvision.live/blog/uae-traffic-cameras",
-        "https://trafficvision.live/blog/israel-traffic-cameras"
+        "https://trafficvision.live/blog/israel-traffic-cameras",
+        "https://admtrafic.ma/?map=true",
+        "https://www.adm.co.ma/fr/adm-trafic",
+        "https://opencctv.org/cameras/traffic",
+        "https://orbisviews.com/en/"
         ]
     }
     if SETTINGS_FILE.exists():
