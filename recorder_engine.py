@@ -622,7 +622,13 @@ def load_settings() -> dict:
     "https://worldeye.app/europe-live-cameras",
     "https://orbisviews.com/en/",
     "https://webcamsdemexico.com/",
-    "https://weather.geek.nz/nz_webcams.php"
+    "https://weather.geek.nz/nz_webcams.php",
+    "https://openwebcamdb.com/",
+    "https://www.vision-environnement.com/",
+    "https://city-webcams.com/",
+    "https://webcamera24.com/countries/",
+    "https://opencctv.org/cameras/live-webcams",
+    "https://overwatch.earth/webcams"
         ]
     }
     if SETTINGS_FILE.exists():
