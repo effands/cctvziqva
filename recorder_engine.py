@@ -290,7 +290,11 @@ def load_settings() -> dict:
         "https://trafficvision.live/blog/chile-traffic-cameras",
         "https://trafficvision.live/blog/mexico-traffic-cameras",
         "https://trafficvision.live/blog/peru-traffic-cameras",
-        "https://trafficvision.live/blog/costa-rica-traffic-cameras"
+        "https://trafficvision.live/blog/costa-rica-traffic-cameras",
+        "https://trafficvision.live/blog/india-traffic-cameras",
+        "https://trafficvision.live/blog/thailand-traffic-cameras",
+        "https://trafficvision.live/blog/malaysia-traffic-cameras",
+        "https://trafficvision.live/blog/vietnam-traffic-cameras"
         ]
     }
     if SETTINGS_FILE.exists():
