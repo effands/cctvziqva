@@ -551,7 +551,9 @@ defaults = {
         "https://www.see.cam/bm",
         "https://www.see.cam/vi",
         "https://www.see.cam/bq",
-        "https://opencctv.org/cameras/senegal"
+        "https://opencctv.org/cameras/senegal",
+        "https://www.pictimo.com/country/lebanon",
+        "https://earthlive.tv/country/cyprus"
     ]
 }
 
