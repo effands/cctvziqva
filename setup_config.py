@@ -445,7 +445,13 @@ defaults = {
         "https://www.eta-il.com/en/webcams",
         "https://www.earthcam.com/world/israel/jerusalem/?cam=jerusal",
         "https://tabi.cam/jordan/amman-cityscapes-259084/",
-        "https://www.earthtv.com/en/webcam/amman-historic-center"
+        "https://www.earthtv.com/en/webcam/amman-historic-center",
+        "https://vanwatch.live/weather",
+        "https://koek.sc/en/livecam",
+        "https://www.pictimo.com/country/mauritius",
+        "https://opencctv.org/cameras/mauritius",
+        "https://www.earthcam.com/world/mauritius/?cam=mauritius",
+        "https://www.discoverourglobe.com/country/tonga"
     ]
 }
 
