@@ -179,6 +179,8 @@ defaults = {
         "https://opencctv.org/cameras/bermuda",
         "https://opencctv.org/cameras/anguilla",
         "https://opencctv.org/cameras/st-barthelemy",
+        "https://apias.dev/environmental",
+        "https://www.webcamhopper.com/map/4751.html",
         "https://opencctv.org/cameras/belarus",
         "https://opencctv.org/cameras/ukraine",
         "https://opencctv.org/cameras/georgia",
