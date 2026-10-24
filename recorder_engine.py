@@ -1406,7 +1406,17 @@ def load_settings() -> dict:
     "https://www.skylinewebcams.com/en/webcam/hrvatska/primorsko-goranska/rab/paradise-beach.html",
     "https://www.skylinewebcams.com/en/webcam/iceland/austurland/hofn/jokulsarlon.html",
     "https://www.skylinewebcams.com/en/webcam/italia/calabria/catanzaro/catanzaro-lido.html",
-    "https://www.skylinewebcams.com/en/webcam/italia/campania/napoli/capri-skyline.html"
+    "https://www.skylinewebcams.com/en/webcam/italia/campania/napoli/capri-skyline.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/campania/napoli/napoli-vesuvio.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/campania/napoli/piazza-del-plebiscito.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/campania/napoli/pozzuoli-macellum.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/campania/salerno/atrani-spiaggia.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/campania/salerno/costiera-amalfi.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/emilia-romagna/bologna/bologna-torre-degli-asinelli.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/emilia-romagna/rimini/rimini.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/friuli-venezia-giulia/trieste/piazza-unita-italia.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/lazio/roma/fontana-di-trevi.html",
+    "https://www.skylinewebcams.com/en/webcam/italia/lazio/roma/piazza-navona.html"
         ]
     }
     if SETTINGS_FILE.exists():
