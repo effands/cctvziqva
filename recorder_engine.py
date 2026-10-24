@@ -294,7 +294,11 @@ def load_settings() -> dict:
         "https://trafficvision.live/blog/india-traffic-cameras",
         "https://trafficvision.live/blog/thailand-traffic-cameras",
         "https://trafficvision.live/blog/malaysia-traffic-cameras",
-        "https://trafficvision.live/blog/vietnam-traffic-cameras"
+        "https://trafficvision.live/blog/vietnam-traffic-cameras",
+        "https://trafficvision.live/blog/germany-traffic-cameras",
+        "https://trafficvision.live/blog/france-traffic-cameras",
+        "https://trafficvision.live/blog/italy-traffic-cameras",
+        "https://trafficvision.live/blog/spain-traffic-cameras"
         ]
     }
     if SETTINGS_FILE.exists():
