@@ -142,7 +142,11 @@ def load_settings() -> dict:
               "https://www.infobuz.ro/en/traffic-romania/",
               "https://dhakabypass.com/en/travel/cameras",
               "https://www.exway.rda.gov.lk/exway/index.php?page=services",
-              "https://auqaf.punjab.gov.pk/live-camera"
+              "https://auqaf.punjab.gov.pk/live-camera",
+              "https://www.admtrafic.ma/?map=true",
+              "https://www.tunisieautoroutes.tn/en/real-time-traffic/",
+              "https://new.namata.go.ke/live-traffic-map/",
+              "https://argosatlas.com/camaras/tanzania/"
         ]
     }
     if SETTINGS_FILE.exists():
