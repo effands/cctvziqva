@@ -332,7 +332,9 @@ def load_settings() -> dict:
         "https://opencctv.org/cameras/nepal/kathmandu/live-camera-axis-m2026-le-mkii-141328",
         "https://argosatlas.com/camaras/china/",
         "https://livecam.tw/",
-        "https://live.focustaiwan.net/"
+        "https://live.focustaiwan.net/",
+        "https://www.andsa.md/camerele-video-amplasate-pe-drumurile-nationale/",
+        "https://argosatlas.com/en/cameras/ukraine/"
         ]
     }
     if SETTINGS_FILE.exists():
