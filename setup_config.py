@@ -140,7 +140,12 @@ defaults = {
         "https://opencctv.org/cameras/botswana",
         "https://opencctv.org/cameras/moldova",
         "https://opencctv.org/cameras/nepal",
-        "https://opencctv.org/cameras/zambia"
+        "https://opencctv.org/cameras/zambia",
+        "https://opencctv.org/cameras/nicaragua",
+        "https://opencctv.org/cameras/honduras",
+        "https://opencctv.org/cameras/paraguay",
+        "https://opencctv.org/cameras/venezuela",
+        "https://opencctv.org/cameras/jamaica"
     ]
 }
 
