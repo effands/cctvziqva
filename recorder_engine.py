@@ -482,7 +482,12 @@ def load_settings() -> dict:
         "https://www.pictimo.com/rwanda/kigali/31383/webcam-ip-camera-kigali",
         "https://ipv4.earthlive24.com/city/kampala",
         "https://www.discoverourglobe.com/country/uganda",
-        "https://freetvgarden.com/webcam/"
+        "https://freetvgarden.com/webcam/",
+        "https://webcamscostarica.com/san-jose/",
+        "https://webcamscostarica.com/zona/valle-central/",
+        "https://vivopanama.com/",
+        "https://www.see.cam/pa",
+        "https://www.youtube.com/watch?v=8iF0NK4loqk"
         ]
     }
     if SETTINGS_FILE.exists():
