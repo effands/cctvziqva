@@ -93,7 +93,11 @@ defaults = {
         "https://www.admtrafic.ma/?map=true",
         "https://www.tunisieautoroutes.tn/en/real-time-traffic/",
         "https://new.namata.go.ke/live-traffic-map/",
-        "https://argosatlas.com/camaras/tanzania/"
+        "https://argosatlas.com/camaras/tanzania/",
+        "https://montevideo.gub.uy/tipo/area-tematica/movilidad/gestion-de-la-movilidad/camaras-de-monitoreo-del-transito",
+        "https://aireambiente.quito.gob.ec/Modules/Realtime/SiteCamView.aspx",
+        "https://vivopanama.com/",
+        "https://argosatlas.com/camaras/costa-rica/"
     ]
 }
 
