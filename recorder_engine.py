@@ -603,7 +603,8 @@ def load_settings() -> dict:
         "https://www.see.cam/ky",
         "https://www.see.cam/bm",
         "https://www.see.cam/vi",
-        "https://www.see.cam/bq"
+        "https://www.see.cam/bq",
+        "https://opencctv.org/cameras/senegal"
         ]
     }
     if SETTINGS_FILE.exists():
