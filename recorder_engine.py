@@ -616,7 +616,13 @@ def load_settings() -> dict:
     "https://opencctv.org/cameras/thailand",
     "https://japanlivenow.com/",
     "https://worldeye.app/cameras/countries",
-    "https://thailivenow.com/en-us/"
+    "https://thailivenow.com/en-us/",
+    "https://opencam.live/",
+    "https://livepublicwebcams.com/",
+    "https://worldeye.app/europe-live-cameras",
+    "https://orbisviews.com/en/",
+    "https://webcamsdemexico.com/",
+    "https://weather.geek.nz/nz_webcams.php"
         ]
     }
     if SETTINGS_FILE.exists():
