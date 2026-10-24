@@ -322,7 +322,8 @@ def load_settings() -> dict:
         "https://livepublicwebcams.com/public-webcams-map",
         "https://pixelsgy.com/cam-dashboard/",
         "https://www.iplivecams.com/live-cams/georgetown-guyana/",
-        "https://www.pictimo.com/guyana/georgetown/16279/webcam-ip-camera-georgetown"
+        "https://www.pictimo.com/guyana/georgetown/16279/webcam-ip-camera-georgetown",
+        "https://worldcam.eu/webcams/south-america/bolivia"
         ]
     }
     if SETTINGS_FILE.exists():
