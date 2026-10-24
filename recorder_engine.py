@@ -439,7 +439,10 @@ def load_settings() -> dict:
         "https://seeker.gg/Home/Webcam",
         "https://www.jersey.co.uk/webcam/",
         "https://www.beaches.gi/",
-        "https://pocketworld.org/webcams/country/fo"
+        "https://pocketworld.org/webcams/country/fo",
+        "https://city-webcams.com/equatorialguinea/monte-bata",
+        "https://www.easeweather.com/africa/equatorial-guinea/bioko-norte/malabo/webcam",
+        "https://www.discoverourglobe.com/country/central-african-republic"
         ]
     }
     if SETTINGS_FILE.exists():
