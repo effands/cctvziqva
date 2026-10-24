@@ -210,7 +210,8 @@ defaults = {
         "https://digital.gov.uz/ru/uzavtoyul/pages/onlayn-rejimidagi-fotoradarlar-va-kameralar",
         "https://kz.qaj.kz/",
         "https://trafico.gt/",
-        "https://argosatlas.com/camaras/guatemala/"
+        "https://argosatlas.com/camaras/guatemala/",
+        "https://opencctv.org/cameras/el-salvador"
     ]
 }
 
