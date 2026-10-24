@@ -897,7 +897,16 @@ def load_settings() -> dict:
     "https://www.camscape.com/location/london/",
     "https://www.camscape.com/location/new-york/",
     "https://www.camscape.com/location/texas/",
-    "https://www.camscape.com/location/victoria/"
+    "https://www.camscape.com/location/victoria/",
+    "https://worldcam.eu/",
+    "https://worldcam.eu/webcams/asia",
+    "https://worldcam.eu/webcams/europe",
+    "https://worldcam.eu/webcams/africa",
+    "https://worldcam.eu/webcams/north-america",
+    "https://worldcam.eu/webcams/south-america",
+    "https://worldcam.eu/webcams/australia-oceania",
+    "https://worldcam.eu/webcams/poles",
+    "https://worldcam.eu/webcams/asia/japan/okinawa"
         ]
     }
     if SETTINGS_FILE.exists():
