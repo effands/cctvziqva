@@ -55,7 +55,9 @@ defaults = {
         "https://www.td.gov.hk/en/transport_in_hong_kong/its/its_achievements/closed_circuit_television_images_on_the_internet/index.html",
         "https://www.c5.cdmx.gob.mx/",
         "https://ameq.live/",
-        "https://codigoqro.mx/trafico"
+        "https://codigoqro.mx/trafico",
+        "https://www.bayerninfo.de/en/",
+        "https://www.verkehrsinfo-bw.de/verkehrskameras"
     ]
 }
 
