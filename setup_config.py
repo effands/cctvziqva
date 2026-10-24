@@ -201,7 +201,10 @@ defaults = {
         "https://opencctv.org/cameras/kyrgyzstan",
         "https://opencctv.org/cameras/azerbaijan",
         "https://opencctv.org/cameras/zimbabwe",
-        "https://opencctv.org/cameras/albania"
+        "https://opencctv.org/cameras/albania",
+        "https://opencctv.org/cameras/maldives",
+        "https://opencctv.org/cameras/guatemala",
+        "https://opencctv.org/cameras/dominican-republic"
     ]
 }
 
