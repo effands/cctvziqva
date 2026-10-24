@@ -245,7 +245,12 @@ defaults = {
         "https://trafficvision.live/blog/germany-traffic-cameras",
         "https://trafficvision.live/blog/france-traffic-cameras",
         "https://trafficvision.live/blog/italy-traffic-cameras",
-        "https://trafficvision.live/blog/spain-traffic-cameras"
+        "https://trafficvision.live/blog/spain-traffic-cameras",
+        "https://trafficvision.live/blog/norway-traffic-cameras",
+        "https://trafficvision.live/blog/stockholm-traffic-cameras",
+        "https://trafficvision.live/blog/gothenburg-traffic-cameras",
+        "https://trafficvision.live/blog/finland-traffic-cameras",
+        "https://trafficvision.live/blog/poland-traffic-cameras"
     ]
 }
 
