@@ -524,7 +524,13 @@ def load_settings() -> dict:
         "https://globenow.tv/live/taiwan",
         "https://opencctv.org/cameras/mozambique",
         "https://worldcam.eu/webcams/africa/mozambique",
-        "https://www.vision-environnement.com/webcams/mozambique/maputo/"
+        "https://www.vision-environnement.com/webcams/mozambique/maputo/",
+        "https://www.see.cam/py",
+        "https://www.see.cam/uy",
+        "https://www.see.cam/ec",
+        "https://www.see.cam/sv",
+        "https://www.see.cam/cn",
+        "https://www.see.cam/uz"
         ]
     }
     if SETTINGS_FILE.exists():
