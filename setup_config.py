@@ -108,7 +108,9 @@ defaults = {
         "https://transport.vic.gov.au/road-and-active-transport/victraffic",
         "https://quickmap.dot.ca.gov/",
         "https://www.txdot.gov/discover/live-traffic-cameras.html",
-        "https://511ny.org/cctv"
+        "https://511ny.org/cctv",
+        "https://www.traffic.gov.scot/traffic-cameras",
+        "https://www.hamburg.de/verkehr/stau-und-baustellen/aktuelle-verkehrslage/verkehrskameras"
     ]
 }
 
