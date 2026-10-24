@@ -128,7 +128,9 @@ defaults = {
         "https://argosatlas.com/camaras/letonia/",
         "https://argosatlas.com/en/cameras/vietnam/",
         "https://www.llm.gov.my/maps/index",
-        "https://www.ppj.gov.my/second-page/live-trafik"
+        "https://www.ppj.gov.my/second-page/live-trafik",
+        "https://www.traffic.delhipolice.gov.in/en",
+        "https://argosatlas.com/en/cameras/kenya/"
     ]
 }
 
