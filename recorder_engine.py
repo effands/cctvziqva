@@ -1170,7 +1170,12 @@ def load_settings() -> dict:
     "https://tripplanning.org/live-cams/japan/okinawa/naha-airport-ntv/",
     "https://tripplanning.org/live-cams/japan/osaka/dotonbori-and-ebisubashi-mbs/",
     "https://tripplanning.org/live-cams/japan/tokyo/asahi-shimbun-ginza-sukiyabashi-crossing/",
-    "https://tripplanning.org/live-cams/japan/yamanashi/mt-fuji-from-oshino-hakkai/"
+    "https://tripplanning.org/live-cams/japan/yamanashi/mt-fuji-from-oshino-hakkai/",
+    "https://tripplanning.org/live-cams/ireland/county-louth/st-brigids-church-dunleer/",
+    "https://tripplanning.org/live-cams/ireland/dublin/dublin-zoo-elephants/",
+    "https://tripplanning.org/live-cams/japan/nagano/hakuba-happo-one-nakiyama-slope/",
+    "https://tripplanning.org/live-cams/south-korea/busan/gwangalli-gwangan-bridge/",
+    "https://tripplanning.org/live-cams/south-korea/seoul/banpo-bridge-han-river/"
         ]
     }
     if SETTINGS_FILE.exists():
