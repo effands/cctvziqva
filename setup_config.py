@@ -546,7 +546,11 @@ defaults = {
         "https://www.see.cam/md",
         "https://www.see.cam/cy",
         "https://www.see.cam/lu",
-        "https://www.see.cam/mc"
+        "https://www.see.cam/mc",
+        "https://www.see.cam/ky",
+        "https://www.see.cam/bm",
+        "https://www.see.cam/vi",
+        "https://www.see.cam/bq"
     ]
 }
 
