@@ -271,7 +271,8 @@ def load_settings() -> dict:
         "https://opencctv.org/cameras/san-marino",
         "https://opencctv.org/cameras/liechtenstein",
         "https://opencctv.org/cameras/vatican-city",
-        "https://opencctv.org/cameras/greenland"
+        "https://opencctv.org/cameras/greenland",
+        "https://opencctv.org/cameras/cook-islands"
         ]
     }
     if SETTINGS_FILE.exists():
