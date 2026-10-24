@@ -410,7 +410,10 @@ def load_settings() -> dict:
         "https://www.easeweather.com/africa/niger/webcam",
         "https://www.discoverourglobe.com/country/comoros",
         "https://webcams.windy.com/webcams/public/embed/player?forceFullScreenOnOverlayPlay=false&interactive=true&loop=false&playerType=month&webcamId=1760626993",
-        "https://www.weer1.com/amp/africa/liberia/montserrado/monrovia?page=webcam"
+        "https://www.weer1.com/amp/africa/liberia/montserrado/monrovia?page=webcam",
+        "https://www.pictimo.com/country/yemen",
+        "https://www.pictimo.com/country/syria",
+        "https://www.tiempo3.com/north-america/cuba/ciudad-de-la-habana/havana?page=webcam"
         ]
     }
     if SETTINGS_FILE.exists():
