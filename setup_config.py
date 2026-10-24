@@ -360,7 +360,9 @@ defaults = {
         "https://www.weer1.com/amp/africa/liberia/montserrado/monrovia?page=webcam",
         "https://www.pictimo.com/country/yemen",
         "https://www.pictimo.com/country/syria",
-        "https://www.tiempo3.com/north-america/cuba/ciudad-de-la-habana/havana?page=webcam"
+        "https://www.tiempo3.com/north-america/cuba/ciudad-de-la-habana/havana?page=webcam",
+        "https://www.tiempo3.com/oceania/tuvalu/funafuti?page=webcam",
+        "https://www.meteohorizon.com/oceania/marshall-islands/majuro-atoll/webcam"
     ]
 }
 
