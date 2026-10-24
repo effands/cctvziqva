@@ -151,7 +151,9 @@ def load_settings() -> dict:
               "https://aireambiente.quito.gob.ec/Modules/Realtime/SiteCamView.aspx",
               "https://vivopanama.com/",
               "https://argosatlas.com/camaras/costa-rica/",
-              "https://earthlive.tv/country/qatar"
+              "https://earthlive.tv/country/qatar",
+              "https://opencctv.org/open-cameras",
+              "https://worldeye.app/cameras/countries"
         ]
     }
     if SETTINGS_FILE.exists():
