@@ -442,7 +442,12 @@ def load_settings() -> dict:
         "https://pocketworld.org/webcams/country/fo",
         "https://city-webcams.com/equatorialguinea/monte-bata",
         "https://www.easeweather.com/africa/equatorial-guinea/bioko-norte/malabo/webcam",
-        "https://www.discoverourglobe.com/country/central-african-republic"
+        "https://www.discoverourglobe.com/country/central-african-republic",
+        "https://www.naarcuracao.com/webcam-curacao/",
+        "https://geocam.ru/en/in/bonaire/",
+        "https://opencctv.org/cameras/netherlands/sint-maarten-netherlands/philipsburg/philipsburg-421610",
+        "https://www.getturquoiseguide.com/webcams",
+        "https://www.vision-environnement.com/en/webcam/iles-turques-et-caiques/iles-turques-et-caiques/9889-providenciales/"
         ]
     }
     if SETTINGS_FILE.exists():
