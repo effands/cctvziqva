@@ -958,7 +958,11 @@ defaults = {
     "https://nowevio.com/country/united-arab-emirates/",
     "https://nowevio.com/country/united-kingdom/",
     "https://nowevio.com/country/united-states/",
-    "https://nowevio.com/country/vietnam/"
+    "https://nowevio.com/country/vietnam/",
+    "https://tripplanning.org/live-cams/",
+    "https://freetvgarden.com/webcam/",
+    "https://livecamsmap.com/",
+    "https://worldeye.app/live-webcams"
     ]
 }
 
