@@ -230,7 +230,9 @@ def load_settings() -> dict:
               "https://opencctv.org/cameras/belarus",
               "https://opencctv.org/cameras/ukraine",
               "https://opencctv.org/cameras/georgia",
-              "https://opencctv.org/cameras/montenegro"
+              "https://opencctv.org/cameras/montenegro",
+              "https://opencctv.org/cameras/tunisia",
+              "https://opencctv.org/cameras/morocco"
         ]
     }
     if SETTINGS_FILE.exists():
