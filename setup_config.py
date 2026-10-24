@@ -190,7 +190,10 @@ defaults = {
         "https://opencctv.org/cameras/romania",
         "https://opencctv.org/cameras/greece",
         "https://opencctv.org/cameras/israel",
-        "https://opencctv.org/cameras/japan"
+        "https://opencctv.org/cameras/japan",
+        "https://opencctv.org/cameras/turkiye",
+        "https://opencctv.org/cameras/south-korea",
+        "https://opencctv.org/cameras/taiwan"
     ]
 }
 
