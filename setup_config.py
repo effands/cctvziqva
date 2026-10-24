@@ -402,7 +402,10 @@ defaults = {
         "https://monteput.me/live-stream/",
         "https://tirana.al/kamera-trafiku",
         "https://radiom.ba/en/live-cameras",
-        "https://openwebcamdb.com/countries/montenegro"
+        "https://openwebcamdb.com/countries/montenegro",
+        "https://ubtraffic.mn/",
+        "https://opencctv.org/cameras/china/macau",
+        "https://opendata.000.taipei/"
     ]
 }
 
