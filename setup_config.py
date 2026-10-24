@@ -105,7 +105,10 @@ defaults = {
         "https://www.dsat.gov.mo/realtime_core.aspx?lang=en",
         "https://www.road-info-prvs.mlit.go.jp/roadinfo/pcen/pcTop_00_0.html",
         "https://www.oss-local.info/all_cctv?lang=en",
-        "https://transport.vic.gov.au/road-and-active-transport/victraffic"
+        "https://transport.vic.gov.au/road-and-active-transport/victraffic",
+        "https://quickmap.dot.ca.gov/",
+        "https://www.txdot.gov/discover/live-traffic-cameras.html",
+        "https://511ny.org/cctv"
     ]
 }
 
