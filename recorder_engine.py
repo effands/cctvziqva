@@ -261,7 +261,9 @@ def load_settings() -> dict:
         "https://kt.kg/en/about-company/online-cameras/",
         "https://joldor.gov.kg/camera/",
         "https://digital.gov.uz/ru/uzavtoyul/pages/onlayn-rejimidagi-fotoradarlar-va-kameralar",
-        "https://kz.qaj.kz/"
+        "https://kz.qaj.kz/",
+        "https://trafico.gt/",
+        "https://argosatlas.com/camaras/guatemala/"
         ]
     }
     if SETTINGS_FILE.exists():
