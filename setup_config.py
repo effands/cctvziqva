@@ -309,7 +309,10 @@ defaults = {
         "https://city-webcams.com/streaming-fiji",
         "https://www.vadernu.com/oceania/samoa/tuamasaga/apia/webcam",
         "https://www.easeweather.com/oceania/tonga/tongatapu/kolofoou/nukualofa/webcam",
-        "https://www.pictimo.com/suriname/paramaribo/21873/webcam-ip-camera-paramaribo"
+        "https://www.pictimo.com/suriname/paramaribo/21873/webcam-ip-camera-paramaribo",
+        "https://www.easeweather.com/africa/malawi/central-region/lilongwe-district/lilongwe/webcam",
+        "https://www.pictimo.com/haiti/port-au-prince/15596/webcam-ip-camera-port-au-prince",
+        "https://www.discoverourglobe.com/country/bhutan"
     ]
 }
 
