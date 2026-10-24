@@ -70,8 +70,16 @@ def load_settings() -> dict:
             "https://cctv.malangkota.go.id/sebaran-cctv",
             "https://dishub.kedirikota.go.id/live-streaming-atcs/",
             "https://atcs.denpasarkota.go.id/",
-            "https://www.skylinewebcams.com/en/webcam.html"
-            ,"https://www.aqi.in/live-camera/india/tamil-nadu/tiruppur/kuppuchipalayam"
+            "https://www.skylinewebcams.com/en/webcam.html",
+            "https://www.aqi.in/live-camera/india/tamil-nadu/tiruppur/kuppuchipalayam",
+            "https://www.mlit.go.jp/road/bosai/LIVEcamera.html",
+            "https://highwaytraffic.go.th/DOHMobile/Modules/CCTV.aspx",
+            "https://traffic.bangkok.go.th/",
+            "https://transport.mos.ru/mostrans/cameras",
+            "https://onemotoring.lta.gov.sg/content/onemotoring/home/driving/traffic_information.html",
+            "https://nationalhighways.co.uk/roads-and-travel/live-travel-updates/",
+            "https://www.livetraffic.com/",
+            "https://www.fl511.com/"
         ]
     }
     if SETTINGS_FILE.exists():

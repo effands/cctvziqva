@@ -412,8 +412,9 @@ async def scan_website_url(page_url: str, browser=None):
 
         def handle_request(req):
             url = req.url
-            # Filter URL media stream
-            if any(ext in url.lower() for ext in [".m3u8", ".mp4", "stream", "live", "hls", "chunklist", "playlist"]):
+            # Filter hanya URL media; kata "live"/"stream" saja sering cocok
+            # dengan halaman HTML, font, atau telemetry dan bukan video.
+            if any(ext in url.lower() for ext in [".m3u8", ".mp4", ".webm", ".ts", ".mkv", ".flv", "chunklist", ".ism/manifest"]):
                 if not any(ignored in url.lower() for ignored in ["analytics", "google", "facebook", "css", "js", "png", "jpg", "svg", "ico"]):
                     if url not in found_streams:
                         found_streams.append(url)
@@ -430,7 +431,7 @@ async def scan_website_url(page_url: str, browser=None):
             for v in videos:
                 src = await v.get_attribute("src")
                 if src and ("http" in src or "rtsp" in src):
-                    if src not in found_streams and any(ext in src.lower() for ext in [".m3u8", ".mp4", "live"]):
+                    if src not in found_streams and any(ext in src.lower() for ext in [".m3u8", ".mp4", ".webm", ".ts", ".mkv", ".flv", ".ism/manifest"]):
                         found_streams.append(src)
         except Exception as e:
             print(f"[WARNING] Gagal memuat {page_url}: {e}")
@@ -544,15 +545,27 @@ async def discover_streams(custom_urls: list = None):
                 # Scan website HTML & network packets via browser
                 streams = await scan_website_url(url, browser=browser)
                 domain = url.split("/")[2].replace("www.", "")
+                source_meta = {
+                    "dishub.kedirikota.go.id": ("Indonesia", "Kediri", "Kota Kediri"),
+                    "www.mlit.go.jp": ("Japan", "Japan", "Japan Road Camera"),
+                    "highwaytraffic.go.th": ("Thailand", "Thailand", "Thailand Highway"),
+                    "traffic.bangkok.go.th": ("Thailand", "Bangkok", "Bangkok"),
+                    "transport.mos.ru": ("Russia", "Moscow", "Moscow"),
+                    "onemotoring.lta.gov.sg": ("Singapore", "Singapore", "Singapore"),
+                    "nationalhighways.co.uk": ("United Kingdom", "England", "National Highways"),
+                    "www.livetraffic.com": ("Australia", "New South Wales", "Live Traffic NSW"),
+                    "www.fl511.com": ("United States", "Florida", "Florida 511"),
+                }
+                country, city, location = source_meta.get(domain, ("Live Webcams", "Global", domain.title()))
                 for s_idx, stream_url in enumerate(streams, 1):
                     if stream_url not in stream_urls_seen:
                         cid = f"custom_{len(all_streams)+1:03d}"
                         all_streams.append({
                             "id": cid,
                             "name": f"CCTV {domain} #{s_idx}",
-                            "location": domain.title(),
-                            "city": "Global",
-                            "country": "Live Webcams",
+                            "location": location,
+                            "city": city,
+                            "country": country,
                             "stream_url": stream_url,
                             "enabled": True,
                             "source": domain
@@ -595,7 +608,18 @@ if __name__ == "__main__":
         "https://cctv.malangkota.go.id/sebaran-cctv",
         "https://dishub.kedirikota.go.id/live-streaming-atcs/",
         "https://atcs.denpasarkota.go.id/",
-        "https://www.skylinewebcams.com/en/webcam.html"
+        "https://www.skylinewebcams.com/en/webcam.html",
+        # Sumber resmi internasional: scanner hanya menyimpan feed yang benar-benar
+        # terlihat di jaringan browser. Portal snapshot tetap disimpan sebagai sumber
+        # rujukan, tetapi tidak dipaksa menjadi video stream.
+        "https://www.mlit.go.jp/road/bosai/LIVEcamera.html",
+        "https://highwaytraffic.go.th/DOHMobile/Modules/CCTV.aspx",
+        "https://traffic.bangkok.go.th/",
+        "https://transport.mos.ru/mostrans/cameras",
+        "https://onemotoring.lta.gov.sg/content/onemotoring/home/driving/traffic_information.html",
+        "https://nationalhighways.co.uk/roads-and-travel/live-travel-updates/",
+        "https://www.livetraffic.com/",
+        "https://www.fl511.com/"
     ]
     asyncio.run(discover_streams(test_urls))
 
