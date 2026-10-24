@@ -227,6 +227,8 @@ def load_settings() -> dict:
               "https://opencctv.org/cameras/fiji",
               "https://opencctv.org/cameras/vanuatu",
               "https://opencctv.org/cameras/new-caledonia",
+              "https://opencctv.org/cameras/christmas-island",
+              "https://opencctv.org/cameras/norfolk-island",
               "https://opencctv.org/cameras/belarus",
               "https://opencctv.org/cameras/ukraine",
               "https://opencctv.org/cameras/georgia",
