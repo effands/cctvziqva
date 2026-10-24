@@ -280,7 +280,10 @@ def load_settings() -> dict:
         "https://opencctv.org/cameras/vatican-city",
         "https://opencctv.org/cameras/greenland",
         "https://opencctv.org/cameras/cook-islands",
-        "https://worldcammap.com/public-cctv/"
+        "https://worldcammap.com/public-cctv/",
+        "https://www.traffic4cyprus.org.cy/",
+        "https://cita.lu/",
+        "https://www.visitmalta.com/en/traveller-info/"
         ]
     }
     if SETTINGS_FILE.exists():
