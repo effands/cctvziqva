@@ -232,7 +232,11 @@ def load_settings() -> dict:
               "https://opencctv.org/cameras/georgia",
               "https://opencctv.org/cameras/montenegro",
               "https://opencctv.org/cameras/tunisia",
-              "https://opencctv.org/cameras/morocco"
+              "https://opencctv.org/cameras/morocco",
+              "https://opencctv.org/cameras/reunion",
+              "https://opencctv.org/cameras/guadeloupe",
+              "https://opencctv.org/cameras/martinique",
+              "https://opencctv.org/cameras/french-polynesia"
         ]
     }
     if SETTINGS_FILE.exists():
