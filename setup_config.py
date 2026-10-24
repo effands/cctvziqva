@@ -1193,7 +1193,17 @@ defaults = {
     "https://freetvgarden.com/webcam/indonesia/",
     "https://freetvgarden.com/webcam/philippines/",
     "https://freetvgarden.com/webcam/uk/",
-    "https://freetvgarden.com/webcam/usa/"
+    "https://freetvgarden.com/webcam/usa/",
+    "https://camlisted.com/",
+    "https://camlisted.com/ch/live.html",
+    "https://camlisted.com/ch/africam.html",
+    "https://camlisted.com/ch/the-real-samui-webcam.html",
+    "https://camlisted.com/ch/kabukicho-live-camera.html",
+    "https://camlisted.com/country/argentina.html",
+    "https://camlisted.com/country/brazil.html",
+    "https://camlisted.com/country/india.html",
+    "https://camlisted.com/country/t-rkiye.html",
+    "https://camlisted.com/country/u-s-virgin-islands.html"
     ]
 }
 
