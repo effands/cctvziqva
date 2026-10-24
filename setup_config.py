@@ -213,7 +213,8 @@ defaults = {
         "https://argosatlas.com/camaras/guatemala/",
         "https://opencctv.org/cameras/el-salvador",
         "https://trafficvision.live/blog/armenia-traffic-cameras",
-        "https://worldviewstream.com/webcams/asia/armenia"
+        "https://worldviewstream.com/webcams/asia/armenia",
+        "https://argosatlas.com/en/cameras/peru/"
     ]
 }
 
