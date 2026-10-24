@@ -346,7 +346,9 @@ def load_settings() -> dict:
         "https://www4.ti.ch/dt/sg/sai/ugeo/temi/geoportale/mappe/mappe-tematiche/webcam",
         "https://www.pictimo.com/country/egypt",
         "https://opencctv.org/cameras/botswana",
-        "https://www.pictimo.com/botswana/gaborone/34865/webcam-ip-camera-gaborone"
+        "https://www.pictimo.com/botswana/gaborone/34865/webcam-ip-camera-gaborone",
+        "https://www.easeweather.com/africa/zambia/lusaka/webcam",
+        "https://www.pictimo.com/mozambique/maputo"
         ]
     }
     if SETTINGS_FILE.exists():
