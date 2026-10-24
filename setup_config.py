@@ -68,7 +68,11 @@ defaults = {
         "https://www.viaverde.pt/ferramentas/informacao-de-transito",
         "https://511on.ca/",
         "https://topis.seoul.go.kr/map/openCctvMap.do",
-        "https://www.utic.go.kr/main/main.do"
+        "https://www.utic.go.kr/main/main.do",
+        "https://www.rwsverkeersinfo.nl/cameras/",
+        "https://trafiroutes.wallonie.be/",
+        "https://drogi.gddkia.gov.pl/",
+        "https://vif.lu.ch/webcams"
     ]
 }
 
