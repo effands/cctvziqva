@@ -530,7 +530,13 @@ def load_settings() -> dict:
         "https://www.see.cam/ec",
         "https://www.see.cam/sv",
         "https://www.see.cam/cn",
-        "https://www.see.cam/uz"
+        "https://www.see.cam/uz",
+        "https://www.see.cam/pe",
+        "https://www.see.cam/cl",
+        "https://www.see.cam/co",
+        "https://www.see.cam/ve",
+        "https://www.see.cam/ni",
+        "https://www.see.cam/cv"
         ]
     }
     if SETTINGS_FILE.exists():
