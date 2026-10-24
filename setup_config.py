@@ -295,7 +295,10 @@ defaults = {
         "https://opencctv.org/cameras/botswana",
         "https://www.pictimo.com/botswana/gaborone/34865/webcam-ip-camera-gaborone",
         "https://www.easeweather.com/africa/zambia/lusaka/webcam",
-        "https://www.pictimo.com/mozambique/maputo"
+        "https://www.pictimo.com/mozambique/maputo",
+        "https://city-webcams.com/angola/luanda",
+        "https://nowevio.com/",
+        "https://orbisviews.com/en/"
     ]
 }
 
