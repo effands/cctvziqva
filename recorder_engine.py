@@ -403,7 +403,11 @@ def load_settings() -> dict:
         "https://city-webcams.com/lesotho?l=en",
         "https://city-webcams.com/streaming-ethiopia",
         "https://city-webcams.com/streaming-guinea",
-        "https://city-webcams.com/streaming-guineabissau-v"
+        "https://city-webcams.com/streaming-guineabissau-v",
+        "https://www.pictimo.com/burkina-faso/ouagadougou/43987/webcam-ouagadougou-ip-camera",
+        "https://www.discoverourglobe.com/country/chad",
+        "https://ortm.net/",
+        "https://www.easeweather.com/africa/niger/webcam"
         ]
     }
     if SETTINGS_FILE.exists():
