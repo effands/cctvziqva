@@ -447,7 +447,11 @@ def load_settings() -> dict:
         "https://geocam.ru/en/in/bonaire/",
         "https://opencctv.org/cameras/netherlands/sint-maarten-netherlands/philipsburg/philipsburg-421610",
         "https://www.getturquoiseguide.com/webcams",
-        "https://www.vision-environnement.com/en/webcam/iles-turques-et-caiques/iles-turques-et-caiques/9889-providenciales/"
+        "https://www.vision-environnement.com/en/webcam/iles-turques-et-caiques/iles-turques-et-caiques/9889-providenciales/",
+        "https://argosatlas.com/en/cameras/namibia/",
+        "https://namibiaweather.info/webcams",
+        "https://www.discoverourglobe.com/country/eswatini",
+        "https://www.easeweather.com/africa/lesotho/maseru/webcam"
         ]
     }
     if SETTINGS_FILE.exists():
