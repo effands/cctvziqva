@@ -284,7 +284,8 @@ defaults = {
         "https://argosatlas.com/en/cameras/ukraine/",
         "https://www.pictimo.com/country/algeria/",
         "https://servicos.infraestruturasdeportugal.pt/index.php/pt-pt/viajar-na-estrada/transito-em-tempo-real",
-        "https://www.arcgis.com/home/item.html?id=8061c55d6a9a481885fa8f913101dcdd&sublayer=0"
+        "https://www.arcgis.com/home/item.html?id=8061c55d6a9a481885fa8f913101dcdd&sublayer=0",
+        "https://argosatlas.com/en/cameras/belgium/"
     ]
 }
 
