@@ -155,7 +155,10 @@ def load_settings() -> dict:
               "https://opencctv.org/open-cameras",
               "https://worldeye.app/cameras/countries",
               "https://www.ubtraffic.mn/",
-              "https://www.dsat.gov.mo/realtime_core.aspx?lang=en"
+              "https://www.dsat.gov.mo/realtime_core.aspx?lang=en",
+              "https://www.road-info-prvs.mlit.go.jp/roadinfo/pcen/pcTop_00_0.html",
+              "https://www.oss-local.info/all_cctv?lang=en",
+              "https://transport.vic.gov.au/road-and-active-transport/victraffic"
         ]
     }
     if SETTINGS_FILE.exists():
