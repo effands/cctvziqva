@@ -337,7 +337,9 @@ defaults = {
         "https://city-webcams.com/streaming-eritrea?l=es",
         "https://www.kingscasino.com/web-cam",
         "https://caribbeantelevision.org/live-stream/",
-        "https://www.tiempo3.com/north-america/dominica/saint-george/roseau?page=webcam"
+        "https://www.tiempo3.com/north-america/dominica/saint-george/roseau?page=webcam",
+        "https://argosatlas.com/en/cameras/papua-new-guinea/",
+        "https://www.vadernu.com/oceania/kiribati/gilbert-islands/tarawa/webcam"
     ]
 }
 
