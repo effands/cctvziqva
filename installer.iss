@@ -1,7 +1,7 @@
 [Setup]
 AppId={{4BBA7E1D-2D93-4CE7-85B8-D9A203949CA2}
 AppName=CCTV ZIQVA
-AppVersion=1.0.26
+AppVersion=1.0.27
 AppPublisher=ZIQVA
 DefaultDirName={localappdata}\Programs\CCTV ZIQVA
 DefaultGroupName=CCTV ZIQVA
@@ -10,7 +10,7 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0
 OutputDir=dist
-OutputBaseFilename=CCTV_ZIQVA_Setup_1.0.26
+OutputBaseFilename=CCTV_ZIQVA_Setup_1.0.27
 SetupIconFile=cctv_icon.ico
 UninstallDisplayIcon={app}\CCTV ZIQVA.exe
 Compression=lzma2/fast

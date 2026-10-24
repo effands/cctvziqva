@@ -1,5 +1,104 @@
 [ 
   {
+    "id": "livepublicwebcams-estonia-tallinn",
+    "name": "Tallinn CityCam",
+    "location": "Tallinn",
+    "city": "Tallinn",
+    "country": "Estonia",
+    "stream_url": "https://www.youtube.com/watch?v=VhVgZi2lGv0",
+    "website_url": "https://livepublicwebcams.com/public-webcams-map",
+    "enabled": true,
+    "source": "Live Public Webcams verified LIVE (YouTube)", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "livepublicwebcams-vatican-city-st-peter",
+    "name": "Vatican Media St Peter's Live",
+    "location": "St Peter's Square",
+    "city": "Vatican City",
+    "country": "Vatican City",
+    "stream_url": "https://www.youtube.com/watch?v=03pYP2Nmreo",
+    "website_url": "https://livepublicwebcams.com/public-webcams-map",
+    "enabled": true,
+    "source": "Live Public Webcams verified LIVE (YouTube)", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "livepublicwebcams-usvi-st-john",
+    "name": "Beach Bar St. John Live",
+    "location": "St. John",
+    "city": "St. John",
+    "country": "US Virgin Islands",
+    "stream_url": "https://www.youtube.com/watch?v=2wqpy036z24",
+    "website_url": "https://livepublicwebcams.com/public-webcams-map",
+    "enabled": true,
+    "source": "Live Public Webcams verified LIVE (YouTube)", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "livepublicwebcams-italy-assisi",
+    "name": "Assisi Basilica di San Francesco Live",
+    "location": "Assisi",
+    "city": "Assisi",
+    "country": "Italy",
+    "stream_url": "https://www.youtube.com/watch?v=5ka3YhVZgME",
+    "website_url": "https://livepublicwebcams.com/public-webcams-map",
+    "enabled": true,
+    "source": "Live Public Webcams verified LIVE (YouTube)", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "livepublicwebcams-japan-tokyo-bay",
+    "name": "Tokyo Bay Live Camera",
+    "location": "Tokyo Bay",
+    "city": "Tokyo",
+    "country": "Japan",
+    "stream_url": "https://www.youtube.com/watch?v=_k-5U7IeK8g",
+    "website_url": "https://livepublicwebcams.com/public-webcams-map",
+    "enabled": true,
+    "source": "Live Public Webcams verified LIVE (YouTube)", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "livepublicwebcams-russia-st-petersburg",
+    "name": "Bronze Horseman Senatskaya Square Live",
+    "location": "Saint Petersburg",
+    "city": "Saint Petersburg",
+    "country": "Russia",
+    "stream_url": "https://www.youtube.com/watch?v=kjem5-kanuc",
+    "website_url": "https://livepublicwebcams.com/public-webcams-map",
+    "enabled": true,
+    "source": "Live Public Webcams verified LIVE (YouTube)", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "livepublicwebcams-belgium-heist",
+    "name": "Heist Seafront Live",
+    "location": "Heist",
+    "city": "Heist",
+    "country": "Belgium",
+    "stream_url": "https://www.youtube.com/watch?v=ThVtj7egCKY",
+    "website_url": "https://livepublicwebcams.com/public-webcams-map",
+    "enabled": true,
+    "source": "Live Public Webcams verified LIVE (YouTube)", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "livepublicwebcams-canada-fort-erie",
+    "name": "Peace Bridge Canada Bound Live",
+    "location": "Fort Erie",
+    "city": "Fort Erie",
+    "country": "Canada",
+    "stream_url": "https://www.youtube.com/watch?v=DnUFAShZKus",
+    "website_url": "https://livepublicwebcams.com/public-webcams-map",
+    "enabled": true,
+    "source": "Live Public Webcams verified LIVE (YouTube)", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
+    "id": "livepublicwebcams-namibia-desert",
+    "name": "Namib Desert Live",
+    "location": "Namib Desert",
+    "city": "Namib Desert",
+    "country": "Namibia",
+    "stream_url": "https://www.youtube.com/watch?v=ydYDqZQpim8",
+    "website_url": "https://livepublicwebcams.com/public-webcams-map",
+    "enabled": true,
+    "source": "Live Public Webcams verified LIVE (YouTube)", "status_health": "online", "offline_reason": "", "fail_count": 0
+  },
+  {
     "id": "nowevio-portugal-fatima-2",
     "name": "Santuario de Fatima Live Cam",
     "location": "Fatima",
