@@ -172,7 +172,13 @@ def load_settings() -> dict:
               "https://cetsp.com.br/consultas/cameras-cet.aspx",
               "https://dersp.der.sp.gov.br/WebSite/Servicos/ServicosOnline/CamerasOnlineMapa.aspx",
               "https://trafficeye.com.ng/",
-              "https://observatory.frsc.gov.ng/"
+              "https://observatory.frsc.gov.ng/",
+              "https://nav.gov.hu/vam/hataratkelohelyi-kamerak",
+              "https://ndsas.sk/public/sluzby/dopravne-informacie",
+              "https://eismoinfo.lt/",
+              "https://tik.teeilm.ee/en",
+              "https://livetrafik.com/lv",
+              "https://argosatlas.com/camaras/letonia/"
         ]
     }
     if SETTINGS_FILE.exists():
