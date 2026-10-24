@@ -754,7 +754,7 @@ def load_settings() -> dict:
     "https://www.vision-environnement.com/webcams/ile-de-man/",
     "https://www.vision-environnement.com/webcams/iles-caimans/",
     "https://www.vision-environnement.com/webcams/iles-feroe/",
-    "https://www.vision-environnement.com/webcams/iles-turques-et-taiques/",
+    "https://www.vision-environnement.com/webcams/iles-turques-et-caiques/",
     "https://www.vision-environnement.com/webcams/iles-vierges-americaines/",
     "https://www.vision-environnement.com/webcams/iles-vierges-britanniques/",
     "https://www.vision-environnement.com/webcams/indonesie/",
